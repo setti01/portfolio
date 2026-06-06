@@ -1,5 +1,5 @@
 {
-  "outputDirectory": "dist/apps/web",
-  "installCommand": "npm install",
-  "buildCommand": "npm run build"
+  "buildCommand": "cd apps/web && npx vite build --outDir dist",
+  "outputDirectory": "apps/web/dist",
+  "installCommand": "cd apps/web && npm install"
 }
