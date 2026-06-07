@@ -114,7 +114,7 @@ const featuredProjects = [
               </h1>
 
               <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed max-w-3xl mx-auto">
-                Designer graphique et web avec expérience freelance depuis 2018. Spécialisé dans l'identité visuelle, le branding, le design web et le contenu digital pour l'hôtellerie, la restauration, la beauté et l'e-commerce.
+                J'aide les marques à se démarquer — identité visuelle, sites web et contenus digitaux qui attirent des clients et inspirent confiance.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -140,7 +140,7 @@ const featuredProjects = [
           <div className="container-custom">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
               {[
-                { label: 'Années d\'expérience', value: 9, suffix: '+' },
+                { label: 'Années d\'expérience', value: 7, suffix: '+' },
                 { label: 'Clients satisfaits', value: 50, suffix: '+' },
                 { label: 'Projets complétés', value: 100, suffix: '+' },
                 { label: 'Secteurs d\'expertise', value: 8, suffix: '+' },
@@ -219,7 +219,7 @@ const featuredProjects = [
                 Créons ensemble des designs et sites web qui renforcent votre image de marque et convertissent.
               </p>
               <Button asChild size="lg" className="rounded-full px-10 h-14 text-lg">
-                <Link to="/contact">Démarrer une discussion</Link>
+                <Link to="/contact">Discutons de votre projet</Link>
               </Button>
             </motion.div>
           </div>
