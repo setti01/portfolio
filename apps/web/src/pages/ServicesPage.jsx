@@ -11,61 +11,77 @@ import Footer from '@/components/Footer.jsx';
 const ServicesPage = () => {
   const detailedServices = [
     {
-      title: 'Design Graphique',
-      desc: 'Création d\'écosystèmes visuels complets et impactants qui reflètent l\'essence de votre marque sur tous les supports.',
+      title: 'Brand Identity & Design Graphique',
+      desc: 'De l\'idée au système visuel complet — je crée des identités de marque cohérentes qui se démarquent et restent mémorables.',
       icon: PenTool,
       image: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f',
       deliverables: [
-        'Identité de marque & Design de logo',
-        'Systèmes d\'identité visuelle',
-        'Matériaux marketing (Flyers, affiches, brochures)',
-        'Roll-ups & Branding événementiel',
-        'Cartes de visite & Menus de restaurant',
-        'Concepts d\'emballage',
-        'Design réseaux sociaux & Créatifs publicitaires'
+        'Logo design & identité visuelle complète',
+        'Charte graphique (couleurs, typographie, règles d\'usage)',
+        'Menus de restaurant (design complet, print-ready)',
+        'Flyers, affiches, brochures',
+        'Roll-ups & visuels événementiels',
+        'Cartes de visite',
+        'Packaging & concepts d\'emballage',
+        'Fichiers print-ready (CMJN, formats imprimeur)'
       ]
     },
     {
       title: 'Web Design & Développement',
-      desc: 'Conception de plateformes digitales performantes, optimisées pour la conversion et offrant une expérience utilisateur fluide.',
+      desc: 'Des sites web rapides, modernes et orientés conversion — du site vitrine à l\'e-commerce complet.',
       icon: Globe,
       image: 'https://images.unsplash.com/photo-1695634365024-b7513447e4f0',
       deliverables: [
-        'Design & Développement WordPress / Elementor',
-        'Design responsive et mobile-first',
-        'Landing pages & Sites corporate',
-        'Sites portfolio & e-commerce',
-        'Configuration WooCommerce',
-        'Optimisation SEO et performance',
-        'Maintenance de site'
+        'Sites WordPress + Elementor sur-mesure',
+        'E-commerce WooCommerce & Shopify',
+        'Landing pages haute conversion',
+        'Sites corporate & portfolio',
+        'Design responsive & mobile-first',
+        'Optimisation SEO technique',
+        'Maintenance & mises à jour',
+        'Layouts bilingues (Arabe / Français / Anglais)'
       ]
     },
     {
-      title: 'Contenu Digital',
-      desc: 'Production de visuels attractifs pour engager votre audience sur les plateformes sociales et mettre en valeur vos produits.',
+      title: 'Social Media & Contenu Digital',
+      desc: 'Des visuels qui captent l\'attention, renforcent votre image de marque et engagent votre audience.',
       icon: ImageIcon,
       image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113',
       deliverables: [
         'Création de contenu Instagram & Facebook',
-        'Visuels de campagnes réseaux sociaux',
-        'Retouche professionnelle d\'images produits',
-        'Graphiques promotionnels',
-        'Adaptation de contenu multi-plateformes',
-        'Bannières web et assets digitaux'
+        'Visuels de campagnes publicitaires',
+        'Retouche professionnelle de photos produits & food',
+        'Génération d\'images par IA pour clients',
+        'Adaptation multi-formats & multi-plateformes',
+        'Bannières web & assets digitaux',
+        'Templates réseaux sociaux réutilisables'
       ]
     },
     {
-      title: 'Design Assisté par IA',
-      desc: 'Intégration des dernières technologies d\'intelligence artificielle pour accélérer le processus créatif et générer des concepts uniques.',
+      title: 'Photographie & Production Visuelle',
+      desc: 'Valorisez vos espaces et votre offre avec des images professionnelles adaptées au web et aux réseaux sociaux.',
       icon: Sparkles,
-      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995',
+      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4',
       deliverables: [
-        'Workflows créatifs améliorés par IA',
-        'Génération d\'images personnalisées par IA',
-        'Idéation de contenu et concepts visuels',
-        'Optimisation de la productivité créative',
-        'Intégration d\'IA dans vos projets digitaux',
-        'Retouche et extensions d\'images assistées'
+        'Photographie de lieux (hôtels, restaurants, commerces)',
+        'Retouche et post-production complète',
+        'Photos optimisées pour le web & réseaux sociaux',
+        'Livrables print-ready haute résolution',
+        'Cohérence visuelle avec votre identité de marque'
+      ]
+    },
+    {
+      title: 'SEO & Stratégie Digitale',
+      desc: 'Rendez votre site visible sur Google et construisez une présence digitale cohérente qui attire les bons clients.',
+      icon: ArrowRight,
+      image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a',
+      deliverables: [
+        'Audit SEO & analyse de positionnement',
+        'Optimisation on-page (titres, metas, structure)',
+        'Stratégie de mots-clés',
+        'SEO local (Google Business Profile)',
+        'Intégration d\'outils IA dans les workflows créatifs',
+        'Recommandations de contenu pour le référencement'
       ]
     }
   ];
