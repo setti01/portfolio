@@ -1,7 +1,7 @@
 [build]
   base = "apps/web"
   command = "npx vite build"
-  publish = "dist"
+  publish = "apps/web/dist"
 
 [[redirects]]
   from = "/*"
