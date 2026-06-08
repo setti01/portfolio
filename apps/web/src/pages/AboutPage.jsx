@@ -111,13 +111,28 @@ const AboutPage = () => {
 
               <motion.div 
                 initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.2 }}
-                className="relative rounded-3xl overflow-hidden aspect-[4/5] border border-border bg-secondary flex items-center justify-center"
+                className="flex flex-col gap-6"
               >
-                <img
-                  src="https://res.cloudinary.com/dfonsuqx6/image/upload/q_auto/f_auto/v1780700743/Gemini_Generated_Image_tz97evtz97evtz97_bcbvnr.png"
-                  alt="Bilal ESSATTE Workspace"
-                  className="w-full h-full object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700"
-                />
+                <div className="relative rounded-3xl overflow-hidden aspect-[4/5] border border-border bg-secondary flex items-center justify-center">
+                  <img
+                    src="https://res.cloudinary.com/dfonsuqx6/image/upload/q_auto/f_auto/v1780700743/Gemini_Generated_Image_tz97evtz97evtz97_bcbvnr.png"
+                    alt="Bilal ESSATTE Workspace"
+                    className="w-full h-full object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700"
+                  />
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { value: '7+', label: 'Années d\'expérience' },
+                    { value: '50+', label: 'Clients satisfaits' },
+                    { value: '100+', label: 'Projets complétés' },
+                    { value: '5', label: 'Secteurs d\'expertise' },
+                  ].map((stat, i) => (
+                    <div key={i} className="bg-card border border-border rounded-2xl p-4 text-center">
+                      <p className="text-3xl font-bold text-primary">{stat.value}</p>
+                      <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
+                    </div>
+                  ))}
+                </div>
               </motion.div>
             </div>
 
