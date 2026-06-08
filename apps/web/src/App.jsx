@@ -13,6 +13,7 @@ import AllinfesPage from './pages/AllinfesPage.jsx';
 import LamaraPage from './pages/LamaraPage.jsx';
 import OmegaSushiPage from './pages/OmegaSushiPage.jsx';
 import WeProdPage from './pages/WeProdPage.jsx';
+import GaleriePage from './pages/GaleriePage.jsx';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/portfolio/lamara" element={<LamaraPage />} />
         <Route path="/portfolio/omega-sushi" element={<OmegaSushiPage />} />
         <Route path="/portfolio/weprod" element={<WeProdPage />} />
+        <Route path="/galerie" element={<GaleriePage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
