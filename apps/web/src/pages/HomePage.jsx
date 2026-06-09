@@ -18,16 +18,18 @@ const HomePage = () => {
     "Design graphique. Web design. Un seul créatif.",
     "Votre marque mérite mieux qu'un design ordinaire"
   ];
-const heroWords = [
-  "confiance",
-  "autorité",
-  "croissance"
-];
-const featuredProjects = [
+  
+  const heroWords = [
+    "confiance",
+    "autorité",
+    "croissance"
+  ];
+
+  const featuredProjects = [
     {
       title: 'Miel Chahda',
       category: 'Web Design & Development',
-    image: 'https://res.cloudinary.com/dfonsuqx6/image/upload/q_auto/f_auto/v1780690378/Screenshot_q0g6em.png',
+      image: 'https://res.cloudinary.com/dfonsuqx6/image/upload/q_auto/f_auto/v1780690378/Screenshot_q0g6em.png',
       link: '/portfolio/allinfes',
     },
     {
@@ -83,7 +85,7 @@ const featuredProjects = [
   return (
     <>
       <Helmet>
-        <title>Bilal ESSATTE - Designer Graphique & Web | Portfolio</title>
+        <title>Bilal ESSATTE - Designer Graphique &amp; Web | Portfolio</title>
         <meta name="description" content="Portfolio de Bilal ESSATTE, designer graphique et web spécialisé dans la création d'écosystèmes visuels complets." />
       </Helmet>
 
@@ -114,18 +116,18 @@ const featuredProjects = [
               </motion.div>
 
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight tracking-tight text-balance">
-  Construire la{" "}
-  <span className="text-primary inline-block min-w-[320px]">
-    <RotatingText
-      phrases={heroWords}
-      className="text-primary"
-    />
-  </span>
-  {" "}par le design
-</h1>
+                Construire la{" "}
+                <span className="text-primary inline-block min-w-[320px]">
+                  <RotatingText
+                    phrases={heroWords}
+                    className="text-primary"
+                  />
+                </span>
+                {" "}par le design
+              </h1>
 
               <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed max-w-3xl mx-auto">
-                J'aide les marques à se démarquer — identité visuelle, sites web et contenus digitaux qui attirent des clients et inspirent confiance.
+                J&apos;aide les marques à se démarquer — identité visuelle, sites web et contenus digitaux qui attirent des clients et inspirent confiance.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -196,8 +198,8 @@ const featuredProjects = [
         <section className="py-24 overflow-hidden bg-card/20 border-y border-border">
           <div className="container-custom mb-12">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
-              <h2 className="text-3xl md:text-5xl font-bold mb-4">Outils & Technologies</h2>
-              <p className="text-muted-foreground">Les outils que j'utilise pour créer des expériences visuelles exceptionnelles.</p>
+              <h2 className="text-3xl md:text-5xl font-bold mb-4">Outils &amp; Technologies</h2>
+              <p className="text-muted-foreground">Les outils que j&apos;utilise pour créer des expériences visuelles exceptionnelles.</p>
             </motion.div>
           </div>
 
@@ -220,7 +222,7 @@ const featuredProjects = [
                 { name: 'After Effects', icon: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg' },
                 { name: 'WordPress', icon: 'https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg' },
                 { name: 'Figma', icon: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg' },
-                { name: 'Shopify', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg' },
+                { name: 'Shopify', icon: 'https://cdn.worldvectorlogo.com/logos/shopify.svg' },
               ].map((tool, i) => (
                 <div key={i} className="flex items-center gap-3 bg-card border border-border rounded-2xl px-6 py-4 shrink-0 hover:border-primary/50 hover:bg-card/80 transition-all duration-300">
                   <img src={tool.icon} alt={tool.name} className="w-8 h-8 object-contain" />
@@ -234,19 +236,19 @@ const featuredProjects = [
           <div className="relative flex overflow-hidden">
             <div className="flex gap-6 whitespace-nowrap" style={{ animation: 'marquee-right 50s linear infinite' }}>
               {[
-                { name: 'Canva', icon: 'https://cdn.worldvectorlogo.com/logos/canva-1.svg' },
-                { name: 'WooCommerce', icon: 'https://cdn.worldvectorlogo.com/logos/woocommerce.svg' },
+                { name: 'Canva', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg' },
+                { name: 'WooCommerce', icon: 'https://upload.wikimedia.org/wikipedia/commons/2/2a/WooCommerce_logo.svg' },
                 { name: 'ChatGPT', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg' },
-                { name: 'Elementor', icon: 'https://cdn.worldvectorlogo.com/logos/elementor.svg' },
-                { name: 'CapCut', bg: '#000000', letter: 'CC' },
+                { name: 'Elementor', icon: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Elementor_icon.svg' },
+                { name: 'CapCut', icon: 'https://cdn.worldvectorlogo.com/logos/capcut.svg' },
                 { name: 'Leonardo AI', bg: '#1a1a2e', letter: 'L' },
                 { name: 'Google AI Studio', bg: '#1a73e8', letter: 'G' },
                 { name: 'Claude', bg: '#cc785c', letter: 'C' },
                 { name: 'Canva', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg' },
                 { name: 'WooCommerce', icon: 'https://upload.wikimedia.org/wikipedia/commons/2/2a/WooCommerce_logo.svg' },
                 { name: 'ChatGPT', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg' },
-                { name: 'Elementor', icon: 'https://cdn.worldvectorlogo.com/logos/elementor.svg' },
-                { name: 'CapCut', icon: 'https://upload.wikimedia.org/wikipedia/commons/e/e9/Capcut-logo.svg' },
+                { name: 'Elementor', icon: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Elementor_icon.svg' },
+                { name: 'CapCut', icon: 'https://cdn.worldvectorlogo.com/logos/capcut.svg' },
                 { name: 'Leonardo AI', bg: '#1a1a2e', letter: 'L' },
                 { name: 'Google AI Studio', bg: '#1a73e8', letter: 'G' },
                 { name: 'Claude', bg: '#cc785c', letter: 'C' },
@@ -266,12 +268,12 @@ const featuredProjects = [
           </div>
         </section>
 
-{/* 3.6 CLIENTS */}
+        {/* 3.6 CLIENTS */}
         <section className="py-20 bg-background">
           <div className="container-custom">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
-              <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest mb-4">Ils m'ont fait confiance</p>
-              <h2 className="text-3xl md:text-4xl font-bold">Clients & Collaborations</h2>
+              <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest mb-4">Ils m&apos;ont fait confiance</p>
+              <h2 className="text-3xl md:text-4xl font-bold">Clients &amp; Collaborations</h2>
             </motion.div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -309,7 +311,7 @@ const featuredProjects = [
           <div className="container-custom">
             <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <h2 className="text-3xl md:text-5xl font-bold mb-4">Ce que disent mes clients</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">Retours d'expérience dans les secteurs de l'hôtellerie, restauration et beauté.</p>
+              <p className="text-muted-foreground max-w-2xl mx-auto">Retours d&apos;expérience dans les secteurs de l&apos;hôtellerie, restauration et beauté.</p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -320,7 +322,7 @@ const featuredProjects = [
                   className="bg-card p-8 rounded-3xl border border-border relative flex flex-col h-full"
                 >
                   <Quote className="absolute top-8 right-8 w-10 h-10 text-primary/10" />
-                  <p className="text-muted-foreground leading-relaxed mb-8 relative z-10 flex-grow">"{test.text}"</p>
+                  <p className="text-muted-foreground leading-relaxed mb-8 relative z-10 flex-grow">&ldquo;{test.text}&rdquo;</p>
                   <div>
                     <h4 className="font-bold">{test.name}</h4>
                     <p className="text-sm text-primary">{test.role}</p>
