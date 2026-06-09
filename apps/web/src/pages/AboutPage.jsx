@@ -107,19 +107,7 @@ const AboutPage = () => {
                     "Combiner créativité, technologie et pensée stratégique pour aider les entreprises à construire des marques plus fortes et de meilleures expériences digitales. Mon objectif est l'amélioration continue en design graphique, web design, workflows assistés par IA, branding et communication digitale pour collaborer avec des clients internationaux, des agences créatives et des entreprises innovantes."
                   </p>
                 </div>
-                <div className="grid grid-cols-2 gap-4 mt-8">
-                  {[
-                    { value: '7+', label: 'Années d\'expérience' },
-                    { value: '50+', label: 'Clients satisfaits' },
-                    { value: '100+', label: 'Projets complétés' },
-                    { value: '5', label: 'Secteurs d\'expertise' },
-                  ].map((stat, i) => (
-                    <div key={i} className="bg-card border border-border rounded-2xl p-4 text-center">
-                      <p className="text-3xl font-bold text-primary">{stat.value}</p>
-                      <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
-                    </div>
-                  ))}
-                </div>
+                
               </motion.div>
 
               <motion.div 
@@ -154,6 +142,19 @@ const AboutPage = () => {
                       <h3 className="text-xl font-semibold">{exp.title}</h3>
                       <p className="text-sm font-medium text-muted-foreground mb-2">{exp.company}</p>
                       <p className="text-muted-foreground leading-relaxed">{exp.description}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="grid grid-cols-2 gap-4 mt-12">
+                  {[
+                    { value: '7+', label: 'Années d\'expérience' },
+                    { value: '50+', label: 'Clients satisfaits' },
+                    { value: '100+', label: 'Projets complétés' },
+                    { value: '5', label: 'Secteurs d\'expertise' },
+                  ].map((stat, i) => (
+                    <div key={i} className="bg-card border border-border rounded-2xl p-4 text-center">
+                      <p className="text-3xl font-bold text-primary">{stat.value}</p>
+                      <p className="text-sm text-muted-foreground mt-1">{stat.label}</p>
                     </div>
                   ))}
                 </div>
