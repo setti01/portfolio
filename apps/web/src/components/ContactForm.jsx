@@ -19,23 +19,20 @@ const ContactForm = () => {
 
   const onSubmit = async (data) => {
     setIsSubmitting(true);
-
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-
-      // Store in localStorage
-      const submissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
-      submissions.push({
-        ...data,
-        timestamp: new Date().toISOString(),
+      const response = await fetch('https://formspree.io/f/xlgkndbg', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
       });
-      localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
-
-      toast.success('Message envoyé avec succès');
-      reset();
+      if (response.ok) {
+        toast.success('Message envoyé avec succès ! Je vous répondrai sous 24h.');
+        reset();
+      } else {
+        toast.error('Erreur lors de l\'envoi. Veuillez réessayer.');
+      }
     } catch (error) {
-      toast.error('Erreur lors de l\'envoi du message');
+      toast.error('Erreur de connexion. Veuillez réessayer.');
     } finally {
       setIsSubmitting(false);
     }
