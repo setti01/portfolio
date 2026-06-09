@@ -181,6 +181,80 @@ const featuredProjects = [
           </div>
         </section>
 
+        {/* 3.5 SKILLS & TOOLS */}
+        <section className="py-24 overflow-hidden bg-card/20 border-y border-border">
+          <div className="container-custom mb-12">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
+              <h2 className="text-3xl md:text-5xl font-bold mb-4">Outils & Technologies</h2>
+              <p className="text-muted-foreground">Les outils que j'utilise pour créer des expériences visuelles exceptionnelles.</p>
+            </motion.div>
+          </div>
+
+          {/* Row 1 - scrolling left */}
+          <div className="relative flex overflow-hidden mb-6">
+            <div className="flex animate-marquee-left gap-6 whitespace-nowrap">
+              {[
+                { name: 'Photoshop', icon: 'https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg' },
+                { name: 'Illustrator', icon: 'https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg' },
+                { name: 'InDesign', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg' },
+                { name: 'Premiere Pro', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg' },
+                { name: 'After Effects', icon: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg' },
+                { name: 'WordPress', icon: 'https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg' },
+                { name: 'Figma', icon: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg' },
+                { name: 'Shopify', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg' },
+                { name: 'Photoshop', icon: 'https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg' },
+                { name: 'Illustrator', icon: 'https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg' },
+                { name: 'InDesign', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg' },
+                { name: 'Premiere Pro', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg' },
+                { name: 'After Effects', icon: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg' },
+                { name: 'WordPress', icon: 'https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg' },
+                { name: 'Figma', icon: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg' },
+                { name: 'Shopify', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg' },
+              ].map((tool, i) => (
+                <div key={i} className="flex items-center gap-3 bg-card border border-border rounded-2xl px-6 py-4 shrink-0 hover:border-primary/50 hover:bg-card/80 transition-all duration-300">
+                  <img src={tool.icon} alt={tool.name} className="w-8 h-8 object-contain" />
+                  <span className="font-medium text-sm">{tool.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Row 2 - scrolling right */}
+          <div className="relative flex overflow-hidden">
+            <div className="flex animate-marquee-right gap-6 whitespace-nowrap">
+              {[
+                { name: 'Canva', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg' },
+                { name: 'WooCommerce', icon: 'https://upload.wikimedia.org/wikipedia/commons/2/2a/WooCommerce_logo.svg' },
+                { name: 'ChatGPT', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg' },
+                { name: 'Elementor', icon: 'https://upload.wikimedia.org/wikipedia/commons/5/5f/Elementor-Logo.svg' },
+                { name: 'CapCut', icon: 'https://upload.wikimedia.org/wikipedia/commons/e/e9/Capcut-logo.svg' },
+                { name: 'Leonardo AI', bg: '#1a1a2e', letter: 'L' },
+                { name: 'Google AI Studio', bg: '#1a73e8', letter: 'G' },
+                { name: 'Claude', bg: '#cc785c', letter: 'C' },
+                { name: 'Canva', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg' },
+                { name: 'WooCommerce', icon: 'https://upload.wikimedia.org/wikipedia/commons/2/2a/WooCommerce_logo.svg' },
+                { name: 'ChatGPT', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg' },
+                { name: 'Elementor', icon: 'https://upload.wikimedia.org/wikipedia/commons/5/5f/Elementor-Logo.svg' },
+                { name: 'CapCut', icon: 'https://upload.wikimedia.org/wikipedia/commons/e/e9/Capcut-logo.svg' },
+                { name: 'Leonardo AI', bg: '#1a1a2e', letter: 'L' },
+                { name: 'Google AI Studio', bg: '#1a73e8', letter: 'G' },
+                { name: 'Claude', bg: '#cc785c', letter: 'C' },
+              ].map((tool, i) => (
+                <div key={i} className="flex items-center gap-3 bg-card border border-border rounded-2xl px-6 py-4 shrink-0 hover:border-primary/50 hover:bg-card/80 transition-all duration-300">
+                  {tool.icon ? (
+                    <img src={tool.icon} alt={tool.name} className="w-8 h-8 object-contain" />
+                  ) : (
+                    <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white font-bold text-sm" style={{ backgroundColor: tool.bg }}>
+                      {tool.letter}
+                    </div>
+                  )}
+                  <span className="font-medium text-sm">{tool.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        
         {/* 4. TESTIMONIALS */}
         <section className="py-24 bg-secondary/30">
           <div className="container-custom">
