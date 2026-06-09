@@ -192,7 +192,7 @@ const featuredProjects = [
 
           {/* Row 1 - scrolling left */}
           <div className="relative flex overflow-hidden mb-6">
-            <div className="flex animate-marquee-left gap-6 whitespace-nowrap">
+            <div className="flex gap-6 whitespace-nowrap" style={{ animation: 'marquee-left 30s linear infinite' }}>
               {[
                 { name: 'Photoshop', icon: 'https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg' },
                 { name: 'Illustrator', icon: 'https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg' },
@@ -221,7 +221,7 @@ const featuredProjects = [
 
           {/* Row 2 - scrolling right */}
           <div className="relative flex overflow-hidden">
-            <div className="flex animate-marquee-right gap-6 whitespace-nowrap">
+            <div className="flex gap-6 whitespace-nowrap" style={{ animation: 'marquee-right 30s linear infinite' }}>
               {[
                 { name: 'Canva', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg' },
                 { name: 'WooCommerce', icon: 'https://upload.wikimedia.org/wikipedia/commons/2/2a/WooCommerce_logo.svg' },
@@ -254,7 +254,7 @@ const featuredProjects = [
             </div>
           </div>
         </section>
-        
+
         {/* 4. TESTIMONIALS */}
         <section className="py-24 bg-secondary/30">
           <div className="container-custom">
