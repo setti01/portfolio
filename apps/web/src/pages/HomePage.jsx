@@ -255,6 +255,39 @@ const featuredProjects = [
           </div>
         </section>
 
+{/* 3.6 CLIENTS */}
+        <section className="py-20 bg-background">
+          <div className="container-custom">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+              <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest mb-4">Ils m'ont fait confiance</p>
+              <h2 className="text-3xl md:text-4xl font-bold">Clients & Collaborations</h2>
+            </motion.div>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {[
+                'Allinfes',
+                'Riad Timrad',
+                'Hotel Farah Tanger',
+                'Flamant Rose',
+                'Omega Sushi',
+                'WeProd Maroc',
+                'Palais Blanc',
+                'Bloom Beauty',
+              ].map((client, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.05 }}
+                  className="bg-card border border-border rounded-2xl px-6 py-5 flex items-center justify-center text-center hover:border-primary/40 transition-all duration-300 group"
+                >
+                  <p className="font-semibold text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300">{client}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+        
         {/* 4. TESTIMONIALS */}
         <section className="py-24 bg-secondary/30">
           <div className="container-custom">
