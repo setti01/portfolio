@@ -192,7 +192,7 @@ const featuredProjects = [
 
           {/* Row 1 - scrolling left */}
           <div className="relative flex overflow-hidden mb-6">
-            <div className="flex gap-6 whitespace-nowrap" style={{ animation: 'marquee-left 30s linear infinite' }}>
+            <div className="flex gap-6 whitespace-nowrap" style={{ animation: 'marquee-left 50s linear infinite' }}>
               {[
                 { name: 'Photoshop', icon: 'https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg' },
                 { name: 'Illustrator', icon: 'https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg' },
@@ -201,7 +201,7 @@ const featuredProjects = [
                 { name: 'After Effects', icon: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg' },
                 { name: 'WordPress', icon: 'https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg' },
                 { name: 'Figma', icon: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg' },
-                { name: 'Shopify', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopify_logo_2018.svg' },
+                { name: 'Shopify', icon: 'https://cdn.worldvectorlogo.com/logos/shopify.svg' },
                 { name: 'Photoshop', icon: 'https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg' },
                 { name: 'Illustrator', icon: 'https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg' },
                 { name: 'InDesign', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg' },
@@ -221,20 +221,20 @@ const featuredProjects = [
 
           {/* Row 2 - scrolling right */}
           <div className="relative flex overflow-hidden">
-            <div className="flex gap-6 whitespace-nowrap" style={{ animation: 'marquee-right 30s linear infinite' }}>
+            <div className="flex gap-6 whitespace-nowrap" style={{ animation: 'marquee-right 50s linear infinite' }}>
               {[
-                { name: 'Canva', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg' },
-                { name: 'WooCommerce', icon: 'https://upload.wikimedia.org/wikipedia/commons/2/2a/WooCommerce_logo.svg' },
+                { name: 'Canva', icon: 'https://cdn.worldvectorlogo.com/logos/canva-1.svg' },
+                { name: 'WooCommerce', icon: 'https://cdn.worldvectorlogo.com/logos/woocommerce.svg' },
                 { name: 'ChatGPT', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg' },
-                { name: 'Elementor', icon: 'https://upload.wikimedia.org/wikipedia/commons/5/5f/Elementor-Logo.svg' },
-                { name: 'CapCut', icon: 'https://upload.wikimedia.org/wikipedia/commons/e/e9/Capcut-logo.svg' },
+                { name: 'Elementor', icon: 'https://cdn.worldvectorlogo.com/logos/elementor.svg' },
+                { name: 'CapCut', bg: '#000000', letter: 'CC' },
                 { name: 'Leonardo AI', bg: '#1a1a2e', letter: 'L' },
                 { name: 'Google AI Studio', bg: '#1a73e8', letter: 'G' },
                 { name: 'Claude', bg: '#cc785c', letter: 'C' },
                 { name: 'Canva', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg' },
                 { name: 'WooCommerce', icon: 'https://upload.wikimedia.org/wikipedia/commons/2/2a/WooCommerce_logo.svg' },
                 { name: 'ChatGPT', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg' },
-                { name: 'Elementor', icon: 'https://upload.wikimedia.org/wikipedia/commons/5/5f/Elementor-Logo.svg' },
+                { name: 'Elementor', icon: 'https://cdn.worldvectorlogo.com/logos/elementor.svg' },
                 { name: 'CapCut', icon: 'https://upload.wikimedia.org/wikipedia/commons/e/e9/Capcut-logo.svg' },
                 { name: 'Leonardo AI', bg: '#1a1a2e', letter: 'L' },
                 { name: 'Google AI Studio', bg: '#1a73e8', letter: 'G' },
