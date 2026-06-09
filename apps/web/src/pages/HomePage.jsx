@@ -18,7 +18,11 @@ const HomePage = () => {
     "Design graphique. Web design. Un seul créatif.",
     "Votre marque mérite mieux qu'un design ordinaire"
   ];
-
+const heroWords = [
+  "confiance",
+  "autorité",
+  "croissance"
+];
 const featuredProjects = [
     {
       title: 'Miel Chahda',
@@ -110,8 +114,15 @@ const featuredProjects = [
               </motion.div>
 
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight tracking-tight text-balance">
-                Construire la <span className="text-primary">confiance</span> par le design
-              </h1>
+  Construire la{" "}
+  <span className="text-primary inline-block min-w-[320px]">
+    <RotatingText
+      phrases={heroWords}
+      className="text-primary"
+    />
+  </span>
+  {" "}par le design
+</h1>
 
               <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed max-w-3xl mx-auto">
                 J'aide les marques à se démarquer — identité visuelle, sites web et contenus digitaux qui attirent des clients et inspirent confiance.
@@ -262,16 +273,17 @@ const featuredProjects = [
               <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest mb-4">Ils m'ont fait confiance</p>
               <h2 className="text-3xl md:text-4xl font-bold">Clients & Collaborations</h2>
             </motion.div>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                'Allinfes',
-                'Riad Timrad',
-                'Hotel Farah Tanger',
-                'Flamant Rose',
-                'Omega Sushi',
-                'WeProd Maroc',
-                'Palais Blanc',
-                'Bloom Beauty',
+                { name: 'Riad Timrad', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1781026098/RIAD-TIMRAD-final-best.pdf_fca1hv.png' },
+                { name: 'Hotel Farah Tanger', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1781025970/8_ibwj1z.png' },
+                { name: 'Flamant Rose', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1781025951/6_lgwkig.png' },
+                { name: 'Digi Topup', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1781025873/IMG_5439.JPG_e2fv4s.jpg' },
+                { name: 'Omega Sushi', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1781026024/omegasushimorocco_1_zwwox9.png' },
+                { name: 'Bouabdallaoui Events', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1781026013/Asset_3_cavy5a.png' },
+                { name: 'Indupuls', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1781025982/Add_a_heading_sromrh.png' },
+                { name: 'Bghit Nakl Daba', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1781025914/WhatsApp_Image_2025-05-04_at_00.39.03_1_fvdfch.jpg' },
               ].map((client, i) => (
                 <motion.div
                   key={i}
@@ -279,9 +291,13 @@ const featuredProjects = [
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.05 }}
-                  className="bg-card border border-border rounded-2xl px-6 py-5 flex items-center justify-center text-center hover:border-primary/40 transition-all duration-300 group"
+                  className="bg-card border border-border rounded-2xl p-6 flex items-center justify-center h-32 hover:border-primary/40 transition-all duration-300 group"
                 >
-                  <p className="font-semibold text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300">{client}</p>
+                  <img 
+                    src={client.logo} 
+                    alt={`Logo ${client.name}`} 
+                    className="max-w-full max-h-full object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                  />
                 </motion.div>
               ))}
             </div>
