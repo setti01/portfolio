@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
@@ -22,13 +21,32 @@ const WeProdPage = () => {
     },
   ];
 
+  const whatIDid = [
+    "Designed social media posts and stories",
+    "Created roll-ups and print materials",
+    "Designed event tickets",
+    "Prepared sponsorship dossiers",
+    "Retouched photos for marketing campaigns",
+    "Created branding assets for multiple clients",
+    "Prepared files for professional printing",
+    "Worked with community managers, videographers and a 3D designer",
+  ];
+
+  const whatILearned = [
+    "How a real creative agency works day to day",
+    "How to prepare files for large-format printing",
+    "How to build a full campaign, not just single posts",
+    "How to stay creative under tight, repeating deadlines",
+    "How to pitch an idea to a founder and see it become real",
+  ];
+
   return (
     <>
       <Helmet>
-        <title>WeProd Maroc - Design & Web | Bilal Essatte</title>
+        <title>WeProd Maroc - Graphic Designer | Bilal Essatte</title>
         <meta
           name="description"
-          content="Découvrez le projet WeProd Maroc - Création d'une plateforme web complète avec design moderne."
+          content="My first experience inside a creative agency: branding, social media, print and event communication for WeProd Maroc."
         />
       </Helmet>
 
@@ -56,161 +74,227 @@ const WeProdPage = () => {
               </Link>
             </Button>
 
+            {/* HERO */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="mb-12"
             >
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">WeProd Maroc</h1>
-              <div className="flex flex-wrap items-center gap-4 mb-6">
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <Tag className="w-4 h-4" />
-                  <span>Design & Web Development</span>
-                </div>
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <Calendar className="w-4 h-4" />
-                  <span>2024</span>
-                </div>
+              <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
+                WeProd Maroc
+              </h1>
+
+              <div className="flex flex-wrap gap-3 mb-8">
+                <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
+                  Graphic Designer
+                </span>
+                <span className="px-4 py-2 rounded-full bg-card border border-border text-sm">
+                  July 2024 — November 2024
+                </span>
+                <span className="px-4 py-2 rounded-full bg-card border border-border text-sm">
+                  Communication & Events Agency
+                </span>
               </div>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
-                Conception et développement d'une plateforme web complète pour WeProd Maroc, agence de production audiovisuelle basée au Maroc.
+
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl">
+                My first experience inside a creative agency, where I worked on branding,
+                social media, print design and event communication for hotels,
+                restaurants and local brands.
               </p>
             </motion.div>
 
+            {/* IMAGE 1 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="rounded-2xl overflow-hidden mb-16"
+              className="mb-16"
             >
-              <img
-                src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960"
-                alt="WeProd Maroc website design showcase"
-                className="w-full h-auto"
-              />
+              <div className="aspect-video rounded-3xl border border-dashed border-border bg-card flex items-center justify-center">
+                <p className="text-muted-foreground">Hero image coming soon</p>
+              </div>
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
               <div className="lg:col-span-2 space-y-12">
+
+                {/* ABOUT WEPROD */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  <h2 className="text-2xl font-bold mb-4">L'objectif</h2>
+                  <h2 className="text-3xl font-bold mb-6">About WeProd</h2>
+                  <p className="text-muted-foreground leading-relaxed mb-6">
+                    WeProd Maroc is one of the leading communication and event agencies in
+                    Tangier. The agency works with hotels, restaurants, beauty brands and
+                    companies, creating everything from social media campaigns to large events,
+                    branding and print materials.
+                  </p>
                   <p className="text-muted-foreground leading-relaxed">
-                    WeProd Maroc, agence de production audiovisuelle en pleine croissance, avait besoin d'une plateforme web qui reflète leur expertise créative et facilite la présentation de leur portfolio. Le site devait être à la fois visuellement impressionnant et fonctionnel, permettant aux clients potentiels de découvrir facilement leurs services et réalisations.
+                    This was my first experience working inside a professional creative agency.
+                    It completely changed the way I see design, teamwork and communication.
                   </p>
                 </motion.div>
 
+                {/* HOW I JOINED */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  <h2 className="text-2xl font-bold mb-4">La réalisation</h2>
+                  <h2 className="text-3xl font-bold mb-6">How I Joined WeProd</h2>
                   <p className="text-muted-foreground leading-relaxed mb-4">
-                    J'ai créé une plateforme web complète qui met en valeur le travail de WeProd :
+                    Before joining WeProd, I was working as a freelance graphic designer.
+                    Freelancing alone wasn't giving me enough stability, and I wanted real
+                    experience inside a creative agency.
                   </p>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <div className="w-2 h-2 rounded-full bg-primary" />
-                      </div>
-                      <span className="text-muted-foreground">Design moderne avec focus sur le contenu visuel</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <div className="w-2 h-2 rounded-full bg-primary" />
-                      </div>
-                      <span className="text-muted-foreground">Galerie portfolio avec filtres par catégorie</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <div className="w-2 h-2 rounded-full bg-primary" />
-                      </div>
-                      <span className="text-muted-foreground">Intégration vidéo optimisée pour performances</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <div className="w-2 h-2 rounded-full bg-primary" />
-                      </div>
-                      <span className="text-muted-foreground">Formulaire de contact et système de devis en ligne</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <div className="w-2 h-2 rounded-full bg-primary" />
-                      </div>
-                      <span className="text-muted-foreground">Animations et transitions fluides pour une expérience premium</span>
-                    </li>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    A friend who worked at WeProd told me they were looking for a graphic
+                    designer. I applied, heard nothing for a few days, and almost forgot about
+                    it. Then one morning I woke up to several missed calls. When they called
+                    back, the first thing I heard was: "Bilal, I think you don't really want
+                    this job!" We both laughed, and a few days later I had my very first job
+                    interview.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    I passed the interviews with the Community Manager, HR and the founder,
+                    and started working that same day.
+                  </p>
+                </motion.div>
+
+                {/* WHAT I DID */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <h2 className="text-3xl font-bold mb-6">What I Did</h2>
+                  <ul className="space-y-4">
+                    {whatIDid.map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <div className="mt-2 w-2 h-2 rounded-full bg-primary shrink-0"></div>
+                        <span className="text-muted-foreground">{item}</span>
+                      </li>
+                    ))}
                   </ul>
                 </motion.div>
 
+                {/* IMAGE 2 */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
-                  className="rounded-2xl overflow-hidden"
                 >
-                  <img
-                    src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f"
-                    alt="WeProd Maroc website interface on multiple devices"
-                    className="w-full h-auto"
-                  />
+                  <div className="aspect-video rounded-3xl border border-dashed border-border bg-card flex items-center justify-center">
+                    <p className="text-muted-foreground">Project visuals coming soon</p>
+                  </div>
                 </motion.div>
 
+                {/* FEATURED PROJECT */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  <h2 className="text-2xl font-bold mb-4">Performance</h2>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
-                    Le nouveau site a transformé la présence en ligne de WeProd Maroc :
+                  <h2 className="text-3xl font-bold mb-6">Featured Project: Traditional Women's Event</h2>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    The project I'm most proud of at WeProd was a large, traditional
+                    women-only event. I had only just joined the agency, but during a team
+                    meeting the founder asked everyone for marketing ideas — so I proposed one.
                   </p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="bg-card rounded-xl p-6 border border-border">
-                      <p className="text-3xl font-bold text-primary mb-2">+189%</p>
-                      <p className="text-muted-foreground">Demandes de devis</p>
-                    </div>
-                    <div className="bg-card rounded-xl p-6 border border-border">
-                      <p className="text-3xl font-bold text-primary mb-2">+143%</p>
-                      <p className="text-muted-foreground">Temps passé sur le site</p>
-                    </div>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    I called it the "Blind Ticket": people could buy their ticket before the
+                    guest artist was announced. It created curiosity and got people talking
+                    about the event early.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Once the idea was approved, I designed the full campaign around it:
+                    the sponsorship dossier, roll-up banners, event tickets, artist
+                    announcements and all the Instagram content.
+                  </p>
+                </motion.div>
+
+                {/* WHAT I LEARNED */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <h2 className="text-3xl font-bold mb-6">What I Learned</h2>
+
+                  <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 mb-6">
+                    <p className="text-lg font-medium">
+                      "Keep It Stupid Simple" — a colleague taught me this early on, and it
+                      changed how I approach every design since.
+                    </p>
                   </div>
+
+                  <ul className="space-y-4">
+                    {whatILearned.map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <div className="mt-2 w-2 h-2 rounded-full bg-primary shrink-0"></div>
+                        <span className="text-muted-foreground">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+
+                {/* REFLECTION */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <h2 className="text-3xl font-bold mb-6">Looking Back</h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    I joined WeProd mostly thinking of myself as a graphic designer. I left
+                    with a much broader view — of branding, print production, event marketing
+                    and working as part of a team. This experience confirmed that I enjoy
+                    adapting quickly to new challenges and industries.
+                  </p>
                 </motion.div>
               </div>
 
+              {/* SIDEBAR */}
               <div className="space-y-6">
                 <div className="bg-card rounded-2xl p-6 border border-border">
-                  <h3 className="text-lg font-semibold mb-4">Informations projet</h3>
+                  <h3 className="text-lg font-semibold mb-4">Project Info</h3>
                   <div className="space-y-4">
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Client</p>
+                      <p className="text-sm text-muted-foreground mb-1">Agency</p>
                       <p className="font-medium">WeProd Maroc</p>
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Services</p>
-                      <p className="font-medium">Design, Développement, UX/UI</p>
+                      <p className="text-sm text-muted-foreground mb-1">Role</p>
+                      <p className="font-medium">Graphic Designer</p>
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Technologies</p>
-                      <p className="font-medium">React, Tailwind CSS, Framer Motion</p>
+                      <p className="text-sm text-muted-foreground mb-1">Duration</p>
+                      <p className="font-medium">July 2024 — November 2024</p>
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Année</p>
-                      <p className="font-medium">2024</p>
+                      <p className="text-sm text-muted-foreground mb-1">Tools</p>
+                      <p className="font-medium">Adobe Photoshop, Illustrator, InDesign</p>
+                    </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground mb-1">Clients</p>
+                      <p className="font-medium">Hotel Farah, Flamant Rose, Palais Blanc, Bloom Beauty</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
+            {/* NEXT PROJECTS */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
