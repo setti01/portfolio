@@ -106,16 +106,18 @@ const WeProdPage = () => {
             </motion.div>
 
             {/* IMAGE 1 */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="mb-16"
-            >
-              <div className="aspect-video rounded-3xl border border-dashed border-border bg-card flex items-center justify-center">
-                <p className="text-muted-foreground">Hero image coming soon</p>
-              </div>
-            </motion.div>
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.2 }}
+  className="mb-16 rounded-3xl overflow-hidden"
+>
+  <img
+    src="https://res.cloudinary.com/dvcaobhqt/image/upload/v1783910220/WhatsApp_Image_2025-05-04_at_00.39.05_3_betqh6.jpg"
+    alt="WeProd event stage production with branded lighting"
+    className="w-full h-auto"
+  />
+</motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
               <div className="lg:col-span-2 space-y-12">
@@ -202,16 +204,23 @@ const WeProdPage = () => {
   </p>
 
   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-    <div className="rounded-2xl overflow-hidden">
+    <div className="md:col-span-2 rounded-2xl overflow-hidden">
       <img
-        src="YOUR_CLOUDINARY_URL_1"
+        src="https://res.cloudinary.com/dvcaobhqt/image/upload/v1783909807/ChatGPT_Image_13_juil._2026_04_27_21_fvb9ji.png"
         alt="WeProd company vehicle branding - side view"
         className="w-full h-auto"
       />
     </div>
     <div className="rounded-2xl overflow-hidden">
       <img
-        src="YOUR_CLOUDINARY_URL_2"
+        src="https://res.cloudinary.com/dvcaobhqt/image/upload/v1783909808/ChatGPT_Image_13_juil._2026_04_19_40_pyppwn.png"
+        alt="WeProd company vehicle branding - front view"
+        className="w-full h-auto"
+      />
+    </div>
+    <div className="rounded-2xl overflow-hidden">
+      <img
+        src="https://res.cloudinary.com/dvcaobhqt/image/upload/v1783909807/ChatGPT_Image_13_juil._2026_04_29_42_b2o1g7.png"
         alt="WeProd company vehicle branding - rear view"
         className="w-full h-auto"
       />
@@ -256,17 +265,36 @@ const WeProdPage = () => {
   />
 </motion.div>
 
-                {/* IMAGE 2 */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <div className="aspect-video rounded-3xl border border-dashed border-border bg-card flex items-center justify-center">
-                    <p className="text-muted-foreground">Project visuals coming soon</p>
-                  </div>
-                </motion.div>
+                {/* IMAGE 2 - CAMPAIGN GALLERY */}
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6 }}
+  className="grid grid-cols-1 md:grid-cols-3 gap-4"
+>
+  <div className="rounded-2xl overflow-hidden">
+    <img
+      src="https://res.cloudinary.com/dvcaobhqt/image/upload/v1783910220/WhatsApp_Image_2025-05-04_at_00.39.05_2_pmszto.jpg"
+      alt="WeProd national football team sponsorship campaign"
+      className="w-full h-full object-cover aspect-[4/5]"
+    />
+  </div>
+  <div className="rounded-2xl overflow-hidden">
+    <img
+      src="https://res.cloudinary.com/dvcaobhqt/image/upload/v1783910220/WhatsApp_Image_2025-05-04_at_00.39.05_4_i3s2tl.jpg"
+      alt="WeProd Auto Expo promotional visual"
+      className="w-full h-full object-cover aspect-[4/5]"
+    />
+  </div>
+  <div className="rounded-2xl overflow-hidden">
+    <img
+      src="https://res.cloudinary.com/dvcaobhqt/image/upload/v1783910220/WhatsApp_Image_2025-05-04_at_00.39.05_5_w2bzmn.jpg"
+      alt="WeProd Instagram content mockup"
+      className="w-full h-full object-cover aspect-[4/5]"
+    />
+  </div>
+</motion.div>
 
                 {/* FEATURED PROJECT */}
                 <motion.div
