@@ -4,7 +4,7 @@
 
 # Positioning
 
-I am a Brand & Web Designer focused on building complete digital systems for businesses.
+I am a Creative Designer & Problem Solver focused on building complete digital systems for businesses.
 
 I combine:
 - Branding

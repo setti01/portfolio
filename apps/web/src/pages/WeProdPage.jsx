@@ -6,6 +6,7 @@ import { ArrowLeft, Calendar, Tag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
+import MaterialsGallery from '@/components/MaterialsGallery.jsx';
 
 const WeProdPage = () => {
   const relatedProjects = [
@@ -183,6 +184,77 @@ const WeProdPage = () => {
                     ))}
                   </ul>
                 </motion.div>
+                
+                {/* VEHICLE BRANDING */}
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6 }}
+>
+  <h2 className="text-3xl font-bold mb-6">Vehicle Branding</h2>
+  <p className="text-muted-foreground leading-relaxed mb-6">
+    I also designed the full branding for WeProd's own company vehicle — used for
+    events and equipment transport across Tangier. The design included the WeProd
+    logo, contact details, a small map showing the agency's headquarters and
+    operation sites, and a visual built around the agency's core services:
+    sound, stage, lighting and event structures.
+  </p>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div className="rounded-2xl overflow-hidden">
+      <img
+        src="YOUR_CLOUDINARY_URL_1"
+        alt="WeProd company vehicle branding - side view"
+        className="w-full h-auto"
+      />
+    </div>
+    <div className="rounded-2xl overflow-hidden">
+      <img
+        src="YOUR_CLOUDINARY_URL_2"
+        alt="WeProd company vehicle branding - rear view"
+        className="w-full h-auto"
+      />
+    </div>
+  </div>
+</motion.div>
+
+{/* MATERIALS CATALOGUE */}
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6 }}
+>
+  <h2 className="text-3xl font-bold mb-6">Event Materials Catalogue</h2>
+  <p className="text-muted-foreground leading-relaxed mb-8">
+    I designed a catalogue covering all the equipment and services used by WeProd's
+    event team: tents and stands (chapiteaux), electrical setup, lighting, sound,
+    audiovisual equipment, decor and furniture, scenography, and printing.
+  </p>
+
+  <MaterialsGallery
+    images={[
+      "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879675/photo_5_2026-07-10_20-02-35_mlaopi.jpg",
+      "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879674/photo_6_2026-07-10_20-02-35_ykairl.jpg",
+      "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879671/photo_7_2026-07-10_20-02-35_g2ywx4.jpg",
+      "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879674/photo_8_2026-07-10_20-02-35_tqp6ng.jpg",
+      "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879677/photo_9_2026-07-10_20-02-35_zbd0ai.jpg",
+      "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879683/photo_10_2026-07-10_20-02-35_z0f35a.jpg",
+      "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879683/photo_11_2026-07-10_20-02-35_omrcac.jpg",
+      "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879684/photo_12_2026-07-10_20-02-35_bfhl46.jpg",
+      "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879671/photo_13_2026-07-10_20-02-35_vokvjp.jpg",
+      "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879667/photo_14_2026-07-10_20-02-35_e1ankb.jpg",
+      "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879683/photo_15_2026-07-10_20-02-35_tucuix.jpg",
+      "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879668/photo_16_2026-07-10_20-02-35_fihrej.jpg",
+      "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879664/photo_17_2026-07-10_20-02-35_uajlio.jpg",
+      "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879658/photo_18_2026-07-10_20-02-35_mudjoz.jpg",
+      "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879660/photo_19_2026-07-10_20-02-35_vu6qtc.jpg",
+      "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879662/photo_20_2026-07-10_20-02-35_jvv4uf.jpg",
+      "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879658/photo_21_2026-07-10_20-02-35_tppm9y.jpg",
+    ]}
+  />
+</motion.div>
 
                 {/* IMAGE 2 */}
                 <motion.div

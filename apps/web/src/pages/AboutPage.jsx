@@ -219,6 +219,43 @@ const AboutPage = () => {
               </div>
             </motion.div>
 
+          
+           {/* CV DOWNLOAD */}
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center">Télécharger mon CV</h2>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+  <a
+    href="https://res.cloudinary.com/dvcaobhqt/raw/upload/Bilal_ESSATTE_CV_English_ATS_Hybrid_fc3hqz.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-full font-medium hover:opacity-90 transition-all duration-300 hover:scale-105"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+      <polyline points="7 10 12 15 17 10"/>
+      <line x1="12" y1="15" x2="12" y2="3"/>
+    </svg>
+    CV English
+  </a>
+
+  <a
+    href="https://res.cloudinary.com/dvcaobhqt/raw/upload/Bilal_ESSATTE_CV_Francais_ATS_Hybrid_pnoqfb.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-border rounded-full font-medium hover:border-primary hover:text-primary transition-all duration-300 hover:scale-105"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+      <polyline points="7 10 12 15 17 10"/>
+      <line x1="12" y1="15" x2="12" y2="3"/>
+    </svg>
+    CV Français
+  </a>
+
+</div>
+            </motion.div>
+
             {/* 5. INTERESTS */}
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
               <h2 className="text-3xl font-bold mb-8">Centres d'intérêt</h2>
