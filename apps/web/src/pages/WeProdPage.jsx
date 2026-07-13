@@ -304,7 +304,10 @@ const WeProdPage = () => {
               >
                 <h2 className="text-3xl font-bold mb-6">More Campaigns at WeProd</h2>
                 <p className="text-muted-foreground leading-relaxed mb-8 max-w-3xl">
-                  TEXT PENDING — waiting on your answers below.
+                  Beyond client work, I also created social media content for WeProd's own
+                  brand — including an Instagram story supporting the Moroccan national
+                  football team, and promotional visuals for the Auto Expo event. The third
+                  image is a mockup showing how one of these campaigns looked live on Instagram.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
