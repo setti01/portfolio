@@ -12,17 +12,17 @@ import RotatingText from '@/components/RotatingText.jsx';
 
 const HomePage = () => {
   const heroPhrases = [
-    "Création d'identités visuelles qui marquent les esprits",
-    "Des sites web qui convertissent et inspirent confiance",
-    "Du branding pensé pour durer, pas pour suivre les tendances",
-    "Design graphique. Web design. Un seul créatif.",
-    "Votre marque mérite mieux qu'un design ordinaire"
+    "Je résous vos problèmes de design, pas seulement vos briefs",
+    "Un designer qui s'adapte à votre secteur, pas l'inverse",
+    "Identité visuelle. Web design. Une seule personne, tous les outils.",
+    "Simple, clair, efficace — le design ne doit jamais compliquer",
+    "Chaque projet est différent, ma méthode s'adapte à chacun"
   ];
   
   const heroWords = [
-    "confiance",
-    "autorité",
-    "croissance"
+    "s'adapte",
+    "résout",
+    "évolue"
   ];
 
   const featuredProjects = [
@@ -116,18 +116,17 @@ const HomePage = () => {
               </motion.div>
 
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight tracking-tight text-balance">
-                Construire la{" "}
+                Un design qui{" "}
                 <span className="text-primary inline-block min-w-[320px]">
                   <RotatingText
                     phrases={heroWords}
                     className="text-primary"
                   />
                 </span>
-                {" "}par le design
               </h1>
 
               <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed max-w-3xl mx-auto">
-                J&apos;aide les marques à se démarquer — identité visuelle, sites web et contenus digitaux qui attirent des clients et inspirent confiance.
+                Je ne me contente pas de designer. Je résous des problèmes — quel que soit le secteur, je m&apos;adapte.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
