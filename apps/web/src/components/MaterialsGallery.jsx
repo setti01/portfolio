@@ -41,7 +41,7 @@ const MaterialsGallery = ({ images }) => {
         {images.map((src, i) => (
           <div
             key={i}
-            className="snap-center shrink-0 w-[80%] md:w-[50%] lg:w-[36%] rounded-2xl overflow-hidden border border-border bg-card select-none"
+            className="snap-center shrink-0 w-[280px] sm:w-[340px] rounded-2xl overflow-hidden border border-border bg-card select-none"
           >
             <img
               src={src}
