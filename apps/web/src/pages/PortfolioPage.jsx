@@ -16,34 +16,16 @@ const PortfolioPage = () => {
 
   // Full clean data array
   const projects = [
-    { title: 'ALLINFES', category: 'Web Design', image: 'https://images.unsplash.com/photo-1695634365024-b7513447e4f0', link: 'https://behance.net/b30072001', description: 'Développement WordPress WooCommerce pour sourcing hôtelier marocain.' },
-    { title: 'LAMARA', category: 'Web Design', image: 'https://images.unsplash.com/photo-1617451588899-7ac8679908c7', link: 'https://behance.net/b30072001', description: 'Création de site Shopify e-commerce avec retouche images.' },
-    { title: 'OMEGA SUSHI TANGER', category: 'Branding', image: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f', link: 'https://behance.net/b30072001', description: 'Identité visuelle complète et design de menu de restaurant.' },
+    { title: 'WEPROD MAROC', category: 'Social Media', image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1783910220/WhatsApp_Image_2025-05-04_at_00.39.05_3_betqh6.jpg', link: '/portfolio/weprod', description: 'Graphic design, branding and event communication for a Tangier creative agency.' },
+    { title: 'SMART SPARES HUB', category: 'Web Design', image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1783996886/Homepage_hkyuki.png', link: '/portfolio/smart-spares-hub', description: 'B2B platform for industrial spare parts, branding and web design from scratch.' },
+    { title: 'HOTEL FARAH TANGER', category: 'Branding', image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1783999178/WhatsApp_Image_2025-05-04_at_00.39.00_1_ifixgo.jpg', link: '/portfolio/hotel-farah', description: 'Luxury hospitality social media design, created via WeProd Maroc.' },
+    { title: 'ALLINFES', category: 'Web Design', image: 'https://images.unsplash.com/photo-1695634365024-b7513447e4f0', link: '/portfolio/allinfes', description: 'Développement WordPress WooCommerce pour sourcing hôtelier marocain.' },
+    { title: 'OMEGA SUSHI TANGER', category: 'Branding', image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1781053606/omegasushimorocco_mhomup.png', link: '/portfolio/omega-sushi', description: 'Identité visuelle complète et design de menu de restaurant.' },
+    { title: 'LAMARA', category: 'Web Design', image: 'https://images.unsplash.com/photo-1617451588899-7ac8679908c7', link: '/portfolio/lamara', description: 'Création de site Shopify e-commerce avec retouche images.' },
     { title: 'GLOBAL BITES', category: 'Branding', image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1', link: 'https://behance.net/b30072001', description: "Rebranding, redesign d'identité visuelle et assets marketing." },
     { title: 'MIEL CHAHDA', category: 'Branding', image: 'https://images.unsplash.com/photo-1587049352847-81a56d773c1c', link: 'https://behance.net/b30072001', description: "Création d'identité de marque avec direction visuelle moderne." },
     { title: 'FASTASK', category: 'Social Media', image: 'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0', link: 'https://behance.net/b30072001', description: 'Design visuel et création de contenu pour les réseaux sociaux.' },
     { title: 'TTOKLIN COMPANY', category: 'Branding', image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0', link: 'https://behance.net/b30072001', description: "Identité de marque complète et création d'assets digitaux." },
-    // Newly integrated projects (with placeholder details to maintain UI stability)
-    { title: 'AIDA FOOD', category: 'Branding', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836', link: 'https://behance.net/b30072001', description: 'Description à venir...' },
-    { title: 'ALUMINIUM BEADS', category: 'Web Design', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836', link: 'https://behance.net/b30072001', description: 'Description à venir...' },
-    { title: 'BELAUMAR', category: 'Branding', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836', link: 'https://behance.net/b30072001', description: 'Description à venir...' },
-    { title: 'BGHIT NAKL DABA', category: 'Social Media', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836', link: 'https://behance.net/b30072001', description: 'Description à venir...' },
-    { title: 'BLOOM', category: 'Branding', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836', link: 'https://behance.net/b30072001', description: 'Description à venir...' },
-    { title: 'LADEQUESA', category: 'Web Design', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836', link: 'https://behance.net/b30072001', description: 'Description à venir...' },
-    { title: 'ENCGT', category: 'Branding', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836', link: 'https://behance.net/b30072001', description: 'Description à venir...' },
-    { title: 'FLAMANT ROSE', category: 'Social Media', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836', link: 'https://behance.net/b30072001', description: 'Description à venir...' },
-    { title: 'FRENCH CHIC', category: 'Branding', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836', link: 'https://behance.net/b30072001', description: 'Description à venir...' },
-    { title: 'GESTION DE PUB', category: 'Social Media', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836', link: 'https://behance.net/b30072001', description: 'Description à venir...' },
-    { title: 'HOTEL FARAH TANGER', category: 'Branding', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836', link: 'https://behance.net/b30072001', description: 'Description à venir...' },
-    { title: 'INDUPULSE', category: 'Web Design', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836', link: 'https://behance.net/b30072001', description: 'Description à venir...' },
-    { title: 'LE COINT VERT', category: 'Branding', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836', link: 'https://behance.net/b30072001', description: 'Description à venir...' },
-    { title: 'MOSAIKA', category: 'Branding', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836', link: 'https://behance.net/b30072001', description: 'Description à venir...' },
-    { title: 'PALAIS BLANC', category: 'Web Design', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836', link: 'https://behance.net/b30072001', description: 'Description à venir...' },
-    { title: 'POPPY', category: 'Branding', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836', link: 'https://behance.net/b30072001', description: 'Description à venir...' },
-    { title: 'RIAD TIMRAD', category: 'Branding', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836', link: 'https://behance.net/b30072001', description: 'Description à venir...' },
-    { title: 'WEPROD', category: 'Social Media', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836', link: 'https://behance.net/b30072001', description: 'Description à venir...' },
-    { title: 'DESEATIF', category: 'Branding', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836', link: 'https://behance.net/b30072001', description: 'Description à venir...' },
-    { title: 'SMART SPARES HUB', category: 'Web Design', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836', link: 'https://behance.net/b30072001', description: 'Description à venir...' },
   ];
 
   // Reset the visible count when a new category is selected
