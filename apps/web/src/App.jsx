@@ -14,6 +14,7 @@ import OmegaSushiPage from './pages/OmegaSushiPage.jsx';
 import WeProdPage from './pages/WeProdPage.jsx';
 import GaleriePage from './pages/GaleriePage.jsx';
 import SmartSparesHubPage from './pages/SmartSparesHubPage.jsx';
+import HotelFarahPage from './pages/HotelFarahPage.jsx';
 
 const WhatsAppButton = () => (
   
@@ -61,6 +62,7 @@ function App() {
         <Route path="/portfolio/omega-sushi" element={<OmegaSushiPage />} />
         <Route path="/portfolio/weprod" element={<WeProdPage />} />
         <Route path="/portfolio/smart-spares-hub" element={<SmartSparesHubPage />} />
+        <Route path="/portfolio/hotel-farah" element={<HotelFarahPage />} />
         <Route path="/galerie" element={<GaleriePage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
