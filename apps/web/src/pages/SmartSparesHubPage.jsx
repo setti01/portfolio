@@ -193,6 +193,28 @@ const SmartSparesHubPage = () => {
                 </ul>
               </motion.div>
 
+              {/* BRAND IDENTITY */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <h2 className="text-3xl font-bold mb-6">Brand Identity</h2>
+                <p className="text-muted-foreground leading-relaxed mb-6 max-w-3xl">
+                  I designed the logo and visual identity from scratch — a clean, industrial
+                  aesthetic that matches the premium direction the client wanted, while
+                  staying simple enough to work at any size, from a favicon to a printed roll-up.
+                </p>
+                <div className="max-w-sm rounded-2xl overflow-hidden border border-border bg-card p-12 flex items-center justify-center">
+                  <img
+                    src="https://res.cloudinary.com/dvcaobhqt/image/upload/v1783996736/Generated_Image_July_02_2026_-_7_42PM_blpcoz.jpg"
+                    alt="Smart Spares Hub logo"
+                    className="max-w-full h-auto"
+                  />
+                </div>
+              </motion.div>
+
               {/* SCREENSHOTS GALLERY */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
