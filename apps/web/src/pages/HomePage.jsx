@@ -27,40 +27,22 @@ const HomePage = () => {
 
   const featuredProjects = [
     {
-      title: 'Miel Chahda',
-      category: 'Web Design & Development',
-      image: 'https://res.cloudinary.com/dfonsuqx6/image/upload/q_auto/f_auto/v1780690378/Screenshot_q0g6em.png',
-      link: '/portfolio/allinfes',
-    },
-    {
-      title: 'Riad Timrad',
-      category: 'Branding & Identité Visuelle',
-      image: 'https://res.cloudinary.com/dfonsuqx6/image/upload/q_auto/f_auto/v1780686756/White_Modern_Photo_Collage_Social_Media_Profile_UI_Instagram_Post_5_skfbgx.jpg',
-      link: '/portfolio',
-    },
-    {
       title: 'WeProd Maroc',
-      category: 'Social Media & Print Design',
-      image: 'https://res.cloudinary.com/dfonsuqx6/image/upload/q_auto/f_auto/v1780632256/WhatsApp_Image_2025-05-04_at_00.39.05_5_kb8ugp.jpg',
-      link: '/portfolio',
+      category: 'Graphic Design & Events',
+      image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1783910220/WhatsApp_Image_2025-05-04_at_00.39.05_3_betqh6.jpg',
+      link: '/portfolio/weprod',
     },
     {
-      title: 'Omega Sushi Tanger',
-      category: 'Branding & Identité',
-      image: 'https://res.cloudinary.com/dfonsuqx6/image/upload/q_auto/f_auto/v1780632236/White_Modern_Photo_Collage_Social_Media_Profile_UI_Instagram_Post_oqj37i.jpg',
-      link: '/portfolio/omega-sushi',
-    },
-    {
-      title: 'Flamant Rose',
-      category: 'Social Media & Contenu Digital',
-      image: 'https://res.cloudinary.com/dfonsuqx6/image/upload/q_auto/f_auto/v1780632235/White_Modern_Photo_Collage_Social_Media_Profile_UI_Instagram_Post_1_ahtqjn.jpg',
-      link: '/portfolio',
+      title: 'Smart Spares Hub',
+      category: 'Brand & Web Design',
+      image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1783996886/Homepage_hkyuki.png',
+      link: '/portfolio/smart-spares-hub',
     },
     {
       title: 'Hotel Farah Tanger',
-      category: 'Marketing Visuel & Print',
-      image: 'https://res.cloudinary.com/dfonsuqx6/image/upload/q_auto/f_auto/v1780632236/White_Modern_Photo_Collage_Social_Media_Profile_UI_Instagram_Post_2_hwun84.jpg',
-      link: '/portfolio',
+      category: 'Branding & Social Media',
+      image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1783999178/WhatsApp_Image_2025-05-04_at_00.39.00_1_ifixgo.jpg',
+      link: '/portfolio/hotel-farah',
     },
   ];
 
