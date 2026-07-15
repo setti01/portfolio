@@ -114,7 +114,7 @@ const ServicesPage = () => {
               {detailedServices.map((service, index) => (
                 <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
                   <motion.div 
-                    initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
+                    initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }}
                     className={index % 2 !== 0 ? 'lg:order-2' : ''}
                   >
                     <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary/10 text-primary font-medium mb-6">
@@ -142,7 +142,7 @@ const ServicesPage = () => {
                   </motion.div>
 
                   <motion.div 
-                    initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
+                    initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, margin: "-100px" }}
                     className={`rounded-3xl overflow-hidden aspect-[4/3] border border-border bg-secondary ${index % 2 !== 0 ? 'lg:order-1' : ''}`}
                   >
                     <img src={service.image} alt={service.title} className="w-full h-full object-cover mix-blend-luminosity hover:mix-blend-normal transition-all duration-500" />
@@ -153,7 +153,7 @@ const ServicesPage = () => {
 
             {/* 3. CTA */}
             <motion.div 
-              initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }}
               className="bg-primary/10 border border-primary/20 rounded-3xl p-12 text-center"
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Un projet spécifique en tête ?</h2>

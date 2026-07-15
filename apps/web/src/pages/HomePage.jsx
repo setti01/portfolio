@@ -139,7 +139,7 @@ const HomePage = () => {
                 { label: 'Projets complétés', value: 100, suffix: '+' },
                 { label: 'Secteurs d\'expertise', value: 8, suffix: '+' },
               ].map((stat, i) => (
-                <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
+                <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ delay: i * 0.1 }}>
                   <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
                     <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                   </div>
@@ -154,7 +154,7 @@ const HomePage = () => {
         <section className="py-24 bg-background">
           <div className="container-custom">
             <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-              <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+              <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }}>
                 <h2 className="text-3xl md:text-5xl font-bold mb-4">Projets récents</h2>
                 <p className="text-muted-foreground max-w-xl">Une sélection de mes réalisations qui aident les entreprises à communiquer efficacement.</p>
               </motion.div>
@@ -178,7 +178,7 @@ const HomePage = () => {
         {/* 3.5 SKILLS & TOOLS */}
         <section className="py-24 overflow-hidden bg-card/20 border-y border-border">
           <div className="container-custom mb-12">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} className="text-center">
               <h2 className="text-3xl md:text-5xl font-bold mb-4">Outils &amp; Technologies</h2>
               <p className="text-muted-foreground">Les outils que j&apos;utilise pour créer des expériences visuelles exceptionnelles.</p>
             </motion.div>
@@ -252,7 +252,7 @@ const HomePage = () => {
         {/* 3.6 CLIENTS */}
         <section className="py-20 bg-background">
           <div className="container-custom">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} className="text-center mb-12">
               <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest mb-4">Ils m&apos;ont fait confiance</p>
               <h2 className="text-3xl md:text-4xl font-bold">Clients &amp; Collaborations</h2>
             </motion.div>
@@ -272,7 +272,7 @@ const HomePage = () => {
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, margin: "-100px" }}
                   transition={{ delay: i * 0.05 }}
                   className="bg-card border border-border rounded-2xl p-6 flex items-center justify-center h-32 hover:border-primary/40 transition-all duration-300 group"
                 >
@@ -290,7 +290,7 @@ const HomePage = () => {
         {/* 4. TESTIMONIALS */}
         <section className="py-24 bg-secondary/30">
           <div className="container-custom">
-            <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }}>
               <h2 className="text-3xl md:text-5xl font-bold mb-4">Ce que disent mes clients</h2>
               <p className="text-muted-foreground max-w-2xl mx-auto">Retours d&apos;expérience dans les secteurs de l&apos;hôtellerie, restauration et beauté.</p>
             </motion.div>
@@ -299,7 +299,7 @@ const HomePage = () => {
               {testimonials.map((test, i) => (
                 <motion.div 
                   key={i}
-                  initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+                  initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ delay: i * 0.1 }}
                   className="bg-card p-8 rounded-3xl border border-border relative flex flex-col h-full"
                 >
                   <Quote className="absolute top-8 right-8 w-10 h-10 text-primary/10" />
@@ -319,7 +319,7 @@ const HomePage = () => {
           <div className="absolute inset-0 bg-primary/10" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/20 rounded-full blur-[120px] pointer-events-none" />
           <div className="container-custom relative z-10 text-center">
-            <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}>
+            <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, margin: "-100px" }}>
               <h2 className="text-4xl md:text-6xl font-bold mb-6">Prêt à attirer plus de clients ?</h2>
               <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
                 Créons ensemble des designs et sites web qui renforcent votre image de marque et convertissent.

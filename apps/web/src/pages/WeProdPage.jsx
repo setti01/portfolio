@@ -141,7 +141,7 @@ const WeProdPage = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6 }}
                 >
                   <h2 className="text-3xl font-bold mb-6">About WeProd</h2>
@@ -194,7 +194,7 @@ const WeProdPage = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
@@ -222,7 +222,7 @@ const WeProdPage = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
@@ -241,7 +241,7 @@ const WeProdPage = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
               >
                 <h2 className="text-3xl font-bold mb-6">Vehicle Branding</h2>
@@ -282,7 +282,7 @@ const WeProdPage = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
               >
                 <h2 className="text-3xl font-bold mb-6">Event Materials Catalogue</h2>
@@ -299,7 +299,7 @@ const WeProdPage = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
               >
                 <h2 className="text-3xl font-bold mb-6">More Campaigns at WeProd</h2>
@@ -339,7 +339,7 @@ const WeProdPage = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
@@ -365,7 +365,7 @@ const WeProdPage = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
@@ -392,7 +392,7 @@ const WeProdPage = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
@@ -410,7 +410,7 @@ const WeProdPage = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-2xl font-bold mb-8">Découvrez aussi</h2>

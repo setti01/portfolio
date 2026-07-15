@@ -115,7 +115,7 @@ const OmegaSushiPage = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24"
             >
               <div className="bg-card border border-border rounded-3xl p-8">
@@ -136,7 +136,7 @@ const OmegaSushiPage = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-24"
             >
               {metrics.map((m, i) => (
@@ -151,7 +151,7 @@ const OmegaSushiPage = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               className="mb-24"
             >
               <p className="text-xs font-mono text-primary uppercase tracking-widest mb-8">Galerie du projet</p>
@@ -161,7 +161,7 @@ const OmegaSushiPage = () => {
                     key={i}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, margin: "-100px" }}
                     transition={{ delay: i * 0.1 }}
                     className="rounded-2xl overflow-hidden border border-border bg-secondary aspect-square"
                   >
@@ -175,7 +175,7 @@ const OmegaSushiPage = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               className="mb-24"
             >
               <p className="text-xs font-mono text-primary uppercase tracking-widest mb-8">Processus</p>
@@ -185,7 +185,7 @@ const OmegaSushiPage = () => {
                     key={i}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true, margin: "-100px" }}
                     transition={{ delay: i * 0.1 }}
                     className="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-6 bg-card border border-border rounded-3xl p-8 items-start"
                   >
@@ -203,7 +203,7 @@ const OmegaSushiPage = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-24"
             >
               {[
@@ -223,7 +223,7 @@ const OmegaSushiPage = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               className="bg-primary/5 border border-primary/20 rounded-3xl p-12 text-center mb-24"
             >
               <h2 className="text-3xl font-bold mb-4">Un projet similaire en tête ?</h2>

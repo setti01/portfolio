@@ -108,7 +108,7 @@ const HotelFarahPage = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6 }}
                 >
                   <h2 className="text-3xl font-bold mb-6">About the Project</h2>
@@ -158,7 +158,7 @@ const HotelFarahPage = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
@@ -177,7 +177,7 @@ const HotelFarahPage = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
               >
                 <h2 className="text-3xl font-bold mb-6">Selected Work</h2>
@@ -193,7 +193,7 @@ const HotelFarahPage = () => {
                       key={i}
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
+                      viewport={{ once: true, margin: "-100px" }}
                       transition={{ delay: i * 0.1 }}
                       className="rounded-2xl overflow-hidden border border-border bg-card"
                     >
@@ -207,7 +207,7 @@ const HotelFarahPage = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
@@ -227,7 +227,7 @@ const HotelFarahPage = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
@@ -245,7 +245,7 @@ const HotelFarahPage = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-2xl font-bold mb-8">Découvrez aussi</h2>

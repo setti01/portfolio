@@ -127,7 +127,7 @@ const AboutPage = () => {
 
             {/* 2 & 3. TIMELINES (Experience & Education) */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-32">
-              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }}>
                 <div className="flex items-center gap-3 mb-10">
                   <Briefcase className="w-8 h-8 text-primary" />
                   <h2 className="text-3xl font-bold">Expérience</h2>
@@ -160,7 +160,7 @@ const AboutPage = () => {
                 </div>
               </motion.div>
 
-              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+              <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }}>
                 <div className="flex items-center gap-3 mb-10">
                   <GraduationCap className="w-8 h-8 text-primary" />
                   <h2 className="text-3xl font-bold">Formation</h2>
@@ -203,7 +203,7 @@ const AboutPage = () => {
             </div>
 
             {/* 4. TECHNICAL SKILLS GRID */}
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-32">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} className="mb-32">
               <h2 className="text-3xl font-bold mb-12 text-center">Compétences Techniques</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {skillCategories.map((category, i) => (
@@ -221,7 +221,7 @@ const AboutPage = () => {
 
           
            {/* CV DOWNLOAD */}
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-16">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} className="mb-16">
               <h2 className="text-3xl font-bold mb-8 text-center">Télécharger mon CV</h2>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
@@ -257,7 +257,7 @@ const AboutPage = () => {
             </motion.div>
 
             {/* 5. INTERESTS */}
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} className="text-center">
               <h2 className="text-3xl font-bold mb-8">Centres d'intérêt</h2>
               <div className="flex flex-wrap justify-center gap-4">
                 {interests.map((interest, i) => (

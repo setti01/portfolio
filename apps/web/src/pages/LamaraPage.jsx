@@ -96,7 +96,7 @@ const LamaraPage = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6 }}
                 >
                   <h2 className="text-2xl font-bold mb-4">Le contexte</h2>
@@ -108,7 +108,7 @@ const LamaraPage = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6 }}
                 >
                   <h2 className="text-2xl font-bold mb-4">L'approche</h2>
@@ -146,7 +146,7 @@ const LamaraPage = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6 }}
                   className="rounded-2xl overflow-hidden"
                 >
@@ -160,7 +160,7 @@ const LamaraPage = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6 }}
                 >
                   <h2 className="text-2xl font-bold mb-4">Impact</h2>
@@ -208,7 +208,7 @@ const LamaraPage = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-2xl font-bold mb-8">Autres projets</h2>

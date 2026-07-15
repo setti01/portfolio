@@ -108,7 +108,7 @@ const SmartSparesHubPage = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6 }}
                 >
                   <h2 className="text-3xl font-bold mb-6">About the Project</h2>
@@ -162,7 +162,7 @@ const SmartSparesHubPage = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
@@ -178,7 +178,7 @@ const SmartSparesHubPage = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
@@ -197,7 +197,7 @@ const SmartSparesHubPage = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
               >
                 <h2 className="text-3xl font-bold mb-6">Brand Identity</h2>
@@ -219,7 +219,7 @@ const SmartSparesHubPage = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
               >
                 <h2 className="text-3xl font-bold mb-6">The Website</h2>
@@ -251,7 +251,7 @@ const SmartSparesHubPage = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
@@ -271,7 +271,7 @@ const SmartSparesHubPage = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
@@ -290,7 +290,7 @@ const SmartSparesHubPage = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-2xl font-bold mb-8">Découvrez aussi</h2>
