@@ -33,12 +33,12 @@ const OmegaSushiPage = () => {
   ];
 
   const galleryImages = [
-    { src: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1781053606/omegasushimorocco_mhomup.png', alt: 'Logo Omega Sushi Tanger', caption: 'Logo — Samurai bleu marine, cercle orange' },
-    { src: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1781055113/1_copie_uytlqw.jpg', alt: 'Instagram post Omega Sushi', caption: 'Contenu Instagram — Retouche Gemini AI' },
-    { src: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1781055670/5_copie_k2x1bb.jpg', alt: 'Instagram post Omega Sushi', caption: 'Contenu Instagram — Photo food professionnelle' },
-    { src: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1781055780/p4_s1_hcjspi.jpg', alt: 'Menu Omega Sushi page 1', caption: 'Menu Digital — Page entrées' },
-    { src: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1781055778/p4_s6_y3zqbp.jpg', alt: 'Menu Omega Sushi page 2', caption: 'Menu Digital — Page maki' },
-    { src: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1781055767/p4_s2_k9ubsi.jpg', alt: 'Menu Omega Sushi page 3', caption: 'Menu Digital — Page spécialités' },
+    { src: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781053606/omegasushimorocco_mhomup.png', alt: 'Logo Omega Sushi Tanger', caption: 'Logo — Samurai bleu marine, cercle orange' },
+    { src: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781055113/1_copie_uytlqw.jpg', alt: 'Instagram post Omega Sushi', caption: 'Contenu Instagram — Retouche Gemini AI' },
+    { src: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781055670/5_copie_k2x1bb.jpg', alt: 'Instagram post Omega Sushi', caption: 'Contenu Instagram — Photo food professionnelle' },
+    { src: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781055780/p4_s1_hcjspi.jpg', alt: 'Menu Omega Sushi page 1', caption: 'Menu Digital — Page entrées' },
+    { src: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781055778/p4_s6_y3zqbp.jpg', alt: 'Menu Omega Sushi page 2', caption: 'Menu Digital — Page maki' },
+    { src: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781055767/p4_s2_k9ubsi.jpg', alt: 'Menu Omega Sushi page 3', caption: 'Menu Digital — Page spécialités' },
   ];
 
   return (
@@ -105,7 +105,7 @@ const OmegaSushiPage = () => {
               className="rounded-3xl overflow-hidden border border-border mb-24 bg-secondary flex items-center justify-center p-16"
             >
               <img
-                src="https://res.cloudinary.com/dvcaobhqt/image/upload/v1781053606/omegasushimorocco_mhomup.png"
+                src="https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781053606/omegasushimorocco_mhomup.png"
                 alt="Logo Omega Sushi Tanger"
                 className="max-h-64 object-contain"
               />

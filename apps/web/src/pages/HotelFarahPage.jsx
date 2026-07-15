@@ -22,11 +22,11 @@ const HotelFarahPage = () => {
   ];
 
   const galleryImages = [
-    { src: "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783999181/WhatsApp_Image_2025-05-04_at_00.38.41_duj8lv.jpg", alt: "Hotel Farah Karaoke Night event poster" },
-    { src: "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783999151/WhatsApp_Image_2025-05-04_at_00.38.59_xbscj5.jpg", alt: "Hotel Farah national holiday post" },
-    { src: "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783999167/WhatsApp_Image_2025-05-04_at_00.38.59_1_ppov6o.jpg", alt: "El Chiringuito special offer, landscape format" },
-    { src: "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783999189/WhatsApp_Image_2025-05-04_at_00.39.00_azyoav.jpg", alt: "El Chiringuito special offer, portrait format" },
-    { src: "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783999178/WhatsApp_Image_2025-05-04_at_00.39.00_1_ifixgo.jpg", alt: "Hotel Farah Pool Day Pass promotion" },
+    { src: "https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783999181/WhatsApp_Image_2025-05-04_at_00.38.41_duj8lv.jpg", alt: "Hotel Farah Karaoke Night event poster" },
+    { src: "https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783999151/WhatsApp_Image_2025-05-04_at_00.38.59_xbscj5.jpg", alt: "Hotel Farah national holiday post" },
+    { src: "https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783999167/WhatsApp_Image_2025-05-04_at_00.38.59_1_ppov6o.jpg", alt: "El Chiringuito special offer, landscape format" },
+    { src: "https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783999189/WhatsApp_Image_2025-05-04_at_00.39.00_azyoav.jpg", alt: "El Chiringuito special offer, portrait format" },
+    { src: "https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783999178/WhatsApp_Image_2025-05-04_at_00.39.00_1_ifixgo.jpg", alt: "Hotel Farah Pool Day Pass promotion" },
   ];
 
   return (
@@ -96,7 +96,7 @@ const HotelFarahPage = () => {
               className="mb-16 rounded-3xl overflow-hidden"
             >
               <img
-                src="https://res.cloudinary.com/dvcaobhqt/image/upload/v1783999178/WhatsApp_Image_2025-05-04_at_00.39.00_1_ifixgo.jpg"
+                src="https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783999178/WhatsApp_Image_2025-05-04_at_00.39.00_1_ifixgo.jpg"
                 alt="Hotel Farah Pool Day Pass promotion"
                 className="w-full h-auto"
               />

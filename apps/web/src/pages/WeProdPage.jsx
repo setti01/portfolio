@@ -42,23 +42,23 @@ const WeProdPage = () => {
   ];
 
   const catalogueImages = [
-    "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879675/photo_5_2026-07-10_20-02-35_mlaopi.jpg",
-    "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879674/photo_6_2026-07-10_20-02-35_ykairl.jpg",
-    "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879671/photo_7_2026-07-10_20-02-35_g2ywx4.jpg",
-    "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879674/photo_8_2026-07-10_20-02-35_tqp6ng.jpg",
-    "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879677/photo_9_2026-07-10_20-02-35_zbd0ai.jpg",
-    "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879683/photo_10_2026-07-10_20-02-35_z0f35a.jpg",
-    "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879683/photo_11_2026-07-10_20-02-35_omrcac.jpg",
-    "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879684/photo_12_2026-07-10_20-02-35_bfhl46.jpg",
-    "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879671/photo_13_2026-07-10_20-02-35_vokvjp.jpg",
-    "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879667/photo_14_2026-07-10_20-02-35_e1ankb.jpg",
-    "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879683/photo_15_2026-07-10_20-02-35_tucuix.jpg",
-    "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879668/photo_16_2026-07-10_20-02-35_fihrej.jpg",
-    "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879664/photo_17_2026-07-10_20-02-35_uajlio.jpg",
-    "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879658/photo_18_2026-07-10_20-02-35_mudjoz.jpg",
-    "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879660/photo_19_2026-07-10_20-02-35_vu6qtc.jpg",
-    "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879662/photo_20_2026-07-10_20-02-35_jvv4uf.jpg",
-    "https://res.cloudinary.com/dvcaobhqt/image/upload/v1783879658/photo_21_2026-07-10_20-02-35_tppm9y.jpg",
+    "https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783879675/photo_5_2026-07-10_20-02-35_mlaopi.jpg",
+    "https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783879674/photo_6_2026-07-10_20-02-35_ykairl.jpg",
+    "https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783879671/photo_7_2026-07-10_20-02-35_g2ywx4.jpg",
+    "https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783879674/photo_8_2026-07-10_20-02-35_tqp6ng.jpg",
+    "https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783879677/photo_9_2026-07-10_20-02-35_zbd0ai.jpg",
+    "https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783879683/photo_10_2026-07-10_20-02-35_z0f35a.jpg",
+    "https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783879683/photo_11_2026-07-10_20-02-35_omrcac.jpg",
+    "https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783879684/photo_12_2026-07-10_20-02-35_bfhl46.jpg",
+    "https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783879671/photo_13_2026-07-10_20-02-35_vokvjp.jpg",
+    "https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783879667/photo_14_2026-07-10_20-02-35_e1ankb.jpg",
+    "https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783879683/photo_15_2026-07-10_20-02-35_tucuix.jpg",
+    "https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783879668/photo_16_2026-07-10_20-02-35_fihrej.jpg",
+    "https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783879664/photo_17_2026-07-10_20-02-35_uajlio.jpg",
+    "https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783879658/photo_18_2026-07-10_20-02-35_mudjoz.jpg",
+    "https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783879660/photo_19_2026-07-10_20-02-35_vu6qtc.jpg",
+    "https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783879662/photo_20_2026-07-10_20-02-35_jvv4uf.jpg",
+    "https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783879658/photo_21_2026-07-10_20-02-35_tppm9y.jpg",
   ];
 
   return (
@@ -129,7 +129,7 @@ const WeProdPage = () => {
               className="mb-16 rounded-3xl overflow-hidden"
             >
               <img
-                src="https://res.cloudinary.com/dvcaobhqt/image/upload/v1783910220/WhatsApp_Image_2025-05-04_at_00.39.05_3_betqh6.jpg"
+                src="https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783910220/WhatsApp_Image_2025-05-04_at_00.39.05_3_betqh6.jpg"
                 alt="WeProd event stage production with branded lighting"
                 className="w-full h-auto"
               />
@@ -256,21 +256,21 @@ const WeProdPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="md:col-span-2 rounded-2xl overflow-hidden">
                     <img
-                      src="https://res.cloudinary.com/dvcaobhqt/image/upload/v1783909807/ChatGPT_Image_13_juil._2026_04_27_21_fvb9ji.png"
+                      src="https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783909807/ChatGPT_Image_13_juil._2026_04_27_21_fvb9ji.png"
                       alt="WeProd company vehicle branding - side view"
                       className="w-full h-auto"
                     />
                   </div>
                   <div className="rounded-2xl overflow-hidden">
                     <img
-                      src="https://res.cloudinary.com/dvcaobhqt/image/upload/v1783909808/ChatGPT_Image_13_juil._2026_04_19_40_pyppwn.png"
+                      src="https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783909808/ChatGPT_Image_13_juil._2026_04_19_40_pyppwn.png"
                       alt="WeProd company vehicle branding - front view"
                       className="w-full h-auto"
                     />
                   </div>
                   <div className="rounded-2xl overflow-hidden">
                     <img
-                      src="https://res.cloudinary.com/dvcaobhqt/image/upload/v1783909807/ChatGPT_Image_13_juil._2026_04_29_42_b2o1g7.png"
+                      src="https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783909807/ChatGPT_Image_13_juil._2026_04_29_42_b2o1g7.png"
                       alt="WeProd company vehicle branding - rear view"
                       className="w-full h-auto"
                     />
@@ -313,21 +313,21 @@ const WeProdPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="rounded-2xl overflow-hidden">
                     <img
-                      src="https://res.cloudinary.com/dvcaobhqt/image/upload/v1783910220/WhatsApp_Image_2025-05-04_at_00.39.05_2_pmszto.jpg"
+                      src="https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783910220/WhatsApp_Image_2025-05-04_at_00.39.05_2_pmszto.jpg"
                       alt="WeProd national football team sponsorship campaign"
                       className="w-full h-full object-cover aspect-[4/5]"
                     />
                   </div>
                   <div className="rounded-2xl overflow-hidden">
                     <img
-                      src="https://res.cloudinary.com/dvcaobhqt/image/upload/v1783910220/WhatsApp_Image_2025-05-04_at_00.39.05_4_i3s2tl.jpg"
+                      src="https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783910220/WhatsApp_Image_2025-05-04_at_00.39.05_4_i3s2tl.jpg"
                       alt="WeProd Auto Expo promotional visual"
                       className="w-full h-full object-cover aspect-[4/5]"
                     />
                   </div>
                   <div className="rounded-2xl overflow-hidden">
                     <img
-                      src="https://res.cloudinary.com/dvcaobhqt/image/upload/v1783910220/WhatsApp_Image_2025-05-04_at_00.39.05_5_w2bzmn.jpg"
+                      src="https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783910220/WhatsApp_Image_2025-05-04_at_00.39.05_5_w2bzmn.jpg"
                       alt="WeProd Instagram content mockup"
                       className="w-full h-full object-cover aspect-[4/5]"
                     />

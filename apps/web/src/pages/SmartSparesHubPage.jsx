@@ -96,7 +96,7 @@ const SmartSparesHubPage = () => {
             >
               <BrowserFrame
                 url="smartspareshub.com"
-                image="https://res.cloudinary.com/dvcaobhqt/image/upload/v1783996886/Homepage_hkyuki.png"
+                image="https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783996886/Homepage_hkyuki.png"
                 alt="Smart Spares Hub homepage"
                 height="600px"
               />
@@ -208,7 +208,7 @@ const SmartSparesHubPage = () => {
                 </p>
                 <div className="max-w-sm rounded-2xl overflow-hidden border border-border bg-card p-12 flex items-center justify-center">
                   <img
-                    src="https://res.cloudinary.com/dvcaobhqt/image/upload/v1783996736/Generated_Image_July_02_2026_-_7_42PM_blpcoz.jpg"
+                    src="https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783996736/Generated_Image_July_02_2026_-_7_42PM_blpcoz.jpg"
                     alt="Smart Spares Hub logo"
                     className="max-w-full h-auto"
                   />
@@ -226,13 +226,13 @@ const SmartSparesHubPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <BrowserFrame
                     url="smartspareshub.com/shop"
-                    image="https://res.cloudinary.com/dvcaobhqt/image/upload/v1783996711/Product_listing_page_oh3yxw.png"
+                    image="https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783996711/Product_listing_page_oh3yxw.png"
                     alt="Smart Spares Hub product listing page"
                     height="400px"
                   />
                   <BrowserFrame
                     url="smartspareshub.com/product"
-                    image="https://res.cloudinary.com/dvcaobhqt/image/upload/v1783996716/A_single_product_detail_pag_sin1lx.png"
+                    image="https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783996716/A_single_product_detail_pag_sin1lx.png"
                     alt="Smart Spares Hub product detail page"
                     height="400px"
                   />
@@ -240,7 +240,7 @@ const SmartSparesHubPage = () => {
                 <div className="max-w-sm">
                   <BrowserFrame
                     url="smartspareshub.com (mobile)"
-                    image="https://res.cloudinary.com/dvcaobhqt/image/upload/v1783996850/Mobile_homepag_lwdbxl.png"
+                    image="https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783996850/Mobile_homepag_lwdbxl.png"
                     alt="Smart Spares Hub mobile homepage"
                     height="500px"
                   />

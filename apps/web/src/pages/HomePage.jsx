@@ -29,19 +29,19 @@ const HomePage = () => {
     {
       title: 'WeProd Maroc',
       category: 'Graphic Design & Events',
-      image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1783910220/WhatsApp_Image_2025-05-04_at_00.39.05_3_betqh6.jpg',
+      image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783910220/WhatsApp_Image_2025-05-04_at_00.39.05_3_betqh6.jpg',
       link: '/portfolio/weprod',
     },
     {
       title: 'Smart Spares Hub',
       category: 'Brand & Web Design',
-      image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1783996886/Homepage_hkyuki.png',
+      image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783996886/Homepage_hkyuki.png',
       link: '/portfolio/smart-spares-hub',
     },
     {
       title: 'Hotel Farah Tanger',
       category: 'Branding & Social Media',
-      image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1783999178/WhatsApp_Image_2025-05-04_at_00.39.00_1_ifixgo.jpg',
+      image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783999178/WhatsApp_Image_2025-05-04_at_00.39.00_1_ifixgo.jpg',
       link: '/portfolio/hotel-farah',
     },
   ];
@@ -259,14 +259,14 @@ const HomePage = () => {
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { name: 'Riad Timrad', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1781026098/RIAD-TIMRAD-final-best.pdf_fca1hv.png' },
-                { name: 'Hotel Farah Tanger', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1781025970/8_ibwj1z.png' },
-                { name: 'Flamant Rose', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1781025951/6_lgwkig.png' },
-                { name: 'Digi Topup', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1781025873/IMG_5439.JPG_e2fv4s.jpg' },
-                { name: 'Omega Sushi', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1781026024/omegasushimorocco_1_zwwox9.png' },
-                { name: 'Bouabdallaoui Events', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1781026013/Asset_3_cavy5a.png' },
-                { name: 'Indupuls', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1781025982/Add_a_heading_sromrh.png' },
-                { name: 'Bghit Nakl Daba', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1781025914/WhatsApp_Image_2025-05-04_at_00.39.03_1_fvdfch.jpg' },
+                { name: 'Riad Timrad', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781026098/RIAD-TIMRAD-final-best.pdf_fca1hv.png' },
+                { name: 'Hotel Farah Tanger', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781025970/8_ibwj1z.png' },
+                { name: 'Flamant Rose', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781025951/6_lgwkig.png' },
+                { name: 'Digi Topup', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781025873/IMG_5439.JPG_e2fv4s.jpg' },
+                { name: 'Omega Sushi', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781026024/omegasushimorocco_1_zwwox9.png' },
+                { name: 'Bouabdallaoui Events', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781026013/Asset_3_cavy5a.png' },
+                { name: 'Indupuls', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781025982/Add_a_heading_sromrh.png' },
+                { name: 'Bghit Nakl Daba', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781025914/WhatsApp_Image_2025-05-04_at_00.39.03_1_fvdfch.jpg' },
               ].map((client, i) => (
                 <motion.div
                   key={i}
