@@ -14,7 +14,7 @@ const ServicesPage = () => {
       title: 'Brand Identity & Design Graphique',
       desc: 'De l\'idée au système visuel complet — je crée des identités de marque cohérentes qui se démarquent et restent mémorables.',
       icon: PenTool,
-      image: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f',
+      image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781053606/omegasushimorocco_mhomup.png',
       deliverables: [
         'Logo design & identité visuelle complète',
         'Charte graphique (couleurs, typographie, règles d\'usage)',
@@ -30,7 +30,7 @@ const ServicesPage = () => {
       title: 'Web Design & Développement',
       desc: 'Des sites web rapides, modernes et orientés conversion — du site vitrine à l\'e-commerce complet.',
       icon: Globe,
-      image: 'https://images.unsplash.com/photo-1695634365024-b7513447e4f0',
+      image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783996886/Homepage_hkyuki.png',
       deliverables: [
         'Sites WordPress + Elementor sur-mesure',
         'E-commerce WooCommerce & Shopify',
@@ -46,7 +46,7 @@ const ServicesPage = () => {
       title: 'Social Media & Contenu Digital',
       desc: 'Des visuels qui captent l\'attention, renforcent votre image de marque et engagent votre audience.',
       icon: ImageIcon,
-      image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113',
+      image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783999178/WhatsApp_Image_2025-05-04_at_00.39.00_1_ifixgo.jpg',
       deliverables: [
         'Création de contenu Instagram & Facebook',
         'Visuels de campagnes publicitaires',
@@ -61,7 +61,7 @@ const ServicesPage = () => {
       title: 'Photographie & Production Visuelle',
       desc: 'Valorisez vos espaces et votre offre avec des images professionnelles adaptées au web et aux réseaux sociaux.',
       icon: Sparkles,
-      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4',
+      image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781055113/1_copie_uytlqw.jpg',
       deliverables: [
         'Photographie de lieux (hôtels, restaurants, commerces)',
         'Retouche et post-production complète',
@@ -74,7 +74,7 @@ const ServicesPage = () => {
       title: 'SEO & Stratégie Digitale',
       desc: 'Rendez votre site visible sur Google et construisez une présence digitale cohérente qui attire les bons clients.',
       icon: ArrowRight,
-      image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a',
+      image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783996711/Product_listing_page_oh3yxw.png',
       deliverables: [
         'Audit SEO & analyse de positionnement',
         'Optimisation on-page (titres, metas, structure)',
