@@ -226,7 +226,7 @@ const AboutPage = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
   <a
-    href="https://res.cloudinary.com/dvcaobhqt/raw/upload/Bilal_ESSATTE_CV_English_ATS_Hybrid_fc3hqz.pdf"
+    href="https://res.cloudinary.com/dvcaobhqt/raw/upload/v1784235856/Bilal_ESSATTE_CV_English_njksbz.docx"
     target="_blank"
     rel="noopener noreferrer"
     className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-full font-medium hover:opacity-90 transition-all duration-300 hover:scale-105"
@@ -240,7 +240,7 @@ const AboutPage = () => {
   </a>
 
   <a
-    href="https://res.cloudinary.com/dvcaobhqt/raw/upload/Bilal_ESSATTE_CV_Francais_ATS_Hybrid_pnoqfb.pdf"
+    href="https://res.cloudinary.com/dvcaobhqt/raw/upload/v1784235856/Bilal_ESSATTE_CV_Francais_ut3qvg.docx"
     target="_blank"
     rel="noopener noreferrer"
     className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-border rounded-full font-medium hover:border-primary hover:text-primary transition-all duration-300 hover:scale-105"
