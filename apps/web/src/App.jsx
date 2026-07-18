@@ -16,6 +16,7 @@ import WeProdPage from './pages/WeProdPage.jsx';
 import GaleriePage from './pages/GaleriePage.jsx';
 import SmartSparesHubPage from './pages/SmartSparesHubPage.jsx';
 import HotelFarahPage from './pages/HotelFarahPage.jsx';
+import NotFoundPage from './pages/NotFoundPage.jsx';
 
 
 const WhatsAppButton = () => (
