@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -11,18 +12,20 @@ import AnimatedCounter from '@/components/AnimatedCounter.jsx';
 import RotatingText from '@/components/RotatingText.jsx';
 
 const HomePage = () => {
+  const { t } = useTranslation();
+
   const heroPhrases = [
-    "Je résous vos problèmes de design, pas seulement vos briefs",
-    "Un designer qui s'adapte à votre secteur, pas l'inverse",
-    "Identité visuelle. Web design. Une seule personne, tous les outils.",
-    "Simple, clair, efficace — le design ne doit jamais compliquer",
-    "Chaque projet est différent, ma méthode s'adapte à chacun"
+    t('home.heroTagline1'),
+    t('home.heroTagline2'),
+    t('home.heroTagline3'),
+    t('home.heroTagline4'),
+    t('home.heroTagline5'),
   ];
   
   const heroWords = [
-    "s'adapte",
-    "résout",
-    "évolue"
+    t('home.heroWord1'),
+    t('home.heroWord2'),
+    t('home.heroWord3'),
   ];
 
   const featuredProjects = [
@@ -67,7 +70,7 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>Bilal ESSATTE - Designer Graphique &amp; Web | Portfolio</title>
+        <title>Bilal ESSATTE - Designer Graphique & Web | Portfolio</title>
         <meta name="description" content="Portfolio de Bilal ESSATTE, designer graphique et web spécialisé dans la création d'écosystèmes visuels complets." />
       </Helmet>
 
@@ -98,7 +101,7 @@ const HomePage = () => {
               </motion.div>
 
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight tracking-tight text-balance">
-                Un design qui{" "}
+                {t('home.heroHeadingPrefix')}{" "}
                 <span className="text-primary inline-block min-w-[320px]">
                   <RotatingText
                     phrases={heroWords}
@@ -108,20 +111,20 @@ const HomePage = () => {
               </h1>
 
               <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed max-w-3xl mx-auto">
-                Je ne me contente pas de designer. Je résous des problèmes — quel que soit le secteur, je m&apos;adapte.
+                {t('home.heroSubtitle')}
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button asChild size="lg" className="gap-2 rounded-full px-8 h-14 text-base hover:scale-105 transition-transform">
                   <Link to="/portfolio">
-                    Voir mes projets
+                    {t('home.viewProjects')}
                     <ArrowRight className="w-5 h-5" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="rounded-full px-8 h-14 text-base gap-2">
                   <a href="https://behance.net/b30072001" target="_blank" rel="noopener noreferrer">
                     <Layout className="w-5 h-5" />
-                    Profil Behance
+                    {t('home.behanceProfile')}
                   </a>
                 </Button>
               </div>
@@ -134,10 +137,10 @@ const HomePage = () => {
           <div className="container-custom">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
               {[
-                { label: 'Années d\'expérience', value: 7, suffix: '+' },
-                { label: 'Clients satisfaits', value: 50, suffix: '+' },
-                { label: 'Projets complétés', value: 100, suffix: '+' },
-                { label: 'Secteurs d\'expertise', value: 8, suffix: '+' },
+                { label: t('home.statsYears'), value: 7, suffix: '+' },
+                { label: t('home.statsClients'), value: 50, suffix: '+' },
+                { label: t('home.statsProjects'), value: 100, suffix: '+' },
+                { label: t('home.statsSectors'), value: 8, suffix: '+' },
               ].map((stat, i) => (
                 <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ delay: i * 0.1 }}>
                   <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
@@ -155,13 +158,13 @@ const HomePage = () => {
           <div className="container-custom">
             <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
               <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }}>
-                <h2 className="text-3xl md:text-5xl font-bold mb-4">Projets récents</h2>
-                <p className="text-muted-foreground max-w-xl">Une sélection de mes réalisations qui aident les entreprises à communiquer efficacement.</p>
+                <h2 className="text-3xl md:text-5xl font-bold mb-4">{t('home.featuredTitle')}</h2>
+                <p className="text-muted-foreground max-w-xl">{t('home.featuredDesc')}</p>
               </motion.div>
               <div className="flex gap-4">
                 <Button asChild variant="ghost" className="gap-2 group">
                   <Link to="/portfolio">
-                    Tous les projets <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    {t('home.featuredAll')} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
               </div>
@@ -179,8 +182,8 @@ const HomePage = () => {
         <section className="py-24 overflow-hidden bg-card/20 border-y border-border">
           <div className="container-custom mb-12">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} className="text-center">
-              <h2 className="text-3xl md:text-5xl font-bold mb-4">Outils &amp; Technologies</h2>
-              <p className="text-muted-foreground">Les outils que j&apos;utilise pour créer des expériences visuelles exceptionnelles.</p>
+              <h2 className="text-3xl md:text-5xl font-bold mb-4">{t('home.skillsTitle')}</h2>
+              <p className="text-muted-foreground">{t('home.skillsDesc')}</p>
             </motion.div>
           </div>
 
@@ -253,8 +256,8 @@ const HomePage = () => {
         <section className="py-20 bg-background">
           <div className="container-custom">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} className="text-center mb-12">
-              <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest mb-4">Ils m&apos;ont fait confiance</p>
-              <h2 className="text-3xl md:text-4xl font-bold">Clients &amp; Collaborations</h2>
+              <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest mb-4">{t('home.clientsTag')}</p>
+              <h2 className="text-3xl md:text-4xl font-bold">{t('home.clientsTitle')}</h2>
             </motion.div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -291,8 +294,8 @@ const HomePage = () => {
         <section className="py-24 bg-secondary/30">
           <div className="container-custom">
             <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }}>
-              <h2 className="text-3xl md:text-5xl font-bold mb-4">Ce que disent mes clients</h2>
-              <p className="text-muted-foreground max-w-2xl mx-auto">Retours d&apos;expérience dans les secteurs de l&apos;hôtellerie, restauration et beauté.</p>
+              <h2 className="text-3xl md:text-5xl font-bold mb-4">{t('home.testimonialsTitle')}</h2>
+              <p className="text-muted-foreground max-w-2xl mx-auto">{t('home.testimonialsDesc')}</p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -320,12 +323,12 @@ const HomePage = () => {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/20 rounded-full blur-[120px] pointer-events-none" />
           <div className="container-custom relative z-10 text-center">
             <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true, margin: "-100px" }}>
-              <h2 className="text-4xl md:text-6xl font-bold mb-6">Prêt à attirer plus de clients ?</h2>
+              <h2 className="text-4xl md:text-6xl font-bold mb-6">{t('home.ctaTitle')}</h2>
               <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-                Créons ensemble des designs et sites web qui renforcent votre image de marque et convertissent.
+                {t('home.ctaDesc')}
               </p>
               <Button asChild size="lg" className="rounded-full px-10 h-14 text-lg">
-                <Link to="/contact">Discutons de votre projet</Link>
+                <Link to="/contact">{t('home.ctaButton')}</Link>
               </Button>
             </motion.div>
           </div>

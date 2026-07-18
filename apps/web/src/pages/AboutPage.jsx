@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { MapPin, Mail, Phone, Calendar, Globe, GraduationCap, Briefcase, Award } from 'lucide-react';
@@ -6,6 +7,8 @@ import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 
 const AboutPage = () => {
+  const { t } = useTranslation();
+
   const experiences = [
     { 
       date: '2025 - Présent', 
@@ -43,13 +46,19 @@ const AboutPage = () => {
     { title: 'Office Tools', skills: ['Word', 'Excel', 'PowerPoint'] },
   ];
 
-  const interests = ['Photographie', 'Voyages', 'Football', 'Échecs', 'Gaming'];
+  const interests = [
+    t('about.interest_photo'),
+    t('about.interest_travel'),
+    t('about.interest_football'),
+    t('about.interest_chess'),
+    t('about.interest_gaming')
+  ];
 
   return (
     <>
       <Helmet>
-        <title>À propos - Bilal ESSATTE | Profil et Compétences</title>
-        <meta name="description" content="Découvrez le parcours de Bilal ESSATTE : Expérience, éducation, compétences techniques et mission professionnelle." />
+        <title>{t('about.title')}</title>
+        <meta name="description" content={t('about.metaDesc')} />
       </Helmet>
 
       <div className="min-h-screen bg-background">
@@ -61,16 +70,16 @@ const AboutPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-32 pt-10">
               <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
                 <h1 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight">Bilal <span className="text-primary">ESSATTE</span></h1>
-                <p className="text-xl text-muted-foreground mb-8">Designer Graphique & Web Developer</p>
+                <p className="text-xl text-muted-foreground mb-8">{t('about.role')}</p>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Calendar className="w-5 h-5 text-primary" />
-                    <span>30 juillet 2001</span>
+                    <span>{t('about.birthdate')}</span>
                   </div>
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <MapPin className="w-5 h-5 text-primary" />
-                    <span>Tanger, Maroc</span>
+                    <span>{t('about.location')}</span>
                   </div>
                   <div className="flex items-center gap-3 text-muted-foreground">
                     <Phone className="w-5 h-5 text-primary" />
@@ -85,13 +94,13 @@ const AboutPage = () => {
                 <div className="bg-card border border-border p-6 rounded-2xl mb-8">
                   <h3 className="font-semibold text-lg mb-3 flex items-center gap-2">
                     <Globe className="w-5 h-5 text-primary" />
-                    Langues
+                    {t('about.languages')}
                   </h3>
                   <div className="flex flex-wrap gap-3">
                     {[
-                      { lang: 'Arabe', level: 'Natif' },
-                      { lang: 'Français', level: 'B2 — TCF' },
-                      { lang: 'Anglais', level: 'Intermédiaire' },
+                      { lang: t('about.lang_ar'), level: t('about.lang_arLevel') },
+                      { lang: t('about.lang_fr'), level: t('about.lang_frLevel') },
+                      { lang: t('about.lang_en'), level: t('about.lang_enLevel') },
                     ].map((l, i) => (
                       <div key={i} className="flex flex-col items-center bg-secondary rounded-xl px-4 py-2 border border-border">
                         <span className="font-semibold text-foreground text-sm">{l.lang}</span>
@@ -102,9 +111,9 @@ const AboutPage = () => {
                 </div>
 
                 <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
-                  <p className="font-medium text-foreground">Mission Personnelle :</p>
+                  <p className="font-medium text-foreground">{t('about.missionTitle')}</p>
                   <p className="italic border-l-4 border-primary pl-4 py-2 bg-primary/5 rounded-r-lg">
-                    "Combiner créativité, technologie et pensée stratégique pour aider les entreprises à construire des marques plus fortes et de meilleures expériences digitales. Mon objectif est l'amélioration continue en design graphique, web design, workflows assistés par IA, branding et communication digitale pour collaborer avec des clients internationaux, des agences créatives et des entreprises innovantes."
+                    {t('about.missionQuote')}
                   </p>
                 </div>
                 
@@ -130,7 +139,7 @@ const AboutPage = () => {
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }}>
                 <div className="flex items-center gap-3 mb-10">
                   <Briefcase className="w-8 h-8 text-primary" />
-                  <h2 className="text-3xl font-bold">Expérience</h2>
+                  <h2 className="text-3xl font-bold">{t('about.expTitle')}</h2>
                 </div>
                 <div className="relative border-l border-border ml-4 space-y-12 py-4">
                   {experiences.map((exp, i) => (
@@ -147,10 +156,10 @@ const AboutPage = () => {
                 </div>
                 <div className="grid grid-cols-2 gap-4 mt-12">
                   {[
-                    { value: '7+', label: 'Années d\'expérience' },
-                    { value: '50+', label: 'Clients satisfaits' },
-                    { value: '100+', label: 'Projets complétés' },
-                    { value: '5', label: 'Secteurs d\'expertise' },
+                    { value: '7+', label: t('about.expYears') },
+                    { value: '50+', label: t('about.expClients') },
+                    { value: '100+', label: t('about.expProjects') },
+                    { value: '5', label: t('about.expSectors') },
                   ].map((stat, i) => (
                     <div key={i} className="bg-card border border-border rounded-2xl p-4 text-center">
                       <p className="text-3xl font-bold text-primary">{stat.value}</p>
@@ -163,7 +172,7 @@ const AboutPage = () => {
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }}>
                 <div className="flex items-center gap-3 mb-10">
                   <GraduationCap className="w-8 h-8 text-primary" />
-                  <h2 className="text-3xl font-bold">Formation</h2>
+                  <h2 className="text-3xl font-bold">{t('about.eduTitle')}</h2>
                 </div>
                 <div className="relative border-l border-border ml-4 space-y-10 py-4">
                   {education.map((edu, i) => (
@@ -182,7 +191,7 @@ const AboutPage = () => {
                 <div className="mt-12 bg-card border border-border p-6 rounded-2xl">
                   <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
                     <Award className="w-5 h-5 text-primary" />
-                    Certifications
+                    {t('about.certTitle')}
                   </h3>
                   {[
                     { name: 'TCF Tout Public B2', org: 'Institut Français', badge: 'Valide : Nov 2027' },
@@ -204,7 +213,7 @@ const AboutPage = () => {
 
             {/* 4. TECHNICAL SKILLS GRID */}
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} className="mb-32">
-              <h2 className="text-3xl font-bold mb-12 text-center">Compétences Techniques</h2>
+              <h2 className="text-3xl font-bold mb-12 text-center">{t('about.skillsTitle')}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {skillCategories.map((category, i) => (
                   <div key={i} className="bg-card p-8 rounded-3xl border border-border">
@@ -219,10 +228,10 @@ const AboutPage = () => {
               </div>
             </motion.div>
 
-          
+           
            {/* CV DOWNLOAD */}
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} className="mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-center">Télécharger mon CV</h2>
+              <h2 className="text-3xl font-bold mb-8 text-center">{t('about.cvTitle')}</h2>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
   <a
@@ -236,7 +245,7 @@ const AboutPage = () => {
       <polyline points="7 10 12 15 17 10"/>
       <line x1="12" y1="15" x2="12" y2="3"/>
     </svg>
-    CV English
+    {t('about.cvEnglish')}
   </a>
 
   <a
@@ -250,7 +259,7 @@ const AboutPage = () => {
       <polyline points="7 10 12 15 17 10"/>
       <line x1="12" y1="15" x2="12" y2="3"/>
     </svg>
-    CV Français
+    {t('about.cvFrench')}
   </a>
 
 </div>
@@ -258,7 +267,7 @@ const AboutPage = () => {
 
             {/* 5. INTERESTS */}
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} className="text-center">
-              <h2 className="text-3xl font-bold mb-8">Centres d'intérêt</h2>
+              <h2 className="text-3xl font-bold mb-8">{t('about.interestsTitle')}</h2>
               <div className="flex flex-wrap justify-center gap-4">
                 {interests.map((interest, i) => (
                   <div key={i} className="px-6 py-3 rounded-2xl bg-secondary text-secondary-foreground font-medium">

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Layout } from 'lucide-react';
@@ -9,23 +10,24 @@ import ProjectCard from '@/components/ProjectCard.jsx';
 import FilterButton from '@/components/FilterButton.jsx';
 
 const PortfolioPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState('Tous');
+  const { t } = useTranslation();
+  const [selectedCategory, setSelectedCategory] = useState(t('portfolio.filterAll'));
   const [visibleCount, setVisibleCount] = useState(6);
 
-  const categories = ['Tous', 'Web Design', 'Branding', 'Social Media'];
+  const categories = [t('portfolio.filterAll'), t('portfolio.filterWeb'), t('portfolio.filterBranding'), t('portfolio.filterSocial')];
 
   // Full clean data array
   const projects = [
-    { title: 'WEPROD MAROC', category: 'Social Media', image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783910220/WhatsApp_Image_2025-05-04_at_00.39.05_3_betqh6.jpg', link: '/portfolio/weprod', description: 'Graphic design, branding and event communication for a Tangier creative agency.' },
-    { title: 'SMART SPARES HUB', category: 'Web Design', image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783996886/Homepage_hkyuki.png', link: '/portfolio/smart-spares-hub', description: 'B2B platform for industrial spare parts, branding and web design from scratch.' },
-    { title: 'HOTEL FARAH TANGER', category: 'Branding', image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783999178/WhatsApp_Image_2025-05-04_at_00.39.00_1_ifixgo.jpg', link: '/portfolio/hotel-farah', description: 'Luxury hospitality social media design, created via WeProd Maroc.' },
-    { title: 'ALLINFES', category: 'Web Design', image: 'https://images.unsplash.com/photo-1695634365024-b7513447e4f0', link: '/portfolio/allinfes', description: 'Développement WordPress WooCommerce pour sourcing hôtelier marocain.' },
-    { title: 'OMEGA SUSHI TANGER', category: 'Branding', image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781053606/omegasushimorocco_mhomup.png', link: '/portfolio/omega-sushi', description: 'Identité visuelle complète et design de menu de restaurant.' },
-    { title: 'LAMARA', category: 'Web Design', image: 'https://images.unsplash.com/photo-1617451588899-7ac8679908c7', link: '/portfolio/lamara', description: 'Création de site Shopify e-commerce avec retouche images.' },
-    { title: 'GLOBAL BITES', category: 'Branding', image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1', link: 'https://behance.net/b30072001', description: "Rebranding, redesign d'identité visuelle et assets marketing." },
-    { title: 'MIEL CHAHDA', category: 'Branding', image: 'https://images.unsplash.com/photo-1587049352847-81a56d773c1c', link: 'https://behance.net/b30072001', description: "Création d'identité de marque avec direction visuelle moderne." },
-    { title: 'FASTASK', category: 'Social Media', image: 'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0', link: 'https://behance.net/b30072001', description: 'Design visuel et création de contenu pour les réseaux sociaux.' },
-    { title: 'TTOKLIN COMPANY', category: 'Branding', image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0', link: 'https://behance.net/b30072001', description: "Identité de marque complète et création d'assets digitaux." },
+    { title: 'WEPROD MAROC', category: t('portfolio.filterSocial'), image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783910220/WhatsApp_Image_2025-05-04_at_00.39.05_3_betqh6.jpg', link: '/portfolio/weprod', description: 'Graphic design, branding and event communication for a Tangier creative agency.' },
+    { title: 'SMART SPARES HUB', category: t('portfolio.filterWeb'), image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783996886/Homepage_hkyuki.png', link: '/portfolio/smart-spares-hub', description: 'B2B platform for industrial spare parts, branding and web design from scratch.' },
+    { title: 'HOTEL FARAH TANGER', category: t('portfolio.filterBranding'), image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783999178/WhatsApp_Image_2025-05-04_at_00.39.00_1_ifixgo.jpg', link: '/portfolio/hotel-farah', description: 'Luxury hospitality social media design, created via WeProd Maroc.' },
+    { title: 'ALLINFES', category: t('portfolio.filterWeb'), image: 'https://images.unsplash.com/photo-1695634365024-b7513447e4f0', link: '/portfolio/allinfes', description: 'WordPress WooCommerce development for Moroccan hospitality sourcing.' },
+    { title: 'OMEGA SUSHI TANGER', category: t('portfolio.filterBranding'), image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781053606/omegasushimorocco_mhomup.png', link: '/portfolio/omega-sushi', description: 'Complete visual identity and restaurant menu design.' },
+    { title: 'LAMARA', category: t('portfolio.filterWeb'), image: 'https://images.unsplash.com/photo-1617451588899-7ac8679908c7', link: '/portfolio/lamara', description: 'Shopify e-commerce site creation with image retouching.' },
+    { title: 'GLOBAL BITES', category: t('portfolio.filterBranding'), image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1', link: 'https://behance.net/b30072001', description: 'Rebranding, visual identity redesign and marketing assets.' },
+    { title: 'MIEL CHAHDA', category: t('portfolio.filterBranding'), image: 'https://images.unsplash.com/photo-1587049352847-81a56d773c1c', link: 'https://behance.net/b30072001', description: 'Brand identity creation with modern visual direction.' },
+    { title: 'FASTASK', category: t('portfolio.filterSocial'), image: 'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0', link: 'https://behance.net/b30072001', description: 'Visual design and content creation for social media.' },
+    { title: 'TTOKLIN COMPANY', category: t('portfolio.filterBranding'), image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0', link: 'https://behance.net/b30072001', description: 'Complete brand identity and digital asset creation.' },
   ];
 
   // Reset the visible count when a new category is selected
@@ -34,7 +36,7 @@ const PortfolioPage = () => {
     setVisibleCount(6);
   };
 
-  const filteredProjects = selectedCategory === 'Tous' 
+  const filteredProjects = selectedCategory === t('portfolio.filterAll') 
     ? projects 
     : projects.filter((project) => project.category === selectedCategory);
 
@@ -44,8 +46,8 @@ const PortfolioPage = () => {
   return (
     <>
       <Helmet>
-        <title>Portfolio - Bilal ESSATTE | Projets Design & Web</title>
-        <meta name="description" content="Découvrez mes études de cas et projets réalisés en branding, e-commerce et design web." />
+        <title>{t('portfolio.title')}</title>
+        <meta name="description" content={t('portfolio.metaDesc')} />
       </Helmet>
 
       <div className="min-h-screen bg-background">
@@ -60,14 +62,14 @@ const PortfolioPage = () => {
               transition={{ duration: 0.6 }}
               className="text-center mb-16 pt-10"
             >
-              <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">Projets <span className="text-primary">Sélectionnés</span></h1>
+              <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">{t('portfolio.heroTitle')}</h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-8">
-                Un aperçu de mon travail pour diverses entreprises innovantes et marques ambitieuses.
+                {t('portfolio.heroDesc')}
               </p>
               <Button asChild size="lg" className="rounded-full px-8 gap-2">
                 <a href="https://behance.net/b30072001" target="_blank" rel="noopener noreferrer">
                   <Layout className="w-5 h-5" />
-                  Voir le portfolio complet sur Behance
+                  {t('portfolio.behanceBtn')}
                 </a>
               </Button>
             </motion.div>
@@ -97,9 +99,8 @@ const PortfolioPage = () => {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.9 }}
-                    transition={{ duration: 0.4 }} // Removed conflicting delay here
+                    transition={{ duration: 0.4 }}
                   >
-                    {/* Passed the actual loop index down to the card */}
                     <ProjectCard project={project} index={index} />
                   </motion.div>
                 ))}
@@ -115,7 +116,7 @@ const PortfolioPage = () => {
                   size="lg" 
                   className="rounded-full px-8 font-medium transition-all hover:bg-primary hover:text-primary-foreground"
                 >
-                  Charger plus
+                  {t('portfolio.loadMore')}
                 </Button>
               </div>
             )}
@@ -123,7 +124,7 @@ const PortfolioPage = () => {
             {/* EMPTY STATE */}
             {filteredProjects.length === 0 && (
               <div className="text-center py-24">
-                <p className="text-xl text-muted-foreground">Aucun projet trouvé dans cette catégorie.</p>
+                <p className="text-xl text-muted-foreground">{t('portfolio.emptyState')}</p>
               </div>
             )}
           </div>

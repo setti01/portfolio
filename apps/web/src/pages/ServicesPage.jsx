@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { CheckCircle2, ArrowRight, PenTool, Globe, Image as ImageIcon, Sparkles } from 'lucide-react';
@@ -9,79 +9,81 @@ import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 
 const ServicesPage = () => {
+  const { t } = useTranslation();
+
   const detailedServices = [
     {
-      title: 'Brand Identity & Design Graphique',
-      desc: 'De l\'idée au système visuel complet — je crée des identités de marque cohérentes qui se démarquent et restent mémorables.',
+      title: t('services.s1_title'),
+      desc: t('services.s1_desc'),
       icon: PenTool,
       image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781053606/omegasushimorocco_mhomup.png',
       deliverables: [
-        'Logo design & identité visuelle complète',
-        'Charte graphique (couleurs, typographie, règles d\'usage)',
-        'Menus de restaurant (design complet, print-ready)',
-        'Flyers, affiches, brochures',
-        'Roll-ups & visuels événementiels',
-        'Cartes de visite',
-        'Packaging & concepts d\'emballage',
-        'Fichiers print-ready (CMJN, formats imprimeur)'
+        t('services.s1_d1'),
+        t('services.s1_d2'),
+        t('services.s1_d3'),
+        t('services.s1_d4'),
+        t('services.s1_d5'),
+        t('services.s1_d6'),
+        t('services.s1_d7'),
+        t('services.s1_d8'),
       ]
     },
     {
-      title: 'Web Design & Développement',
-      desc: 'Des sites web rapides, modernes et orientés conversion — du site vitrine à l\'e-commerce complet.',
+      title: t('services.s2_title'),
+      desc: t('services.s2_desc'),
       icon: Globe,
       image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783996886/Homepage_hkyuki.png',
       deliverables: [
-        'Sites WordPress + Elementor sur-mesure',
-        'E-commerce WooCommerce & Shopify',
-        'Landing pages haute conversion',
-        'Sites corporate & portfolio',
-        'Design responsive & mobile-first',
-        'Optimisation SEO technique',
-        'Maintenance & mises à jour',
-        'Layouts bilingues (Arabe / Français / Anglais)'
+        t('services.s2_d1'),
+        t('services.s2_d2'),
+        t('services.s2_d3'),
+        t('services.s2_d4'),
+        t('services.s2_d5'),
+        t('services.s2_d6'),
+        t('services.s2_d7'),
+        t('services.s2_d8'),
       ]
     },
     {
-      title: 'Social Media & Contenu Digital',
-      desc: 'Des visuels qui captent l\'attention, renforcent votre image de marque et engagent votre audience.',
+      title: t('services.s3_title'),
+      desc: t('services.s3_desc'),
       icon: ImageIcon,
       image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783999178/WhatsApp_Image_2025-05-04_at_00.39.00_1_ifixgo.jpg',
       deliverables: [
-        'Création de contenu Instagram & Facebook',
-        'Visuels de campagnes publicitaires',
-        'Retouche professionnelle de photos produits & food',
-        'Génération d\'images par IA pour clients',
-        'Adaptation multi-formats & multi-plateformes',
-        'Bannières web & assets digitaux',
-        'Templates réseaux sociaux réutilisables'
+        t('services.s3_d1'),
+        t('services.s3_d2'),
+        t('services.s3_d3'),
+        t('services.s3_d4'),
+        t('services.s3_d5'),
+        t('services.s3_d6'),
+        t('services.s3_d7'),
       ]
     },
     {
-      title: 'Photographie & Production Visuelle',
-      desc: 'Valorisez vos espaces et votre offre avec des images professionnelles adaptées au web et aux réseaux sociaux.',
+      title: t('services.s4_title'),
+      desc: t('services.s4_desc'),
       icon: Sparkles,
       image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781055113/1_copie_uytlqw.jpg',
       deliverables: [
-        'Photographie de lieux (hôtels, restaurants, commerces)',
-        'Retouche et post-production complète',
-        'Photos optimisées pour le web & réseaux sociaux',
-        'Livrables print-ready haute résolution',
-        'Cohérence visuelle avec votre identité de marque'
+        t('services.s4_d1'),
+        t('services.s4_d2'),
+        t('services.s4_d3'),
+        t('services.s4_d4'),
+        t('services.s4_d5'),
       ]
     },
     {
-      title: 'SEO & Stratégie Digitale',
-      desc: 'Rendez votre site visible sur Google et construisez une présence digitale cohérente qui attire les bons clients.',
+      title: t('services.s5_title'),
+      desc: t('services.s5_desc'),
       icon: ArrowRight,
       image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783996711/Product_listing_page_oh3yxw.png',
       deliverables: [
-        'Audit SEO & analyse de positionnement',
-        'Optimisation on-page (titres, metas, structure)',
-        'Stratégie de mots-clés',
-        'SEO local (Google Business Profile)',
-        'Intégration d\'outils IA dans les workflows créatifs',
-        'Recommandations de contenu pour le référencement'
+        t('services.s5_d1'),
+        t('services.s5_d2'),
+        t('services.s5_d3'),
+        t('services.s5_d4'),
+        t('services.s5_d5'),
+        t('services.s5_d6'),
       ]
     }
   ];
@@ -89,8 +91,8 @@ const ServicesPage = () => {
   return (
     <>
       <Helmet>
-        <title>Services - Bilal ESSATTE | Design Graphique & Web</title>
-        <meta name="description" content="Découvrez mes services complets : Design graphique, Web design, Contenu digital et Design assisté par IA." />
+        <title>{t('services.title')}</title>
+        <meta name="description" content={t('services.metaDesc')} />
       </Helmet>
 
       <div className="min-h-screen bg-background">
@@ -103,9 +105,9 @@ const ServicesPage = () => {
               initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
               className="text-center mb-24 pt-10"
             >
-              <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">Mes <span className="text-primary">Expertises</span></h1>
+              <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">{t('services.heroTitle')}</h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                Des solutions complètes pour bâtir votre présence visuelle et digitale, de la création de logo à la mise en ligne de votre plateforme e-commerce.
+                {t('services.heroDesc')}
               </p>
             </motion.div>
 
@@ -125,7 +127,7 @@ const ServicesPage = () => {
                     <p className="text-lg text-muted-foreground mb-8 leading-relaxed">{service.desc}</p>
                     
                     <div className="bg-card border border-border rounded-2xl p-6 mb-8">
-                      <h3 className="font-semibold mb-4 text-lg">Inclus dans ce service :</h3>
+                      <h3 className="font-semibold mb-4 text-lg">{t('services.includeLabel')}</h3>
                       <ul className="space-y-3">
                         {service.deliverables.map((item, i) => (
                           <li key={i} className="flex items-start gap-3 text-muted-foreground">
@@ -137,7 +139,7 @@ const ServicesPage = () => {
                     </div>
                     
                     <Button asChild variant="outline" className="rounded-full h-12 px-6">
-                      <Link to="/contact">Discuter de vos besoins</Link>
+                      <Link to="/contact">{t('services.discussBtn')}</Link>
                     </Button>
                   </motion.div>
 
@@ -156,13 +158,13 @@ const ServicesPage = () => {
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }}
               className="bg-primary/10 border border-primary/20 rounded-3xl p-12 text-center"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Un projet spécifique en tête ?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('services.ctaTitle')}</h2>
               <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Je m'adapte à vos besoins pour créer une solution sur-mesure combinant ces différentes expertises.
+                {t('services.ctaDesc')}
               </p>
               <Button asChild size="lg" className="rounded-full px-8 h-14 text-lg gap-2">
                 <Link to="/contact">
-                  Démarrer la discussion <ArrowRight className="w-5 h-5" />
+                  {t('services.ctaBtn')} <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
             </motion.div>
