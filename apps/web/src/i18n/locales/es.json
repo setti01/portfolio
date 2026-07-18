@@ -153,6 +153,12 @@
     "emptyState": "Todavía no hay proyectos en esta categoría.",
     "behanceBtn": "Ver más en Behance"
   },
+  "project": {
+    "breadcrumbHome": "Inicio",
+    "breadcrumbPortfolio": "Portafolio",
+    "backToPortfolio": "Volver al portafolio",
+    "relatedProjects": "Descubre también"
+  },
   "gallery": {
     "title": "Galería — Bilal Essatte",
     "metaDesc": "Fotografía personal de Bilal Essatte — naturaleza, mar, cielo, lugares y animales alrededor de Tánger y Marruecos.",

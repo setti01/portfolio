@@ -153,6 +153,12 @@
     "emptyState": "No projects in this category yet.",
     "behanceBtn": "See more on Behance"
   },
+  "project": {
+    "breadcrumbHome": "Home",
+    "breadcrumbPortfolio": "Portfolio",
+    "backToPortfolio": "Back to portfolio",
+    "relatedProjects": "Also discover"
+  },
   "gallery": {
     "title": "Gallery — Bilal Essatte",
     "metaDesc": "Personal photography by Bilal Essatte — nature, sea, sky, places and animals around Tangier and Morocco.",
