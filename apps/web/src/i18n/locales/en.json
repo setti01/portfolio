@@ -171,4 +171,12 @@
     "filterPlaces": "Places",
     "filterAnimals": "Animals"
   }
+  ,
+  "footer": {
+    "bio": "Graphic & Web Designer based in Tangier. I combine creativity and technology for strong brands.",
+    "contactTitle": "Contact",
+    "portfolioTitle": "My Portfolio",
+    "portfolioDesc": "See my complete case studies and creative process on Behance.",
+    "rights": "All rights reserved."
+  }
 }

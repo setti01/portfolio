@@ -171,4 +171,12 @@
     "filterPlaces": "Lugares",
     "filterAnimals": "Animales"
   }
+  ,
+  "footer": {
+    "bio": "Diseñador gráfico y web con base en Tánger. Combino creatividad y tecnología para marcas fuertes.",
+    "contactTitle": "Contacto",
+    "portfolioTitle": "Mi Portafolio",
+    "portfolioDesc": "Descubre mis estudios de caso completos y mi proceso creativo en Behance.",
+    "rights": "Todos los derechos reservados."
+  }
 }

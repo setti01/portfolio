@@ -171,4 +171,12 @@
     "filterPlaces": "Lieux",
     "filterAnimals": "Animaux"
   }
+  ,
+  "footer": {
+    "bio": "Designer graphique et web basé à Tanger. Je combine créativité et technologie pour des marques fortes.",
+    "contactTitle": "Contact",
+    "portfolioTitle": "Mon Portfolio",
+    "portfolioDesc": "Découvrez mes études de cas complètes et mes processus créatifs sur Behance.",
+    "rights": "Tous droits réservés."
+  }
 }
