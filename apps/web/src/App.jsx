@@ -1,5 +1,6 @@
 import React from 'react';
-import { Route, Routes, BrowserRouter as Router, Link } from 'react-router-dom';
+import { Route, Routes, BrowserRouter as Router, Link, useLocation } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Toaster } from '@/components/ui/sonner';
 import ScrollToTop from './components/ScrollToTop.jsx';
@@ -15,6 +16,7 @@ import WeProdPage from './pages/WeProdPage.jsx';
 import GaleriePage from './pages/GaleriePage.jsx';
 import SmartSparesHubPage from './pages/SmartSparesHubPage.jsx';
 import HotelFarahPage from './pages/HotelFarahPage.jsx';
+
 
 const WhatsAppButton = () => (
   
@@ -45,27 +47,44 @@ const WhatsAppButton = () => (
   </a>
 );
 
+const pageVariants = {
+  initial: { opacity: 0, y: 16 },
+  animate: { opacity: 1, y: 0, transition: { duration: 0.35, ease: [0.25, 0.1, 0.25, 1] } },
+  exit: { opacity: 0, y: -8, transition: { duration: 0.2, ease: [0.25, 0.1, 0.25, 1] } },
+};
+
+const AnimatedRoutes = () => {
+  const location = useLocation();
+  return (
+    <AnimatePresence mode="wait">
+      <motion.div key={location.pathname} variants={pageVariants} initial="initial" animate="animate" exit="exit">
+        <Routes location={location}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/portfolio" element={<PortfolioPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/portfolio/allinfes" element={<AllinfesPage />} />
+          <Route path="/portfolio/lamara" element={<LamaraPage />} />
+          <Route path="/portfolio/omega-sushi" element={<OmegaSushiPage />} />
+          <Route path="/portfolio/weprod" element={<WeProdPage />} />
+          <Route path="/portfolio/smart-spares-hub" element={<SmartSparesHubPage />} />
+          <Route path="/portfolio/hotel-farah" element={<HotelFarahPage />} />
+          <Route path="/galerie" element={<GaleriePage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </motion.div>
+    </AnimatePresence>
+  );
+};
+
 function App() {
   return (
     <Router>
       <ScrollToTop />
       <Toaster position="bottom-right" />
       <WhatsAppButton />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/portfolio" element={<PortfolioPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/services" element={<ServicesPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/portfolio/allinfes" element={<AllinfesPage />} />
-        <Route path="/portfolio/lamara" element={<LamaraPage />} />
-        <Route path="/portfolio/omega-sushi" element={<OmegaSushiPage />} />
-        <Route path="/portfolio/weprod" element={<WeProdPage />} />
-        <Route path="/portfolio/smart-spares-hub" element={<SmartSparesHubPage />} />
-        <Route path="/portfolio/hotel-farah" element={<HotelFarahPage />} />
-        <Route path="/galerie" element={<GaleriePage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
+      <AnimatedRoutes />
     </Router>
   );
 }
