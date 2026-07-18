@@ -1,0 +1,10 @@
+{
+  "nav": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "gallery": "Gallery",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact"
+  }
+}
