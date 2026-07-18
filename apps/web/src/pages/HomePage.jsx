@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import TextReveal from '@/components/TextReveal.jsx';
 import { ArrowRight, Sparkles, Quote, Layout } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Header from '@/components/Header.jsx';
@@ -101,7 +102,8 @@ const HomePage = () => {
               </motion.div>
 
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight tracking-tight text-balance">
-                {t('home.heroHeadingPrefix')}{" "}
+                <TextReveal text={t('home.heroHeadingPrefix')} className="inline" />
+                {" "}
                 <span className="text-primary inline-block min-w-[320px]">
                   <RotatingText
                     phrases={heroWords}
@@ -191,22 +193,22 @@ const HomePage = () => {
           <div className="relative flex overflow-hidden mb-6">
             <div className="flex gap-6 whitespace-nowrap" style={{ animation: 'marquee-left 50s linear infinite' }}>
               {[
-                { name: 'Photoshop', icon: 'https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg' },
-                { name: 'Illustrator', icon: 'https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg' },
-                { name: 'InDesign', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg' },
-                { name: 'Premiere Pro', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg' },
-                { name: 'After Effects', icon: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg' },
-                { name: 'WordPress', icon: 'https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg' },
-                { name: 'Figma', icon: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg' },
-                { name: 'Shopify', icon: 'https://cdn.worldvectorlogo.com/logos/shopify.svg' },
-                { name: 'Photoshop', icon: 'https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg' },
-                { name: 'Illustrator', icon: 'https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg' },
-                { name: 'InDesign', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg' },
-                { name: 'Premiere Pro', icon: 'https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg' },
-                { name: 'After Effects', icon: 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg' },
-                { name: 'WordPress', icon: 'https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg' },
-                { name: 'Figma', icon: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg' },
-                { name: 'Shopify', icon: 'https://cdn.worldvectorlogo.com/logos/shopify.svg' },
+                { name: 'Photoshop', icon: 'https://cdn.simpleicons.org/adobephotoshop' },
+                { name: 'Illustrator', icon: 'https://cdn.simpleicons.org/adobeillustrator' },
+                { name: 'InDesign', icon: 'https://cdn.simpleicons.org/adobeindesign' },
+                { name: 'Premiere Pro', icon: 'https://cdn.simpleicons.org/adobepremierepro' },
+                { name: 'After Effects', icon: 'https://cdn.simpleicons.org/adobeaftereffects' },
+                { name: 'WordPress', icon: 'https://cdn.simpleicons.org/wordpress' },
+                { name: 'Figma', icon: 'https://cdn.simpleicons.org/figma' },
+                { name: 'Shopify', icon: 'https://cdn.simpleicons.org/shopify' },
+                { name: 'Photoshop', icon: 'https://cdn.simpleicons.org/adobephotoshop' },
+                { name: 'Illustrator', icon: 'https://cdn.simpleicons.org/adobeillustrator' },
+                { name: 'InDesign', icon: 'https://cdn.simpleicons.org/adobeindesign' },
+                { name: 'Premiere Pro', icon: 'https://cdn.simpleicons.org/adobepremierepro' },
+                { name: 'After Effects', icon: 'https://cdn.simpleicons.org/adobeaftereffects' },
+                { name: 'WordPress', icon: 'https://cdn.simpleicons.org/wordpress' },
+                { name: 'Figma', icon: 'https://cdn.simpleicons.org/figma' },
+                { name: 'Shopify', icon: 'https://cdn.simpleicons.org/shopify' },
               ].map((tool, i) => (
                 <div key={i} className="flex items-center gap-3 bg-card border border-border rounded-2xl px-6 py-4 shrink-0 hover:border-primary/50 hover:bg-card/80 transition-all duration-300">
                   <img src={tool.icon} alt={tool.name} className="w-8 h-8 object-contain" />
@@ -220,19 +222,19 @@ const HomePage = () => {
           <div className="relative flex overflow-hidden">
             <div className="flex gap-6 whitespace-nowrap" style={{ animation: 'marquee-right 50s linear infinite' }}>
               {[
-                { name: 'Canva', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg' },
-                { name: 'WooCommerce', icon: 'https://upload.wikimedia.org/wikipedia/commons/2/2a/WooCommerce_logo.svg' },
-                { name: 'ChatGPT', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg' },
-                { name: 'Elementor', icon: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Elementor_icon.svg' },
-                { name: 'CapCut', icon: 'https://cdn.worldvectorlogo.com/logos/capcut.svg' },
+                { name: 'Canva', icon: 'https://cdn.simpleicons.org/canva' },
+                { name: 'WooCommerce', icon: 'https://cdn.simpleicons.org/woocommerce' },
+                { name: 'ChatGPT', icon: 'https://cdn.simpleicons.org/openai' },
+                { name: 'Elementor', icon: 'https://cdn.simpleicons.org/elementor' },
+                { name: 'CapCut', icon: 'https://cdn.simpleicons.org/capcut' },
                 { name: 'Leonardo AI', bg: '#1a1a2e', letter: 'L' },
                 { name: 'Google AI Studio', bg: '#1a73e8', letter: 'G' },
                 { name: 'Claude', bg: '#cc785c', letter: 'C' },
-                { name: 'Canva', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg' },
-                { name: 'WooCommerce', icon: 'https://upload.wikimedia.org/wikipedia/commons/2/2a/WooCommerce_logo.svg' },
-                { name: 'ChatGPT', icon: 'https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg' },
-                { name: 'Elementor', icon: 'https://upload.wikimedia.org/wikipedia/commons/8/87/Elementor_icon.svg' },
-                { name: 'CapCut', icon: 'https://cdn.worldvectorlogo.com/logos/capcut.svg' },
+                { name: 'Canva', icon: 'https://cdn.simpleicons.org/canva' },
+                { name: 'WooCommerce', icon: 'https://cdn.simpleicons.org/woocommerce' },
+                { name: 'ChatGPT', icon: 'https://cdn.simpleicons.org/openai' },
+                { name: 'Elementor', icon: 'https://cdn.simpleicons.org/elementor' },
+                { name: 'CapCut', icon: 'https://cdn.simpleicons.org/capcut' },
                 { name: 'Leonardo AI', bg: '#1a1a2e', letter: 'L' },
                 { name: 'Google AI Studio', bg: '#1a73e8', letter: 'G' },
                 { name: 'Claude', bg: '#cc785c', letter: 'C' },
