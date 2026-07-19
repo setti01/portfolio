@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -9,6 +10,7 @@ import Footer from '@/components/Footer.jsx';
 import MaterialsGallery from '@/components/MaterialsGallery.jsx';
 
 const WeProdPage = () => {
+  const { t } = useTranslation();
   const relatedProjects = [
     {
       title: 'Lamara',
@@ -77,9 +79,9 @@ const WeProdPage = () => {
         <main className="pt-32 pb-24">
           <div className="container-custom">
             <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
-              <Link to="/" className="hover:text-primary transition-colors duration-200">Accueil</Link>
+              <Link to="/" className="hover:text-primary transition-colors duration-200">{t('project.breadcrumbHome')}</Link>
               <span>/</span>
-              <Link to="/portfolio" className="hover:text-primary transition-colors duration-200">Portfolio</Link>
+              <Link to="/portfolio" className="hover:text-primary transition-colors duration-200">{t('project.breadcrumbPortfolio')}</Link>
               <span>/</span>
               <span className="text-foreground">WeProd Maroc</span>
             </nav>
@@ -87,7 +89,7 @@ const WeProdPage = () => {
             <Button asChild variant="ghost" className="mb-8 gap-2">
               <Link to="/portfolio">
                 <ArrowLeft className="w-4 h-4" />
-                Retour au portfolio
+                {t('project.backToPortfolio')}
               </Link>
             </Button>
 
@@ -295,7 +297,6 @@ const WeProdPage = () => {
                 <MaterialsGallery images={catalogueImages} />
               </motion.div>
 
-              {/* CAMPAIGN GALLERY — placeholder heading/copy, pending your answers */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -413,7 +414,7 @@ const WeProdPage = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-2xl font-bold mb-8">Découvrez aussi</h2>
+              <h2 className="text-2xl font-bold mb-8">{t('project.relatedProjects')}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {relatedProjects.map((project) => (
                   <Link
