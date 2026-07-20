@@ -10,34 +10,35 @@ import Footer from '@/components/Footer.jsx';
 
 const OmegaSushiPage = () => {
   const { t } = useTranslation();
+
   const metrics = [
-    { value: '1 semaine', label: 'Délai de livraison complet — logo, menu 13 pages, social media, retouche photos' },
-    { value: 'Gemini AI', label: 'Photos food de qualité médiocre transformées en visuels professionnels via Nano Banana Pro' },
-    { value: 'Meta Suite', label: 'Instagram, Facebook et WhatsApp Business connectés et opérationnels dès le lancement' },
+    { value: t('omegasushi.metric1'), label: t('omegasushi.metric1Desc') },
+    { value: t('omegasushi.metric2'), label: t('omegasushi.metric2Desc') },
+    { value: t('omegasushi.metric3'), label: t('omegasushi.metric3Desc') },
   ];
 
   const phases = [
     {
       number: '01',
-      title: 'Recherche & Direction Créative',
-      description: 'Analyse des tendances du secteur restauration japonaise via Gemini Deep Research. Définition d\'une direction visuelle moderne — samurai stylisé en bleu marine dans un cercle orange — qui combine esthétique japonaise et identité forte adaptée au marché de Tanger.',
+      title: t('omegasushi.processPhase1'),
+      description: t('omegasushi.processPhase1Desc'),
     },
     {
       number: '02',
-      title: 'Identité Visuelle & Menu Design',
-      description: 'Création du logo from scratch sur Adobe Illustrator. Développement de la charte graphique complète. Design d\'un menu digital de 13 pages sur Canva/Illustrator. Retouche professionnelle des photos food via Gemini Nano Banana Pro — transformation de photos médiocres en visuels premium prêts pour Glovo et Instagram.',
+      title: t('omegasushi.processPhase2'),
+      description: t('omegasushi.processPhase2Desc'),
     },
     {
       number: '03',
-      title: 'Lancement Digital & Social Media',
-      description: 'Création et configuration des pages Instagram, Facebook et WhatsApp Business, connexion via Meta Business Suite. Production de contenu Instagram (offres promotionnelles, photos food). Copywriting optimisé avec ChatGPT pour maximiser l\'engagement et la portée organique.',
+      title: t('omegasushi.processPhase3'),
+      description: t('omegasushi.processPhase3Desc'),
     },
   ];
 
   const galleryImages = [
-    { src: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781053606/omegasushimorocco_mhomup.png', alt: 'Logo Omega Sushi Tanger', caption: 'Logo — Samurai bleu marine, cercle orange' },
-    { src: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781055113/1_copie_uytlqw.jpg', alt: 'Instagram post Omega Sushi', caption: 'Contenu Instagram — Retouche Gemini AI' },
-    { src: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781055670/5_copie_k2x1bb.jpg', alt: 'Instagram post Omega Sushi', caption: 'Contenu Instagram — Photo food professionnelle' },
+    { src: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781053606/omegasushimorocco_mhomup.png', alt: 'Omega Sushi Tanger Logo', caption: t('omegasushi.processPhase1') },
+    { src: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781055113/1_copie_uytlqw.jpg', alt: 'Instagram post Omega Sushi', caption: t('omegasushi.processPhase3') },
+    { src: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781055670/5_copie_k2x1bb.jpg', alt: 'Instagram post Omega Sushi', caption: t('omegasushi.processPhase2') },
     { src: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781055780/p4_s1_hcjspi.jpg', alt: 'Menu Omega Sushi page 1', caption: 'Menu Digital — Page entrées' },
     { src: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781055778/p4_s6_y3zqbp.jpg', alt: 'Menu Omega Sushi page 2', caption: 'Menu Digital — Page maki' },
     { src: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781055767/p4_s2_k9ubsi.jpg', alt: 'Menu Omega Sushi page 3', caption: 'Menu Digital — Page spécialités' },
@@ -46,8 +47,8 @@ const OmegaSushiPage = () => {
   return (
     <>
       <Helmet>
-        <title>Omega Sushi Tanger — Branding & Social Media | Bilal Essatte</title>
-        <meta name="description" content="Identité visuelle complète, menu design 13 pages, retouche food AI, et lancement digital pour Omega Sushi Tanger — livré en 1 semaine." />
+        <title>{t('omegasushi.title')}</title>
+        <meta name="description" content={t('omegasushi.metaDesc')} />
       </Helmet>
 
       <div className="min-h-screen bg-background">
@@ -83,13 +84,13 @@ const OmegaSushiPage = () => {
                 <span className="text-xs font-mono bg-primary/10 text-primary px-3 py-1 rounded-full border border-primary/20">Menu Design</span>
                 <span className="text-xs font-mono bg-primary/10 text-primary px-3 py-1 rounded-full border border-primary/20">Social Media</span>
                 <span className="text-xs font-mono bg-primary/10 text-primary px-3 py-1 rounded-full border border-primary/20">AI Photo Retouche</span>
-                <span className="text-xs font-mono bg-secondary text-secondary-foreground px-3 py-1 rounded-full">Nov–Déc 2025</span>
+                <span className="text-xs font-mono bg-secondary text-secondary-foreground px-3 py-1 rounded-full">{t('omegasushi.heroPeriod')}</span>
               </div>
               <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight leading-tight">
                 Omega Sushi<span className="text-primary">.</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl leading-relaxed mb-8">
-                Identité visuelle complète, menu digital 13 pages, retouche food photography par IA, et lancement sur Instagram, Facebook et Glovo — le tout livré en une semaine.
+                {t('omegasushi.heroDesc')}
               </p>
               <Button asChild variant="outline" className="rounded-full gap-2">
                 <a href="https://www.instagram.com/omegasushitanger/" target="_blank" rel="noopener noreferrer">
@@ -121,15 +122,15 @@ const OmegaSushiPage = () => {
               className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24"
             >
               <div className="bg-card border border-border rounded-3xl p-8">
-                <p className="text-xs font-mono text-primary uppercase tracking-widest mb-4">Le défi</p>
+                <p className="text-xs font-mono text-primary uppercase tracking-widest mb-4">{t('omegasushi.challengeLabel')}</p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Omega Sushi Tanger ouvrait ses portes sans aucune identité visuelle ni présence digitale. Les photos food existantes étaient de mauvaise qualité. Il fallait tout créer from scratch et lancer le restaurant en ligne en un minimum de temps.
+                  {t('omegasushi.challengeDesc')}
                 </p>
               </div>
               <div className="bg-primary/5 border border-primary/20 rounded-3xl p-8">
-                <p className="text-xs font-mono text-primary uppercase tracking-widest mb-4">La solution</p>
+                <p className="text-xs font-mono text-primary uppercase tracking-widest mb-4">{t('omegasushi.solutionLabel')}</p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Écosystème visuel complet livré en 1 semaine — logo from scratch, menu digital 13 pages, photos food retouchées via Gemini Nano Banana Pro, et déploiement sur Instagram, Facebook, WhatsApp Business et Glovo.
+                  {t('omegasushi.solutionDesc')}
                 </p>
               </div>
             </motion.div>
@@ -156,7 +157,7 @@ const OmegaSushiPage = () => {
               viewport={{ once: true, margin: "-100px" }}
               className="mb-24"
             >
-              <p className="text-xs font-mono text-primary uppercase tracking-widest mb-8">Galerie du projet</p>
+              <p className="text-xs font-mono text-primary uppercase tracking-widest mb-8">{t('omegasushi.galleryLabel')}</p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {galleryImages.map((img, i) => (
                   <motion.div
@@ -180,7 +181,7 @@ const OmegaSushiPage = () => {
               viewport={{ once: true, margin: "-100px" }}
               className="mb-24"
             >
-              <p className="text-xs font-mono text-primary uppercase tracking-widest mb-8">Processus</p>
+              <p className="text-xs font-mono text-primary uppercase tracking-widest mb-8">{t('omegasushi.processLabel')}</p>
               <div className="space-y-6">
                 {phases.map((phase, i) => (
                   <motion.div
@@ -209,10 +210,10 @@ const OmegaSushiPage = () => {
               className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-24"
             >
               {[
-                { label: 'Client', value: 'Omega Sushi Tanger' },
-                { label: 'Services', value: 'Branding, Menu, Social Media' },
-                { label: 'Outils', value: 'Illustrator, Photoshop, Canva, Gemini AI' },
-                { label: 'Délai', value: '1 semaine — Nov 2025' },
+                { label: t('allinfes.labelClient'), value: 'Omega Sushi Tanger' },
+                { label: t('allinfes.labelServices'), value: t('omegasushi.heroTags') },
+                { label: t('allinfes.labelTools'), value: 'Illustrator, Photoshop, Canva, Gemini AI' },
+                { label: t('allinfes.labelStatus'), value: '1 semaine — Nov 2025' },
               ].map((item, i) => (
                 <div key={i} className="bg-card border border-border rounded-2xl p-5">
                   <p className="text-xs text-muted-foreground mb-2 font-mono uppercase tracking-wider">{item.label}</p>
@@ -228,19 +229,19 @@ const OmegaSushiPage = () => {
               viewport={{ once: true, margin: "-100px" }}
               className="bg-primary/5 border border-primary/20 rounded-3xl p-12 text-center mb-24"
             >
-              <h2 className="text-3xl font-bold mb-4">Un projet similaire en tête ?</h2>
-              <p className="text-muted-foreground mb-8 max-w-xl mx-auto">Je crée des identités visuelles complètes et des stratégies digitales pour les restaurants et marques F&B — avec des délais courts et des résultats premium.</p>
+              <h2 className="text-3xl font-bold mb-4">{t('omegasushi.ctaTitle')}</h2>
+              <p className="text-muted-foreground mb-8 max-w-xl mx-auto">{t('omegasushi.ctaDesc')}</p>
               <Button asChild size="lg" className="rounded-full px-8 h-14 gap-2">
-                <Link to="/contact">Discutons de votre projet</Link>
+                <Link to="/contact">{t('omegasushi.ctaButton')}</Link>
               </Button>
             </motion.div>
 
             {/* RELATED */}
             <div>
-              <p className="text-xs font-mono text-primary uppercase tracking-widest mb-8">Projets similaires</p>
+              <p className="text-xs font-mono text-primary uppercase tracking-widest mb-8">{t('omegasushi.relatedLabel')}</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
-                  { title: 'Allinfes', category: 'Web Design & WooCommerce', link: '/portfolio/allinfes' },
+                  { title: t('allinfes.title').split('—')[0].trim(), category: t('omegasushi.allinfesCategory'), link: '/portfolio/allinfes' },
                   { title: 'WeProd Maroc', category: 'Social Media & Print', link: '/portfolio/weprod' },
                 ].map((project) => (
                   <Link

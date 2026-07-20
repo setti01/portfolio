@@ -3,42 +3,43 @@ import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, ExternalLink } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 
 const AllinfesPage = () => {
   const { t } = useTranslation();
+
   const metrics = [
-    { value: '100%', label: 'Contrôle indépendant du catalogue produit livré au client dès le lancement' },
-    { value: 'WooCommerce', label: 'Système e-commerce complet intégré avec gestion des devis et commandes' },
-    { value: 'Mobile-first', label: 'Design responsive optimisé pour tous les appareils et marchés internationaux' },
+    { value: t('allinfes.challengeLabel'), label: t('allinfes.challengeDesc') },
+    { value: t('services.s2_d4'), label: t('allinfes.solutionDesc') },
+    { value: 'Mobile-first', label: t('allinfes.processPhase3Desc') },
   ];
 
   const phases = [
     {
       number: '01',
-      title: 'Stratégie & Architecture',
-      description: 'Analyse du secteur de l\'approvisionnement hôtelier marocain. Définition de l\'architecture de l\'information, des catégories produits, et du parcours utilisateur pour les acheteurs B2B internationaux.',
+      title: t('allinfes.processPhase1'),
+      description: t('allinfes.processPhase1Desc'),
     },
     {
       number: '02',
-      title: 'Design & Identité Visuelle',
-      description: 'Conception d\'une interface premium reflétant le positionnement haut de gamme d\'Allinfes. Typographie, palette de couleurs et système visuel conçus pour inspirer confiance aux clients internationaux.',
+      title: t('allinfes.processPhase2'),
+      description: t('allinfes.processPhase2Desc'),
     },
     {
       number: '03',
-      title: 'Développement & Lancement',
-      description: 'Développement WordPress + Elementor + WooCommerce avec workflow de demande de devis, organisation des catégories produits, et optimisation des performances pour un chargement rapide.',
+      title: t('allinfes.processPhase3'),
+      description: t('allinfes.processPhase3Desc'),
     },
   ];
 
   return (
     <>
       <Helmet>
-        <title>Allinfes — Plateforme E-commerce B2B | Bilal Essatte</title>
-        <meta name="description" content="Conception et développement d'une plateforme WordPress WooCommerce pour Allinfes, marque marocaine d'approvisionnement hôtelier." />
+        <title>{t('allinfes.title')}</title>
+        <meta name="description" content={t('allinfes.metaDesc')} />
       </Helmet>
 
       <div className="min-h-screen bg-background">
@@ -73,13 +74,13 @@ const AllinfesPage = () => {
                 <span className="text-xs font-mono bg-primary/10 text-primary px-3 py-1 rounded-full border border-primary/20">WordPress</span>
                 <span className="text-xs font-mono bg-primary/10 text-primary px-3 py-1 rounded-full border border-primary/20">WooCommerce</span>
                 <span className="text-xs font-mono bg-primary/10 text-primary px-3 py-1 rounded-full border border-primary/20">Elementor</span>
-                <span className="text-xs font-mono bg-secondary text-secondary-foreground px-3 py-1 rounded-full">Avr 2026 — En cours</span>
+                <span className="text-xs font-mono bg-secondary text-secondary-foreground px-3 py-1 rounded-full">{t('allinfes.heroStatus')}</span>
               </div>
               <h1 className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight leading-tight">
                 Allinfes<span className="text-primary">.</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl leading-relaxed">
-                Conception et développement d'une plateforme e-commerce B2B pour la marque marocaine d'approvisionnement hôtelier — un système complet permettant aux hôtels et riads de sourcer leurs équipements directement en ligne.
+                {t('allinfes.heroDesc')}
               </p>
             </motion.div>
 
@@ -88,7 +89,7 @@ const AllinfesPage = () => {
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="rounded-3xl overflow-hidden border border-border mb-24 aspect-video bg-secondary"
+              className="rounded-3xl overflow-hidden mb-24 aspect-video bg-secondary"
             >
               <img
                 src="https://res.cloudinary.com/dfonsuqx6/image/upload/q_auto/f_auto/v1780690378/Screenshot_q0g6em.png"
@@ -105,15 +106,15 @@ const AllinfesPage = () => {
               className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24"
             >
               <div className="bg-card border border-border rounded-3xl p-8">
-                <p className="text-xs font-mono text-primary uppercase tracking-widest mb-4">Le défi</p>
+                <p className="text-xs font-mono text-primary uppercase tracking-widest mb-4">{t('allinfes.challengeLabel')}</p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Allinfes, marque marocaine spécialisée dans l'approvisionnement hôtelier, n'avait aucune présence digitale capable de servir des clients B2B internationaux. Les hôtels et riads ne pouvaient pas accéder au catalogue, demander des devis, ou passer commande en ligne.
+                  {t('allinfes.challengeDesc')}
                 </p>
               </div>
               <div className="bg-primary/5 border border-primary/20 rounded-3xl p-8">
-                <p className="text-xs font-mono text-primary uppercase tracking-widest mb-4">La solution</p>
+                <p className="text-xs font-mono text-primary uppercase tracking-widest mb-4">{t('allinfes.solutionLabel')}</p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Développement d'une plateforme WordPress + WooCommerce sur mesure avec catalogue produit organisé par catégories, système de demande de devis, et interface conçue pour inspirer confiance aux acheteurs internationaux.
+                  {t('allinfes.solutionDesc')}
                 </p>
               </div>
             </motion.div>
@@ -140,7 +141,7 @@ const AllinfesPage = () => {
               viewport={{ once: true, margin: "-100px" }}
               className="mb-24"
             >
-              <p className="text-xs font-mono text-primary uppercase tracking-widest mb-8">Processus</p>
+              <p className="text-xs font-mono text-primary uppercase tracking-widest mb-8">{t('allinfes.processLabel')}</p>
               <div className="space-y-6">
                 {phases.map((phase, i) => (
                   <motion.div
@@ -169,10 +170,10 @@ const AllinfesPage = () => {
               className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-24"
             >
               {[
-                { label: 'Client', value: 'Allinfes' },
-                { label: 'Services', value: 'Web Design, WooCommerce' },
-                { label: 'Outils', value: 'WordPress, Elementor' },
-                { label: 'Statut', value: 'En cours — 2026' },
+                { label: t('allinfes.labelClient'), value: 'Allinfes' },
+                { label: t('allinfes.labelServices'), value: t('allinfes.heroTags') },
+                { label: t('allinfes.labelTools'), value: 'WordPress, Elementor' },
+                { label: t('allinfes.labelStatus'), value: t('allinfes.heroStatus') },
               ].map((item, i) => (
                 <div key={i} className="bg-card border border-border rounded-2xl p-5">
                   <p className="text-xs text-muted-foreground mb-2 font-mono uppercase tracking-wider">{item.label}</p>
@@ -188,20 +189,20 @@ const AllinfesPage = () => {
               viewport={{ once: true, margin: "-100px" }}
               className="bg-primary/5 border border-primary/20 rounded-3xl p-12 text-center mb-24"
             >
-              <h2 className="text-3xl font-bold mb-4">Un projet similaire en tête ?</h2>
-              <p className="text-muted-foreground mb-8 max-w-xl mx-auto">Je conçois et développe des plateformes web qui convertissent — du site vitrine à l'e-commerce B2B complet.</p>
+              <h2 className="text-3xl font-bold mb-4">{t('allinfes.ctaTitle')}</h2>
+              <p className="text-muted-foreground mb-8 max-w-xl mx-auto">{t('allinfes.ctaDesc')}</p>
               <Button asChild size="lg" className="rounded-full px-8 h-14 gap-2">
-                <Link to="/contact">Discutons de votre projet</Link>
+                <Link to="/contact">{t('allinfes.ctaButton')}</Link>
               </Button>
             </motion.div>
 
             {/* RELATED PROJECTS */}
             <div>
-              <p className="text-xs font-mono text-primary uppercase tracking-widest mb-8">Projets similaires</p>
+              <p className="text-xs font-mono text-primary uppercase tracking-widest mb-8">{t('allinfes.relatedLabel')}</p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
-                  { title: 'Lamara', category: 'Shopify E-commerce', link: '/portfolio/lamara' },
-                  { title: 'WeProd Maroc', category: 'Social Media & Print', link: '/portfolio/weprod' },
+                  { title: t('lamara.allinfesTitle'), category: t('allinfes.lamaraCategory'), link: '/portfolio/lamara' },
+                  { title: t('weprod.aboutTitle'), category: t('allinfes.weprodCategory'), link: '/portfolio/weprod' },
                 ].map((project) => (
                   <Link
                     key={project.title}

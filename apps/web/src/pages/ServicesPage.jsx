@@ -121,7 +121,7 @@ const ServicesPage = () => {
                   >
                     <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-primary/10 text-primary font-medium mb-6">
                       <service.icon className="w-5 h-5" />
-                      Service {index + 1}
+                      {t('services.serviceLabel')} {index + 1}
                     </div>
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">{service.title}</h2>
                     <p className="text-lg text-muted-foreground mb-8 leading-relaxed">{service.desc}</p>
