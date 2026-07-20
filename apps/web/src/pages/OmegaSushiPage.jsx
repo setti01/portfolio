@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -8,6 +9,7 @@ import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 
 const OmegaSushiPage = () => {
+  const { t } = useTranslation();
   const metrics = [
     { value: '1 semaine', label: 'Délai de livraison complet — logo, menu 13 pages, social media, retouche photos' },
     { value: 'Gemini AI', label: 'Photos food de qualité médiocre transformées en visuels professionnels via Nano Banana Pro' },
@@ -56,16 +58,16 @@ const OmegaSushiPage = () => {
 
             {/* Breadcrumb + Back */}
             <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
-              <Link to="/" className="hover:text-primary transition-colors">Accueil</Link>
+              <Link to="/" className="hover:text-primary transition-colors">{t('project.breadcrumbHome')}</Link>
               <span>/</span>
-              <Link to="/portfolio" className="hover:text-primary transition-colors">Portfolio</Link>
+              <Link to="/portfolio" className="hover:text-primary transition-colors">{t('project.breadcrumbPortfolio')}</Link>
               <span>/</span>
               <span className="text-foreground">Omega Sushi Tanger</span>
             </nav>
             <Button asChild variant="ghost" className="mb-12 gap-2">
               <Link to="/portfolio">
                 <ArrowLeft className="w-4 h-4" />
-                Retour au portfolio
+                {t('project.backToPortfolio')}
               </Link>
             </Button>
 

@@ -36,17 +36,17 @@ const Footer = () => {
             </p>
             <div className="flex items-center gap-3">
               {socialLinks.map((social) => (
-                
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.label}
-                  className="w-10 h-10 rounded-full bg-background/50 hover:bg-primary text-secondary-foreground hover:text-primary-foreground transition-all duration-300 flex items-center justify-center"
-                >
-                  <social.icon className="w-4 h-4" />
-                </a>
-              ))}
+  <a
+    key={social.label}
+    href={social.href}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={social.label}
+    className="w-10 h-10 rounded-full bg-background/50 hover:bg-primary text-secondary-foreground hover:text-primary-foreground transition-all duration-300 flex items-center justify-center"
+  >
+    <social.icon className="w-4 h-4" />
+  </a>
+))}
             </div>
           </div>
 

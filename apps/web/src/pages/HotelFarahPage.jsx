@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -8,17 +9,18 @@ import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 
 const HotelFarahPage = () => {
+  const { t } = useTranslation();
   const relatedProjects = [
     { title: 'Smart Spares Hub', category: 'Brand & Web Design', link: '/portfolio/smart-spares-hub' },
     { title: 'WeProd Maroc', category: 'Graphic Design', link: '/portfolio/weprod' },
   ];
 
   const deliverables = [
-    "Instagram posts for events and promotions",
-    "Instagram stories for daily communication",
-    "Facebook visuals",
-    "Event tickets when needed",
-    "Promotional print materials",
+    t('hotelfarah.designedItem1'),
+    t('hotelfarah.designedItem2'),
+    t('hotelfarah.designedItem3'),
+    t('hotelfarah.designedItem4'),
+    t('hotelfarah.designedItem5'),
   ];
 
   const galleryImages = [
@@ -32,10 +34,10 @@ const HotelFarahPage = () => {
   return (
     <>
       <Helmet>
-        <title>Hotel Farah Tanger - Graphic Designer | Bilal Essatte</title>
+        <title>{t('hotelfarah.title')}</title>
         <meta
           name="description"
-          content="Luxury hospitality social media and print design for Hotel Farah Tanger, created during my time at WeProd Maroc."
+          content={t('hotelfarah.metaDesc')}
         />
       </Helmet>
 
@@ -45,9 +47,9 @@ const HotelFarahPage = () => {
         <main className="pt-32 pb-24">
           <div className="container-custom">
             <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
-              <Link to="/" className="hover:text-primary transition-colors duration-200">Accueil</Link>
+              <Link to="/" className="hover:text-primary transition-colors duration-200">{t('project.breadcrumbHome')}</Link>
               <span>/</span>
-              <Link to="/portfolio" className="hover:text-primary transition-colors duration-200">Portfolio</Link>
+              <Link to="/portfolio" className="hover:text-primary transition-colors duration-200">{t('project.breadcrumbPortfolio')}</Link>
               <span>/</span>
               <span className="text-foreground">Hotel Farah Tanger</span>
             </nav>
@@ -55,7 +57,7 @@ const HotelFarahPage = () => {
             <Button asChild variant="ghost" className="mb-8 gap-2">
               <Link to="/portfolio">
                 <ArrowLeft className="w-4 h-4" />
-                Retour au portfolio
+                {t('project.backToPortfolio')}
               </Link>
             </Button>
 
@@ -72,19 +74,18 @@ const HotelFarahPage = () => {
 
               <div className="flex flex-wrap gap-3 mb-8">
                 <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
-                  Graphic Designer
+                  {t('hotelfarah.heroTag')}
                 </span>
                 <span className="px-4 py-2 rounded-full bg-card border border-border text-sm">
-                  Client work via WeProd Maroc
+                  {t('hotelfarah.heroType')}
                 </span>
                 <span className="px-4 py-2 rounded-full bg-card border border-border text-sm">
-                  Luxury Hospitality
+                  {t('hotelfarah.heroIndustry')}
                 </span>
               </div>
 
               <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl">
-                Social media and print design for one of Tangier's best-known luxury
-                hotels — created while working at WeProd Maroc.
+                {t('hotelfarah.heroDesc')}
               </p>
             </motion.div>
 
@@ -111,39 +112,34 @@ const HotelFarahPage = () => {
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6 }}
                 >
-                  <h2 className="text-3xl font-bold mb-6">About the Project</h2>
+                  <h2 className="text-3xl font-bold mb-6">{t('hotelfarah.aboutTitle')}</h2>
                   <p className="text-muted-foreground leading-relaxed mb-6">
-                    Hotel Farah Tanger is a well-known luxury hotel in Tangier. As part of my
-                    work at WeProd Maroc, I created ongoing social media and promotional
-                    content to keep the hotel's brand image consistent and premium across
-                    Instagram and Facebook.
+                    {t('hotelfarah.aboutDesc1')}
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
-                    The content covered everything from event promotions like Karaoke Night
-                    at Le Jazz Bar, to seasonal offers at El Chiringuito, national holiday
-                    posts, and Pool Day Pass promotions.
+                    {t('hotelfarah.aboutDesc2')}
                   </p>
                 </motion.div>
               </div>
 
               <div>
                 <div className="bg-card rounded-2xl p-6 border border-border">
-                  <h3 className="text-lg font-semibold mb-4">Project Info</h3>
+                  <h3 className="text-lg font-semibold mb-4">{t('hotelfarah.projectInfo')}</h3>
                   <div className="space-y-4">
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Client</p>
+                      <p className="text-sm text-muted-foreground mb-1">{t('hotelfarah.labelClient')}</p>
                       <p className="font-medium">Hotel Farah Tanger</p>
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Agency</p>
+                      <p className="text-sm text-muted-foreground mb-1">{t('hotelfarah.labelAgency')}</p>
                       <p className="font-medium">WeProd Maroc</p>
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Role</p>
-                      <p className="font-medium">Graphic Designer</p>
+                      <p className="text-sm text-muted-foreground mb-1">{t('hotelfarah.labelRole')}</p>
+                      <p className="font-medium">{t('hotelfarah.heroTag')}</p>
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Tools</p>
+                      <p className="text-sm text-muted-foreground mb-1">{t('hotelfarah.labelTools')}</p>
                       <p className="font-medium">Adobe Photoshop, Illustrator</p>
                     </div>
                   </div>
@@ -162,7 +158,7 @@ const HotelFarahPage = () => {
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
-                <h2 className="text-3xl font-bold mb-6">What I Designed</h2>
+                <h2 className="text-3xl font-bold mb-6">{t('hotelfarah.designedTitle')}</h2>
                 <ul className="space-y-4">
                   {deliverables.map((item) => (
                     <li key={item} className="flex items-start gap-3">
@@ -180,12 +176,9 @@ const HotelFarahPage = () => {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-3xl font-bold mb-6">Selected Work</h2>
+                <h2 className="text-3xl font-bold mb-6">{t('weprod.catalogueTitle')}</h2>
                 <p className="text-muted-foreground leading-relaxed mb-8 max-w-3xl">
-                  One thing this project taught me: the same offer often needed to work in
-                  more than one format. The El Chiringuito promotion below was designed both
-                  as a landscape post and a portrait story, keeping the same identity
-                  consistent across both.
+                  {t('weprod.campaignsDesc')}
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {galleryImages.map((img, i) => (
@@ -211,15 +204,12 @@ const HotelFarahPage = () => {
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
-                <h2 className="text-3xl font-bold mb-6">Challenges</h2>
+                <h2 className="text-3xl font-bold mb-6">{t('hotelfarah.challengesTitle')}</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  The biggest challenge wasn't the design itself — it was staying creative
-                  with limited source material. The hotel's rooms, pool and restaurant stayed
-                  the same, so every new post needed a fresh angle without repeating the last one.
+                  {t('hotelfarah.challengesDesc1')}
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Communication with the hotel's team wasn't always clear, which meant more
-                  back-and-forth than usual to get each piece approved.
+                  {t('hotelfarah.challengesDesc2')}
                 </p>
               </motion.div>
 
@@ -231,12 +221,9 @@ const HotelFarahPage = () => {
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
-                <h2 className="text-3xl font-bold mb-6">Looking Back</h2>
+                <h2 className="text-3xl font-bold mb-6">{t('hotelfarah.lookbackTitle')}</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  This project taught me how to keep a luxury brand feeling consistent across
-                  dozens of posts, how to adapt one idea into multiple formats, and how to
-                  keep producing quality content on a tight, repeating schedule — even when
-                  feedback wasn't always clear.
+                  {t('hotelfarah.lookbackDesc')}
                 </p>
               </motion.div>
             </div>
@@ -248,7 +235,7 @@ const HotelFarahPage = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-2xl font-bold mb-8">Découvrez aussi</h2>
+              <h2 className="text-2xl font-bold mb-8">{t('project.relatedProjects')}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {relatedProjects.map((project) => (
                   <Link

@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -9,26 +9,34 @@ import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 
 const LamaraPage = () => {
+  const { t } = useTranslation();
   const relatedProjects = [
     {
-      title: 'Allinfes',
-      category: 'Web Design',
+      title: t('lamara.allinfesTitle'),
+      category: t('allinfes.lamaraCategory'),
       link: '/portfolio/allinfes',
     },
     {
-      title: 'WeProd Maroc',
-      category: 'Design & Web',
+      title: t('lamara.weprodTitle'),
+      category: t('allinfes.weprodCategory'),
       link: '/portfolio/weprod',
     },
+  ];
+
+  const approachItems = [
+    t('lamara.approachItem1'),
+    t('lamara.approachItem2'),
+    t('lamara.approachItem3'),
+    t('lamara.approachItem4'),
   ];
 
   return (
     <>
       <Helmet>
-        <title>Lamara - Projet Web Design | Bilal Essatte</title>
+        <title>{t('lamara.title')}</title>
         <meta
           name="description"
-          content="Découvrez le projet Lamara - Création d'une expérience web élégante et performante."
+          content={t('lamara.metaDesc')}
         />
       </Helmet>
 
@@ -39,11 +47,11 @@ const LamaraPage = () => {
           <div className="container-custom">
             <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
               <Link to="/" className="hover:text-primary transition-colors duration-200">
-                Accueil
+                {t('project.breadcrumbHome')}
               </Link>
               <span>/</span>
               <Link to="/portfolio" className="hover:text-primary transition-colors duration-200">
-                Portfolio
+                {t('project.breadcrumbPortfolio')}
               </Link>
               <span>/</span>
               <span className="text-foreground">Lamara</span>
@@ -52,7 +60,7 @@ const LamaraPage = () => {
             <Button asChild variant="ghost" className="mb-8 gap-2">
               <Link to="/portfolio">
                 <ArrowLeft className="w-4 h-4" />
-                Retour au portfolio
+                {t('project.backToPortfolio')}
               </Link>
             </Button>
 
@@ -66,15 +74,15 @@ const LamaraPage = () => {
               <div className="flex flex-wrap items-center gap-4 mb-6">
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <Tag className="w-4 h-4" />
-                  <span>Web Design & Development</span>
+                  <span>{t('lamara.heroTag')}</span>
                 </div>
                 <div className="flex items-center gap-2 text-muted-foreground">
                   <Calendar className="w-4 h-4" />
-                  <span>2024</span>
+                  <span>{t('lamara.heroYear')}</span>
                 </div>
               </div>
               <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl">
-                Développement d'une plateforme web élégante pour Lamara, combinant esthétique raffinée et fonctionnalités avancées pour une expérience utilisateur exceptionnelle.
+                {t('lamara.heroDesc')}
               </p>
             </motion.div>
 
@@ -99,9 +107,9 @@ const LamaraPage = () => {
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6 }}
                 >
-                  <h2 className="text-2xl font-bold mb-4">Le contexte</h2>
+                  <h2 className="text-2xl font-bold mb-4">{t('lamara.contextTitle')}</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    Lamara cherchait à se démarquer dans un marché compétitif avec une présence en ligne qui reflète leur positionnement premium. L'objectif était de créer une expérience web qui allie élégance visuelle et performance technique, tout en facilitant la découverte de leurs produits et services.
+                    {t('lamara.contextDesc')}
                   </p>
                 </motion.div>
 
@@ -111,35 +119,19 @@ const LamaraPage = () => {
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6 }}
                 >
-                  <h2 className="text-2xl font-bold mb-4">L'approche</h2>
+                  <h2 className="text-2xl font-bold mb-4">{t('lamara.approachTitle')}</h2>
                   <p className="text-muted-foreground leading-relaxed mb-4">
-                    J'ai développé une solution web complète qui met en valeur l'identité de Lamara à travers :
+                    {t('lamara.approachIntro')}
                   </p>
                   <ul className="space-y-3">
-                    <li className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <div className="w-2 h-2 rounded-full bg-primary" />
-                      </div>
-                      <span className="text-muted-foreground">Interface utilisateur élégante avec animations fluides</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <div className="w-2 h-2 rounded-full bg-primary" />
-                      </div>
-                      <span className="text-muted-foreground">Architecture responsive adaptée à tous les écrans</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <div className="w-2 h-2 rounded-full bg-primary" />
-                      </div>
-                      <span className="text-muted-foreground">Optimisation SEO pour une meilleure visibilité</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <div className="w-2 h-2 rounded-full bg-primary" />
-                      </div>
-                      <span className="text-muted-foreground">Système de gestion de contenu intuitif</span>
-                    </li>
+                    {approachItems.map((item, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <div className="w-6 h-6 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <div className="w-2 h-2 rounded-full bg-primary" />
+                        </div>
+                        <span className="text-muted-foreground">{item}</span>
+                      </li>
+                    ))}
                   </ul>
                 </motion.div>
 
@@ -163,18 +155,18 @@ const LamaraPage = () => {
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6 }}
                 >
-                  <h2 className="text-2xl font-bold mb-4">Impact</h2>
+                  <h2 className="text-2xl font-bold mb-4">{t('lamara.impactTitle')}</h2>
                   <p className="text-muted-foreground leading-relaxed mb-6">
-                    Le lancement du nouveau site a généré des résultats significatifs pour Lamara :
+                    {t('weprod.campaignsDesc')}
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="bg-card rounded-xl p-6 border border-border">
                       <p className="text-3xl font-bold text-primary mb-2">+156%</p>
-                      <p className="text-muted-foreground">Engagement utilisateur</p>
+                      <p className="text-muted-foreground">{t('lamara.impactMetric1')}</p>
                     </div>
                     <div className="bg-card rounded-xl p-6 border border-border">
                       <p className="text-3xl font-bold text-primary mb-2">+92%</p>
-                      <p className="text-muted-foreground">Demandes de contact</p>
+                      <p className="text-muted-foreground">{t('lamara.impactMetric2')}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -182,22 +174,22 @@ const LamaraPage = () => {
 
               <div className="space-y-6">
                 <div className="bg-card rounded-2xl p-6 border border-border">
-                  <h3 className="text-lg font-semibold mb-4">Informations</h3>
+                  <h3 className="text-lg font-semibold mb-4">{t('lamara.infoTitle')}</h3>
                   <div className="space-y-4">
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Client</p>
+                      <p className="text-sm text-muted-foreground mb-1">{t('hotelfarah.labelClient')}</p>
                       <p className="font-medium">Lamara</p>
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Services</p>
-                      <p className="font-medium">UX/UI Design, Développement Web</p>
+                      <p className="text-sm text-muted-foreground mb-1">{t('allinfes.labelServices')}</p>
+                      <p className="font-medium">{t('lamara.heroTag')}</p>
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Technologies</p>
+                      <p className="text-sm text-muted-foreground mb-1">{t('allinfes.labelTools')}</p>
                       <p className="font-medium">React, Next.js, Tailwind CSS</p>
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Année</p>
+                      <p className="text-sm text-muted-foreground mb-1">{t('lamara.labelYear')}</p>
                       <p className="font-medium">2024</p>
                     </div>
                   </div>
@@ -211,7 +203,7 @@ const LamaraPage = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-2xl font-bold mb-8">Autres projets</h2>
+              <h2 className="text-2xl font-bold mb-8">{t('project.relatedProjects')}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {relatedProjects.map((project) => (
                   <Link

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -9,28 +10,29 @@ import Footer from '@/components/Footer.jsx';
 import BrowserFrame from '@/components/BrowserFrame.jsx';
 
 const SmartSparesHubPage = () => {
+  const { t } = useTranslation();
   const relatedProjects = [
     { title: 'Hotel Farah Tanger', category: 'Branding & Social', link: '/portfolio/hotel-farah' },
-    { title: 'WeProd Maroc', category: 'Graphic Design', link: '/portfolio/weprod' },
+    { title: 'WeProd Maroc', category: 'Design & Web', link: '/portfolio/weprod' },
   ];
 
   const whatIBuilt = [
-    "Brand identity and logo design",
-    "Full homepage design, Apple-inspired direction",
-    "Product search and category navigation system",
-    "Blog / resources section",
-    "B2B structure pages (shop, order, contact)",
-    "Responsive design for mobile and desktop",
-    "SEO setup: titles, meta descriptions, alt text, sitemap, internal linking",
+    t('smartspares.builtItem1'),
+    t('smartspares.builtItem2'),
+    t('smartspares.builtItem3'),
+    t('smartspares.builtItem4'),
+    t('smartspares.builtItem5'),
+    t('smartspares.builtItem6'),
+    t('smartspares.builtItem7'),
   ];
 
   return (
     <>
       <Helmet>
-        <title>Smart Spares Hub - Brand & Web Designer | Bilal Essatte</title>
+        <title>{t('smartspares.title')}</title>
         <meta
           name="description"
-          content="A premium B2B platform for industrial spare parts — branding, web design and development from scratch."
+          content={t('smartspares.metaDesc')}
         />
       </Helmet>
 
@@ -40,9 +42,9 @@ const SmartSparesHubPage = () => {
         <main className="pt-32 pb-24">
           <div className="container-custom">
             <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
-              <Link to="/" className="hover:text-primary transition-colors duration-200">Accueil</Link>
+              <Link to="/" className="hover:text-primary transition-colors duration-200">{t('project.breadcrumbHome')}</Link>
               <span>/</span>
-              <Link to="/portfolio" className="hover:text-primary transition-colors duration-200">Portfolio</Link>
+              <Link to="/portfolio" className="hover:text-primary transition-colors duration-200">{t('project.breadcrumbPortfolio')}</Link>
               <span>/</span>
               <span className="text-foreground">Smart Spares Hub</span>
             </nav>
@@ -50,7 +52,7 @@ const SmartSparesHubPage = () => {
             <Button asChild variant="ghost" className="mb-8 gap-2">
               <Link to="/portfolio">
                 <ArrowLeft className="w-4 h-4" />
-                Retour au portfolio
+                {t('project.backToPortfolio')}
               </Link>
             </Button>
 
@@ -67,22 +69,21 @@ const SmartSparesHubPage = () => {
 
               <div className="flex flex-wrap gap-3 mb-8">
                 <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
-                  Brand & Web Designer
+                  {t('smartspares.heroTag')}
                 </span>
                 <span className="px-4 py-2 rounded-full bg-card border border-border text-sm">
-                  B2B Industrial Platform
+                  {t('smartspares.heroIndustry')}
                 </span>
               </div>
 
               <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mb-6">
-                A B2B platform built from scratch for industrial spare parts sourcing —
-                branding, web design, development and SEO, all designed and built by me.
+                {t('smartspares.heroDesc')}
               </p>
 
               <Button asChild variant="outline" className="rounded-full gap-2">
                 <a href="https://www.smartspareshub.com/" target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="w-4 h-4" />
-                  Visit smartspareshub.com
+                  {t('smartspares.heroButton')}
                 </a>
               </Button>
             </motion.div>
@@ -111,43 +112,38 @@ const SmartSparesHubPage = () => {
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6 }}
                 >
-                  <h2 className="text-3xl font-bold mb-6">About the Project</h2>
+                  <h2 className="text-3xl font-bold mb-6">{t('smartspares.aboutTitle')}</h2>
                   <p className="text-muted-foreground leading-relaxed mb-6">
-                    Smart Spares Hub is a B2B platform for industrial spare parts and
-                    maintenance solutions. My cousin, who runs the business, asked me to
-                    build the company's first website — his goal was a premium experience,
-                    inspired by the Apple website, that would make procurement simple for
-                    industrial clients.
+                    {t('smartspares.aboutDesc1')}
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
-                    I designed and built the entire project alone: brand identity, UI design,
-                    WordPress development, and a printed roll-up for the business.
+                    {t('smartspares.aboutDesc2')}
                   </p>
                 </motion.div>
               </div>
 
               <div>
                 <div className="bg-card rounded-2xl p-6 border border-border">
-                  <h3 className="text-lg font-semibold mb-4">Project Info</h3>
+                  <h3 className="text-lg font-semibold mb-4">{t('smartspares.projectInfo')}</h3>
                   <div className="space-y-4">
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Client</p>
+                      <p className="text-sm text-muted-foreground mb-1">{t('smartspares.labelClient')}</p>
                       <p className="font-medium">Smart Spares Hub</p>
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Role</p>
-                      <p className="font-medium">Brand & Web Designer</p>
+                      <p className="text-sm text-muted-foreground mb-1">{t('smartspares.labelRole')}</p>
+                      <p className="font-medium">{t('smartspares.heroTag')}</p>
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Duration</p>
+                      <p className="text-sm text-muted-foreground mb-1">{t('smartspares.labelDuration')}</p>
                       <p className="font-medium">Logo: 2 days · Website: 10 days · Roll-up: 1 day</p>
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Tools</p>
+                      <p className="text-sm text-muted-foreground mb-1">{t('smartspares.labelTools')}</p>
                       <p className="font-medium">WordPress, Elementor, Custom CSS</p>
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Plugins</p>
+                      <p className="text-sm text-muted-foreground mb-1">{t('smartspares.labelPlugins')}</p>
                       <p className="font-medium">B2BKing, Wholesale Suite, WPForms, Yoast SEO</p>
                     </div>
                   </div>
@@ -166,11 +162,9 @@ const SmartSparesHubPage = () => {
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
-                <h2 className="text-3xl font-bold mb-6">The Goal</h2>
+                <h2 className="text-3xl font-bold mb-6">{t('smartspares.goalTitle')}</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Build the company's first website, with a premium image inspired by Apple's
-                  design language. The site needed to present industrial products clearly,
-                  build trust with B2B clients, and support the business as it grows.
+                  {t('smartspares.goalDesc')}
                 </p>
               </motion.div>
 
@@ -182,7 +176,7 @@ const SmartSparesHubPage = () => {
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
-                <h2 className="text-3xl font-bold mb-6">What I Built</h2>
+                <h2 className="text-3xl font-bold mb-6">{t('smartspares.builtTitle')}</h2>
                 <ul className="space-y-4">
                   {whatIBuilt.map((item) => (
                     <li key={item} className="flex items-start gap-3">
@@ -200,11 +194,9 @@ const SmartSparesHubPage = () => {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-3xl font-bold mb-6">Brand Identity</h2>
+                <h2 className="text-3xl font-bold mb-6">{t('smartspares.identityTitle')}</h2>
                 <p className="text-muted-foreground leading-relaxed mb-6 max-w-3xl">
-                  I designed the logo and visual identity from scratch — a clean, industrial
-                  aesthetic that matches the premium direction the client wanted, while
-                  staying simple enough to work at any size, from a favicon to a printed roll-up.
+                  {t('smartspares.identityDesc')}
                 </p>
                 <div className="max-w-sm rounded-2xl overflow-hidden border border-border bg-card p-12 flex items-center justify-center">
                   <img
@@ -222,7 +214,7 @@ const SmartSparesHubPage = () => {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-3xl font-bold mb-6">The Website</h2>
+                <h2 className="text-3xl font-bold mb-6">{t('smartspares.webTitle')}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <BrowserFrame
                     url="smartspareshub.com/shop"
@@ -255,15 +247,12 @@ const SmartSparesHubPage = () => {
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
-                <h2 className="text-3xl font-bold mb-6">Challenges</h2>
+                <h2 className="text-3xl font-bold mb-6">{t('smartspares.challengesTitle')}</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Elementor has real limits when you're chasing a very specific, premium look —
-                  I used custom CSS to build things the page builder couldn't do on its own.
+                  {t('smartspares.challengesDesc1')}
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  The biggest challenge wasn't technical — it was matching my cousin's very
-                  specific taste, shaped by studying the Apple website closely. Getting that
-                  level of polish right took several rounds of refinement.
+                  {t('smartspares.challengesDesc2')}
                 </p>
               </motion.div>
 
@@ -275,13 +264,9 @@ const SmartSparesHubPage = () => {
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
-                <h2 className="text-3xl font-bold mb-6">Looking Back</h2>
+                <h2 className="text-3xl font-bold mb-6">{t('smartspares.lookbackTitle')}</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  This project pushed me to build a real design system — consistent spacing,
-                  reusable components, and a clear typographic hierarchy — for a B2B platform
-                  that had to feel premium, not just functional. It's one of the projects I'm
-                  most proud of, because I handled every part of it myself, from the first
-                  sketch to the final line of CSS.
+                  {t('smartspares.lookbackDesc')}
                 </p>
               </motion.div>
             </div>
@@ -293,7 +278,7 @@ const SmartSparesHubPage = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-2xl font-bold mb-8">Découvrez aussi</h2>
+              <h2 className="text-2xl font-bold mb-8">{t('project.relatedProjects')}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {relatedProjects.map((project) => (
                   <Link

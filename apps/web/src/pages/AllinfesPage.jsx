@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -8,6 +9,7 @@ import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 
 const AllinfesPage = () => {
+  const { t } = useTranslation();
   const metrics = [
     { value: '100%', label: 'Contrôle indépendant du catalogue produit livré au client dès le lancement' },
     { value: 'WooCommerce', label: 'Système e-commerce complet intégré avec gestion des devis et commandes' },
@@ -47,16 +49,16 @@ const AllinfesPage = () => {
 
             {/* Breadcrumb + Back */}
             <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
-              <Link to="/" className="hover:text-primary transition-colors">Accueil</Link>
+              <Link to="/" className="hover:text-primary transition-colors">{t('project.breadcrumbHome')}</Link>
               <span>/</span>
-              <Link to="/portfolio" className="hover:text-primary transition-colors">Portfolio</Link>
+              <Link to="/portfolio" className="hover:text-primary transition-colors">{t('project.breadcrumbPortfolio')}</Link>
               <span>/</span>
               <span className="text-foreground">Allinfes</span>
             </nav>
             <Button asChild variant="ghost" className="mb-12 gap-2">
               <Link to="/portfolio">
                 <ArrowLeft className="w-4 h-4" />
-                Retour au portfolio
+                {t('project.backToPortfolio')}
               </Link>
             </Button>
 

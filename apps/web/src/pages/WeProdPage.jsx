@@ -25,22 +25,22 @@ const WeProdPage = () => {
   ];
 
   const whatIDid = [
-    "Designed social media posts and stories",
-    "Created roll-ups and print materials",
-    "Designed event tickets",
-    "Prepared sponsorship dossiers",
-    "Retouched photos for marketing campaigns",
-    "Created branding assets for multiple clients",
-    "Prepared files for professional printing",
-    "Worked with community managers, videographers and a 3D designer",
+    t('weprod.didItem1'),
+    t('weprod.didItem2'),
+    t('weprod.didItem3'),
+    t('weprod.didItem4'),
+    t('weprod.didItem5'),
+    t('weprod.didItem6'),
+    t('weprod.didItem7'),
+    t('weprod.didItem8'),
   ];
 
   const whatILearned = [
-    "How a real creative agency works day to day",
-    "How to prepare files for large-format printing",
-    "How to build a full campaign, not just single posts",
-    "How to stay creative under tight, repeating deadlines",
-    "How to pitch an idea to a founder and see it become real",
+    t('weprod.learnedItem1'),
+    t('weprod.learnedItem2'),
+    t('weprod.learnedItem3'),
+    t('weprod.learnedItem4'),
+    t('weprod.learnedItem5'),
   ];
 
   const catalogueImages = [
@@ -66,10 +66,10 @@ const WeProdPage = () => {
   return (
     <>
       <Helmet>
-        <title>WeProd Maroc - Graphic Designer | Bilal Essatte</title>
+        <title>{t('weprod.title')}</title>
         <meta
           name="description"
-          content="My first experience inside a creative agency: branding, social media, print and event communication for WeProd Maroc."
+          content={t('weprod.metaDesc')}
         />
       </Helmet>
 
@@ -106,20 +106,18 @@ const WeProdPage = () => {
 
               <div className="flex flex-wrap gap-3 mb-8">
                 <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
-                  Graphic Designer
+                  {t('weprod.heroTag')}
                 </span>
                 <span className="px-4 py-2 rounded-full bg-card border border-border text-sm">
-                  July 2024 — November 2024
+                  {t('weprod.heroDuration')}
                 </span>
                 <span className="px-4 py-2 rounded-full bg-card border border-border text-sm">
-                  Communication & Events Agency
+                  {t('weprod.heroType')}
                 </span>
               </div>
 
               <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl">
-                My first experience inside a creative agency, where I worked on branding,
-                social media, print design and event communication for hotels,
-                restaurants and local brands.
+                {t('weprod.heroDesc')}
               </p>
             </motion.div>
 
@@ -146,42 +144,38 @@ const WeProdPage = () => {
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6 }}
                 >
-                  <h2 className="text-3xl font-bold mb-6">About WeProd</h2>
+                  <h2 className="text-3xl font-bold mb-6">{t('weprod.aboutTitle')}</h2>
                   <p className="text-muted-foreground leading-relaxed mb-6">
-                    WeProd Maroc is one of the leading communication and event agencies in
-                    Tangier. The agency works with hotels, restaurants, beauty brands and
-                    companies, creating everything from social media campaigns to large events,
-                    branding and print materials.
+                    {t('weprod.aboutDesc1')}
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
-                    This was my first experience working inside a professional creative agency.
-                    It completely changed the way I see design, teamwork and communication.
+                    {t('weprod.aboutDesc2')}
                   </p>
                 </motion.div>
               </div>
 
               <div>
                 <div className="bg-card rounded-2xl p-6 border border-border">
-                  <h3 className="text-lg font-semibold mb-4">Project Info</h3>
+                  <h3 className="text-lg font-semibold mb-4">{t('weprod.projectInfo')}</h3>
                   <div className="space-y-4">
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Agency</p>
+                      <p className="text-sm text-muted-foreground mb-1">{t('weprod.labelAgency')}</p>
                       <p className="font-medium">WeProd Maroc</p>
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Role</p>
-                      <p className="font-medium">Graphic Designer</p>
+                      <p className="text-sm text-muted-foreground mb-1">{t('weprod.labelRole')}</p>
+                      <p className="font-medium">{t('weprod.heroTag')}</p>
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Duration</p>
-                      <p className="font-medium">July 2024 — November 2024</p>
+                      <p className="text-sm text-muted-foreground mb-1">{t('weprod.labelDuration')}</p>
+                      <p className="font-medium">{t('weprod.heroDuration')}</p>
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Tools</p>
+                      <p className="text-sm text-muted-foreground mb-1">{t('weprod.labelTools')}</p>
                       <p className="font-medium">Adobe Photoshop, Illustrator, InDesign</p>
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Clients</p>
+                      <p className="text-sm text-muted-foreground mb-1">{t('weprod.labelClients')}</p>
                       <p className="font-medium">Hotel Farah, Flamant Rose, Palais Blanc, Bloom Beauty</p>
                     </div>
                   </div>
@@ -200,23 +194,15 @@ const WeProdPage = () => {
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
-                <h2 className="text-3xl font-bold mb-6">How I Joined WeProd</h2>
+                <h2 className="text-3xl font-bold mb-6">{t('weprod.joinedTitle')}</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Before joining WeProd, I was working as a freelance graphic designer.
-                  Freelancing alone wasn't giving me enough stability, and I wanted real
-                  experience inside a creative agency.
+                  {t('weprod.joinedDesc1')}
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  A friend who worked at WeProd told me they were looking for a graphic
-                  designer. I applied, heard nothing for a few days, and almost forgot about
-                  it. Then one morning I woke up to several missed calls. When they called
-                  back, the first thing I heard was: "Bilal, I think you don't really want
-                  this job!" We both laughed, and a few days later I had my very first job
-                  interview.
+                  {t('weprod.joinedDesc2')}
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  I passed the interviews with the Community Manager, HR and the founder,
-                  and started working that same day.
+                  {t('weprod.joinedDesc3')}
                 </p>
               </motion.div>
 
@@ -228,7 +214,7 @@ const WeProdPage = () => {
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
-                <h2 className="text-3xl font-bold mb-6">What I Did</h2>
+                <h2 className="text-3xl font-bold mb-6">{t('weprod.didTitle')}</h2>
                 <ul className="space-y-4">
                   {whatIDid.map((item) => (
                     <li key={item} className="flex items-start gap-3">
@@ -246,13 +232,9 @@ const WeProdPage = () => {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-3xl font-bold mb-6">Vehicle Branding</h2>
+                <h2 className="text-3xl font-bold mb-6">{t('weprod.vehicleTitle')}</h2>
                 <p className="text-muted-foreground leading-relaxed mb-6 max-w-3xl">
-                  I also designed the full branding for WeProd's own company vehicle — used for
-                  events and equipment transport across Tangier. The design included the WeProd
-                  logo, contact details, a small map showing the agency's headquarters and
-                  operation sites, and a visual built around the agency's core services:
-                  sound, stage, lighting and event structures.
+                  {t('weprod.vehicleDesc')}
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -287,11 +269,9 @@ const WeProdPage = () => {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-3xl font-bold mb-6">Event Materials Catalogue</h2>
+                <h2 className="text-3xl font-bold mb-6">{t('weprod.catalogueTitle')}</h2>
                 <p className="text-muted-foreground leading-relaxed mb-8 max-w-3xl">
-                  I designed a catalogue covering all the equipment and services used by WeProd's
-                  event team: tents and stands (chapiteaux), electrical setup, lighting, sound,
-                  audiovisual equipment, decor and furniture, scenography, and printing.
+                  {t('weprod.catalogueDesc')}
                 </p>
 
                 <MaterialsGallery images={catalogueImages} />
@@ -303,12 +283,9 @@ const WeProdPage = () => {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-3xl font-bold mb-6">More Campaigns at WeProd</h2>
+                <h2 className="text-3xl font-bold mb-6">{t('weprod.campaignsTitle')}</h2>
                 <p className="text-muted-foreground leading-relaxed mb-8 max-w-3xl">
-                  Beyond client work, I also created social media content for WeProd's own
-                  brand — including an Instagram story supporting the Moroccan national
-                  football team, and promotional visuals for the Auto Expo event. The third
-                  image is a mockup showing how one of these campaigns looked live on Instagram.
+                  {t('weprod.campaignsDesc')}
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -344,21 +321,15 @@ const WeProdPage = () => {
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
-                <h2 className="text-3xl font-bold mb-6">Featured Project: Traditional Women's Event</h2>
+                <h2 className="text-3xl font-bold mb-6">{t('weprod.featuredTitle')}</h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  The project I'm most proud of at WeProd was a large, traditional
-                  women-only event. I had only just joined the agency, but during a team
-                  meeting the founder asked everyone for marketing ideas — so I proposed one.
+                  {t('weprod.featuredDesc1')}
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  I called it the "Blind Ticket": people could buy their ticket before the
-                  guest artist was announced. It created curiosity and got people talking
-                  about the event early.
+                  {t('weprod.featuredDesc2')}
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Once the idea was approved, I designed the full campaign around it:
-                  the sponsorship dossier, roll-up banners, event tickets, artist
-                  announcements and all the Instagram content.
+                  {t('weprod.featuredDesc3')}
                 </p>
               </motion.div>
 
@@ -370,12 +341,11 @@ const WeProdPage = () => {
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
-                <h2 className="text-3xl font-bold mb-6">What I Learned</h2>
+                <h2 className="text-3xl font-bold mb-6">{t('weprod.learnedTitle')}</h2>
 
                 <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 mb-6">
                   <p className="text-lg font-medium">
-                    "Keep It Stupid Simple" — a colleague taught me this early on, and it
-                    changed how I approach every design since.
+                    {t('weprod.learnedQuote')}
                   </p>
                 </div>
 
@@ -397,12 +367,9 @@ const WeProdPage = () => {
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
-                <h2 className="text-3xl font-bold mb-6">Looking Back</h2>
+                <h2 className="text-3xl font-bold mb-6">{t('weprod.reflectionTitle')}</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  I joined WeProd mostly thinking of myself as a graphic designer. I left
-                  with a much broader view — of branding, print production, event marketing
-                  and working as part of a team. This experience confirmed that I enjoy
-                  adapting quickly to new challenges and industries.
+                  {t('weprod.reflectionDesc')}
                 </p>
               </motion.div>
             </div>
