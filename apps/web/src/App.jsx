@@ -17,6 +17,7 @@ import GaleriePage from './pages/GaleriePage.jsx';
 import SmartSparesHubPage from './pages/SmartSparesHubPage.jsx';
 import HotelFarahPage from './pages/HotelFarahPage.jsx';
 import NotFoundPage from './pages/NotFoundPage.jsx';
+import MielChahdaPage from './pages/MielChahdaPage.jsx';
 
 
 const WhatsAppButton = () => (
@@ -71,6 +72,7 @@ const AnimatedRoutes = () => {
           <Route path="/portfolio/weprod" element={<WeProdPage />} />
           <Route path="/portfolio/smart-spares-hub" element={<SmartSparesHubPage />} />
           <Route path="/portfolio/hotel-farah" element={<HotelFarahPage />} />
+          <Route path="/portfolio/miel-chahda" element={<MielChahdaPage />} />
           <Route path="/galerie" element={<GaleriePage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
