@@ -67,7 +67,7 @@ const AnimatedRoutes = () => {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/portfolio/allinfes" element={<AllinfesPage />} />
-          {/* <Route path="/portfolio/lamara" element={<LamaraPage />} /> */}
+          <Route path="/portfolio/lamara" element={<LamaraPage />} />
           <Route path="/portfolio/omega-sushi" element={<OmegaSushiPage />} />
           <Route path="/portfolio/weprod" element={<WeProdPage />} />
           <Route path="/portfolio/smart-spares-hub" element={<SmartSparesHubPage />} />

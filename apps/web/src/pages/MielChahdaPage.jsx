@@ -127,7 +127,7 @@ const MielChahdaPage = () => {
                   <div className="overflow-y-auto max-h-[500px]">
                     <img
                       src="https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1784601521/screencapture-mielchahda-2026-06-12-00_32_43_oswuhz.png"
-                      alt="Miel Chahda homepage before — cluttered, broken version"
+                      alt="Miel Chahda homepage before"
                       className="w-full h-auto"
                     />
                   </div>
@@ -140,7 +140,7 @@ const MielChahdaPage = () => {
                   <div className="overflow-y-auto max-h-[500px]">
                     <img
                       src="https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1784601445/screencapture-mielchahda-2026-07-21-04_02_37_leusvs.png"
-                      alt="Miel Chahda homepage after — clean, rebuilt version"
+                      alt="Miel Chahda homepage after"
                       className="w-full h-auto"
                     />
                   </div>
@@ -198,17 +198,17 @@ const MielChahdaPage = () => {
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground mb-1">Budget</p>
-                      <p className="font-medium">2,000 MAD (Speed optimization + Full rebuild)</p>
+                      <p className="font-medium">2,000 MAD</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* FULL WIDTH FROM HERE */}
+            {/* FULL WIDTH */}
             <div className="space-y-16 mb-16">
 
-              {/* PERFORMANCE RESULTS */}
+              {/* PERFORMANCE */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -217,21 +217,17 @@ const MielChahdaPage = () => {
               >
                 <h2 className="text-3xl font-bold mb-6">Performance Results</h2>
                 <p className="text-muted-foreground leading-relaxed mb-8 max-w-3xl">
-                  Before touching the design, the priority was stopping the site from
-                  bleeding potential customers during load. These are the real numbers
-                  from PageSpeed Insights, before and after Phase 1.
+                  Real numbers from PageSpeed Insights, before and after Phase 1.
                 </p>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {/* Desktop */}
                   <div className="bg-card rounded-2xl p-6 border border-border">
                     <h3 className="font-semibold text-lg mb-4">Desktop</h3>
                     <div className="space-y-4">
                       {[
-                        { label: "Performance Score", before: "49 / 100", after: "71 / 100", good: true },
-                        { label: "LCP", before: "16.1 s", after: "2.9 s", good: true },
-                        { label: "FCP", before: "1.0 s", after: "Improved", good: true },
-                        { label: "Speed Index", before: "13.7 s", after: "Improved", good: true },
+                        { label: "Performance Score", before: "49 / 100", after: "71 / 100" },
+                        { label: "LCP", before: "16.1 s", after: "2.9 s" },
+                        { label: "FCP", before: "1.0 s", after: "Improved" },
+                        { label: "Speed Index", before: "13.7 s", after: "Improved" },
                       ].map((row) => (
                         <div key={row.label} className="flex items-center justify-between gap-4">
                           <span className="text-sm text-muted-foreground">{row.label}</span>
@@ -244,16 +240,14 @@ const MielChahdaPage = () => {
                       ))}
                     </div>
                   </div>
-
-                  {/* Mobile */}
                   <div className="bg-card rounded-2xl p-6 border border-border">
                     <h3 className="font-semibold text-lg mb-4">Mobile</h3>
                     <div className="space-y-4">
                       {[
-                        { label: "Performance Score", before: "41 / 100", after: "49–55 / 100", good: true },
-                        { label: "LCP", before: "72.5 s", after: "13.9 s", good: true },
-                        { label: "FCP", before: "6.0 s", after: "2.0–2.7 s", good: true },
-                        { label: "Speed Index", before: "55.0 s", after: "9.8–9.9 s", good: true },
+                        { label: "Performance Score", before: "41 / 100", after: "49–55 / 100" },
+                        { label: "LCP", before: "72.5 s", after: "13.9 s" },
+                        { label: "FCP", before: "6.0 s", after: "2.0–2.7 s" },
+                        { label: "Speed Index", before: "55.0 s", after: "9.8–9.9 s" },
                       ].map((row) => (
                         <div key={row.label} className="flex items-center justify-between gap-4">
                           <span className="text-sm text-muted-foreground">{row.label}</span>
@@ -319,8 +313,8 @@ const MielChahdaPage = () => {
                 <h2 className="text-3xl font-bold mb-6">Product Photography</h2>
                 <p className="text-muted-foreground leading-relaxed mb-8 max-w-3xl">
                   All product images were retouched and prepared for web — original
-                  photos edited with clean studio-style backgrounds (white/cream tones)
-                  for a consistent, premium look across the catalog.
+                  photos edited with clean studio-style backgrounds for a consistent,
+                  premium look across the catalog.
                 </p>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {productImages.map((src, i) => (
@@ -362,10 +356,9 @@ const MielChahdaPage = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   The previous developer had left the site with over 30 active plugins
                   generating conflicting scripts and layout breaks. Diagnosing which
-                  plugin was causing which problem — without simply deactivating everything
-                  at once and breaking the site — required methodical, isolated testing.
-                  Every optimization was verified against live WooCommerce functionality
-                  before being kept.
+                  plugin caused which problem — without simply deactivating everything
+                  at once — required methodical, isolated testing. Every optimization
+                  was verified against live WooCommerce functionality before being kept.
                 </p>
               </motion.div>
 
@@ -381,9 +374,9 @@ const MielChahdaPage = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   This project confirmed something I already suspected: performance
                   optimization and technical debt recovery require a different mindset
-                  than new builds. You have to understand what's already there before
-                  you can improve it — and you have to move carefully, because someone's
-                  business is running on it while you work.
+                  than new builds. You have to understand what's there before you can
+                  improve it — and move carefully, because someone's business is running
+                  on it while you work.
                 </p>
               </motion.div>
             </div>
