@@ -44,6 +44,15 @@ const MielChahdaPage = () => {
       <Helmet>
         <title>{t('mielchahda.title')}</title>
         <meta name="description" content={t('mielchahda.metaDesc')} />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://bilalessatte.site/"},
+            {"@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://bilalessatte.site/portfolio"},
+            {"@type": "ListItem", "position": 3, "name": "Miel Chahda", "item": "https://bilalessatte.site/portfolio/miel-chahda"}
+          ]
+        })}</script>
       </Helmet>
 
       <div className="min-h-screen bg-background">

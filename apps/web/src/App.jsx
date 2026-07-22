@@ -67,9 +67,13 @@ const pageVariants = {
 const AnimatedRoutes = () => {
   const location = useLocation();
   return (
-    <AnimatePresence mode="wait">
-      <motion.div key={location.pathname} variants={pageVariants} initial="initial" animate="animate" exit="exit">
-        <Suspense fallback={<PageLoader />}>
+    <Suspense fallback={
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <div className="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin" />
+      </div>
+    }>
+      <AnimatePresence mode="wait">
+        <motion.div key={location.pathname} variants={pageVariants} initial="initial" animate="animate" exit="exit">
           <Routes location={location}>
             <Route path="/" element={<HomePage />} />
             <Route path="/portfolio" element={<PortfolioPage />} />
@@ -86,9 +90,9 @@ const AnimatedRoutes = () => {
             <Route path="/galerie" element={<GaleriePage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
-        </Suspense>
-      </motion.div>
-    </AnimatePresence>
+        </motion.div>
+      </AnimatePresence>
+    </Suspense>
   );
 };
 
