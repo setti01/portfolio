@@ -11,8 +11,8 @@ import Footer from '@/components/Footer.jsx';
 const HotelFarahPage = () => {
   const { t } = useTranslation();
   const relatedProjects = [
-    { title: 'Smart Spares Hub', category: 'Brand & Web Design', link: '/portfolio/smart-spares-hub' },
-    { title: 'WeProd Maroc', category: 'Graphic Design', link: '/portfolio/weprod' },
+    { title: 'Smart Spares Hub', category: t('home.featuredProject2_category'), link: '/portfolio/smart-spares-hub' },
+    { title: 'WeProd Maroc', category: t('project.categoryGraphicDesign'), link: '/portfolio/weprod' },
   ];
 
   const deliverables = [
@@ -176,9 +176,9 @@ const HotelFarahPage = () => {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-3xl font-bold mb-6">{t('weprod.catalogueTitle')}</h2>
+              <h2 className="text-3xl font-bold mb-6">{t('hotelfarah.galleryTitle')}</h2>
                 <p className="text-muted-foreground leading-relaxed mb-8 max-w-3xl">
-                  {t('weprod.campaignsDesc')}
+                  {t('hotelfarah.galleryDesc')}
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {galleryImages.map((img, i) => (

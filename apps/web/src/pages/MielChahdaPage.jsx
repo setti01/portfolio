@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -8,31 +9,11 @@ import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 
 const MielChahdaPage = () => {
+  const { t } = useTranslation();
+
   const relatedProjects = [
-    { title: 'Smart Spares Hub', category: 'Brand & Web Design', link: '/portfolio/smart-spares-hub' },
-    { title: 'WeProd Maroc', category: 'Graphic Design', link: '/portfolio/weprod' },
-  ];
-
-  const phase1Items = [
-    "Configured LiteSpeed Cache and enabled browser caching",
-    "Set up WebP image delivery via QUIC.cloud",
-    "Compressed raw images from 1–3 MB down to 100–300 KB",
-    "Minified and deferred non-critical JS/CSS while keeping WooCommerce checkout intact",
-    "Identified a heavy slider plugin as the primary mobile bottleneck and removed it",
-    "Safely deactivated conflicting plugins without disrupting live Cash-on-Delivery orders",
-  ];
-
-  const phase2Items = [
-    "Completely rebuilt the homepage layout in Elementor",
-    "Removed artificial urgency timers, duplicate sections and clutter",
-    "Created 'Nos Variétés de Miel' section with 12 custom botanical illustrations",
-    "Integrated 4 client testimonials and fixed the Coffret Chahda section",
-    "Audited full WooCommerce catalog — deleted 15 invalid/duplicate products",
-    "Created 6 clean product categories: Collection du Miel, Amlou Marocain, Mélange du Miel, Produits de la Ruche, Fruits Secs, Pâte à Tartiner",
-    "Configured exact weight variations (125g / 250g / 500g / 1kg) for all products",
-    "Retouched and prepared all product images with clean studio-style backgrounds",
-    "Deployed Rank Math SEO across all 37 product pages with original French content",
-    "Updated footer with real contact numbers, location and partner logos (Carrefour, Aswak Salam, ONSSA)",
+    { title: 'Smart Spares Hub', category: t('project.categoryWeb'), link: '/portfolio/smart-spares-hub' },
+    { title: 'WeProd Maroc', category: t('project.categoryGraphicDesign'), link: '/portfolio/weprod' },
   ];
 
   const productImages = [
@@ -44,14 +25,25 @@ const MielChahdaPage = () => {
     "https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1784601035/Gemini_Generated_Image_i5apxdi5apxdi5ap_qnmpqn.png",
   ];
 
+  const perfDesktop = [
+    { label: t('mielchahda.perfScore'), before: "49 / 100", after: "71 / 100" },
+    { label: t('mielchahda.perfLCP'), before: "16.1 s", after: "2.9 s" },
+    { label: t('mielchahda.perfFCP'), before: "1.0 s", after: t('mielchahda.perfImproved') },
+    { label: t('mielchahda.perfSpeedIndex'), before: "13.7 s", after: t('mielchahda.perfImproved') },
+  ];
+
+  const perfMobile = [
+    { label: t('mielchahda.perfScore'), before: "41 / 100", after: "49–55 / 100" },
+    { label: t('mielchahda.perfLCP'), before: "72.5 s", after: "13.9 s" },
+    { label: t('mielchahda.perfFCP'), before: "6.0 s", after: "2.0–2.7 s" },
+    { label: t('mielchahda.perfSpeedIndex'), before: "55.0 s", after: "9.8–9.9 s" },
+  ];
+
   return (
     <>
       <Helmet>
-        <title>Miel Chahda — E-Commerce Turnaround | Bilal Essatte</title>
-        <meta
-          name="description"
-          content="Full WordPress e-commerce recovery for Miel Chahda: speed optimization, WooCommerce restructuring, homepage rebuild and SEO — desktop performance from 49 to 71."
-        />
+        <title>{t('mielchahda.title')}</title>
+        <meta name="description" content={t('mielchahda.metaDesc')} />
       </Helmet>
 
       <div className="min-h-screen bg-background">
@@ -60,9 +52,9 @@ const MielChahdaPage = () => {
         <main className="pt-32 pb-24">
           <div className="container-custom">
             <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
-              <Link to="/" className="hover:text-primary transition-colors duration-200">Home</Link>
+              <Link to="/" className="hover:text-primary transition-colors duration-200">{t('mielchahda.breadcrumbHome')}</Link>
               <span>/</span>
-              <Link to="/portfolio" className="hover:text-primary transition-colors duration-200">Portfolio</Link>
+              <Link to="/portfolio" className="hover:text-primary transition-colors duration-200">{t('mielchahda.breadcrumbPortfolio')}</Link>
               <span>/</span>
               <span className="text-foreground">Miel Chahda</span>
             </nav>
@@ -70,7 +62,7 @@ const MielChahdaPage = () => {
             <Button asChild variant="ghost" className="mb-8 gap-2">
               <Link to="/portfolio">
                 <ArrowLeft className="w-4 h-4" />
-                Back to portfolio
+                {t('mielchahda.backBtn')}
               </Link>
             </Button>
 
@@ -82,31 +74,29 @@ const MielChahdaPage = () => {
               className="mb-12"
             >
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
-                Miel Chahda
+                {t('mielchahda.heroTitle')}
               </h1>
 
               <div className="flex flex-wrap gap-3 mb-8">
                 <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
-                  Web Designer & Developer
+                  {t('mielchahda.heroTag')}
                 </span>
                 <span className="px-4 py-2 rounded-full bg-card border border-border text-sm">
-                  April – June 2026
+                  {t('mielchahda.heroPeriod')}
                 </span>
                 <span className="px-4 py-2 rounded-full bg-card border border-border text-sm">
-                  E-Commerce / Agricultural Cooperative
+                  {t('mielchahda.heroIndustry')}
                 </span>
               </div>
 
               <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mb-6">
-                A full technical recovery and redesign for a Moroccan honey cooperative —
-                fixing a site left in critical condition by a previous developer, without
-                a single hour of downtime on live orders.
+                {t('mielchahda.heroDesc')}
               </p>
 
               <Button asChild variant="outline" className="rounded-full gap-2">
                 <a href="https://mielchahda.com" target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="w-4 h-4" />
-                  Visit mielchahda.com
+                  {t('mielchahda.heroBtn')}
                 </a>
               </Button>
             </motion.div>
@@ -122,7 +112,7 @@ const MielChahdaPage = () => {
                 <div className="rounded-2xl overflow-hidden border border-border bg-card">
                   <div className="px-4 py-2 bg-red-500/10 border-b border-border flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-red-400"></div>
-                    <span className="text-sm font-medium text-red-400">Before — broken version</span>
+                    <span className="text-sm font-medium text-red-400">{t('mielchahda.beforeLabel')}</span>
                   </div>
                   <div className="overflow-y-auto max-h-[500px]">
                     <img
@@ -135,7 +125,7 @@ const MielChahdaPage = () => {
                 <div className="rounded-2xl overflow-hidden border border-primary/30 bg-card">
                   <div className="px-4 py-2 bg-primary/10 border-b border-border flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-primary"></div>
-                    <span className="text-sm font-medium text-primary">After — rebuilt version</span>
+                    <span className="text-sm font-medium text-primary">{t('mielchahda.afterLabel')}</span>
                   </div>
                   <div className="overflow-y-auto max-h-[500px]">
                     <img
@@ -157,48 +147,39 @@ const MielChahdaPage = () => {
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6 }}
                 >
-                  <h2 className="text-3xl font-bold mb-6">About the Project</h2>
+                  <h2 className="text-3xl font-bold mb-6">{t('mielchahda.aboutTitle')}</h2>
                   <p className="text-muted-foreground leading-relaxed mb-6">
-                    Coopérative Agricole CHAHDA is a Moroccan honey producer based in
-                    El Jadida. I originally built their e-commerce site in 2020. In 2024,
-                    the site went offline due to sales challenges. When the owner relaunched,
-                    he hired another developer — who left the site in critical condition:
-                    over 30 active plugins generating conflicting scripts, uncompressed
-                    images weighing up to 3 MB each, broken category structures, and a
-                    mobile performance score of 41/100 with a 72.5 second Largest
-                    Contentful Paint.
+                    {t('mielchahda.aboutDesc1')}
                   </p>
                   <p className="text-muted-foreground leading-relaxed">
-                    The owner brought me back to fix it. The challenge wasn't rebuilding
-                    the site — it was fixing it without taking it down, while live
-                    Cash-on-Delivery orders were still coming in.
+                    {t('mielchahda.aboutDesc2')}
                   </p>
                 </motion.div>
               </div>
 
               <div>
                 <div className="bg-card rounded-2xl p-6 border border-border sticky top-32">
-                  <h3 className="text-lg font-semibold mb-4">Project Info</h3>
+                  <h3 className="text-lg font-semibold mb-4">{t('mielchahda.infoTitle')}</h3>
                   <div className="space-y-4">
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Client</p>
-                      <p className="font-medium">Coopérative Agricole CHAHDA</p>
+                      <p className="text-sm text-muted-foreground mb-1">{t('mielchahda.infoClient')}</p>
+                      <p className="font-medium">{t('mielchahda.infoClientValue')}</p>
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Role</p>
-                      <p className="font-medium">Web Designer & Developer</p>
+                      <p className="text-sm text-muted-foreground mb-1">{t('mielchahda.infoRole')}</p>
+                      <p className="font-medium">{t('mielchahda.infoRoleValue')}</p>
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Timeline</p>
-                      <p className="font-medium">April – June 2026</p>
+                      <p className="text-sm text-muted-foreground mb-1">{t('mielchahda.infoTimeline')}</p>
+                      <p className="font-medium">{t('mielchahda.infoTimelineValue')}</p>
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Tools</p>
-                      <p className="font-medium">WordPress, WooCommerce, Elementor, Rank Math SEO, LiteSpeed Cache, Gemini AI, Canva</p>
+                      <p className="text-sm text-muted-foreground mb-1">{t('mielchahda.infoTools')}</p>
+                      <p className="font-medium">{t('mielchahda.infoToolsValue')}</p>
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Budget</p>
-                      <p className="font-medium">2,000 MAD</p>
+                      <p className="text-sm text-muted-foreground mb-1">{t('mielchahda.infoBudget')}</p>
+                      <p className="font-medium">{t('mielchahda.infoBudgetValue')}</p>
                     </div>
                   </div>
                 </div>
@@ -215,20 +196,15 @@ const MielChahdaPage = () => {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-3xl font-bold mb-6">Performance Results</h2>
+                <h2 className="text-3xl font-bold mb-6">{t('mielchahda.perfTitle')}</h2>
                 <p className="text-muted-foreground leading-relaxed mb-8 max-w-3xl">
-                  Real numbers from PageSpeed Insights, before and after Phase 1.
+                  {t('mielchahda.perfDesc')}
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="bg-card rounded-2xl p-6 border border-border">
-                    <h3 className="font-semibold text-lg mb-4">Desktop</h3>
+                    <h3 className="font-semibold text-lg mb-4">{t('mielchahda.perfDesktop')}</h3>
                     <div className="space-y-4">
-                      {[
-                        { label: "Performance Score", before: "49 / 100", after: "71 / 100" },
-                        { label: "LCP", before: "16.1 s", after: "2.9 s" },
-                        { label: "FCP", before: "1.0 s", after: "Improved" },
-                        { label: "Speed Index", before: "13.7 s", after: "Improved" },
-                      ].map((row) => (
+                      {perfDesktop.map((row) => (
                         <div key={row.label} className="flex items-center justify-between gap-4">
                           <span className="text-sm text-muted-foreground">{row.label}</span>
                           <div className="flex items-center gap-2 text-sm">
@@ -241,14 +217,9 @@ const MielChahdaPage = () => {
                     </div>
                   </div>
                   <div className="bg-card rounded-2xl p-6 border border-border">
-                    <h3 className="font-semibold text-lg mb-4">Mobile</h3>
+                    <h3 className="font-semibold text-lg mb-4">{t('mielchahda.perfMobile')}</h3>
                     <div className="space-y-4">
-                      {[
-                        { label: "Performance Score", before: "41 / 100", after: "49–55 / 100" },
-                        { label: "LCP", before: "72.5 s", after: "13.9 s" },
-                        { label: "FCP", before: "6.0 s", after: "2.0–2.7 s" },
-                        { label: "Speed Index", before: "55.0 s", after: "9.8–9.9 s" },
-                      ].map((row) => (
+                      {perfMobile.map((row) => (
                         <div key={row.label} className="flex items-center justify-between gap-4">
                           <span className="text-sm text-muted-foreground">{row.label}</span>
                           <div className="flex items-center gap-2 text-sm">
@@ -271,13 +242,13 @@ const MielChahdaPage = () => {
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
-                <h2 className="text-3xl font-bold mb-2">Phase 1 — Speed & Technical Recovery</h2>
-                <p className="text-muted-foreground mb-6">April – May 2026</p>
+                <h2 className="text-3xl font-bold mb-2">{t('mielchahda.phase1Title')}</h2>
+                <p className="text-muted-foreground mb-6">{t('mielchahda.phase1Period')}</p>
                 <ul className="space-y-4">
-                  {phase1Items.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
+                  {[1,2,3,4,5,6].map((i) => (
+                    <li key={i} className="flex items-start gap-3">
                       <div className="mt-2 w-2 h-2 rounded-full bg-primary shrink-0"></div>
-                      <span className="text-muted-foreground">{item}</span>
+                      <span className="text-muted-foreground">{t(`mielchahda.phase1Item${i}`)}</span>
                     </li>
                   ))}
                 </ul>
@@ -291,13 +262,13 @@ const MielChahdaPage = () => {
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
-                <h2 className="text-3xl font-bold mb-2">Phase 2 — Rebuild & Restructure</h2>
-                <p className="text-muted-foreground mb-6">May – June 2026</p>
+                <h2 className="text-3xl font-bold mb-2">{t('mielchahda.phase2Title')}</h2>
+                <p className="text-muted-foreground mb-6">{t('mielchahda.phase2Period')}</p>
                 <ul className="space-y-4">
-                  {phase2Items.map((item) => (
-                    <li key={item} className="flex items-start gap-3">
+                  {[1,2,3,4,5,6,7,8,9,10].map((i) => (
+                    <li key={i} className="flex items-start gap-3">
                       <div className="mt-2 w-2 h-2 rounded-full bg-primary shrink-0"></div>
-                      <span className="text-muted-foreground">{item}</span>
+                      <span className="text-muted-foreground">{t(`mielchahda.phase2Item${i}`)}</span>
                     </li>
                   ))}
                 </ul>
@@ -310,11 +281,9 @@ const MielChahdaPage = () => {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-3xl font-bold mb-6">Product Photography</h2>
+                <h2 className="text-3xl font-bold mb-6">{t('mielchahda.photoTitle')}</h2>
                 <p className="text-muted-foreground leading-relaxed mb-8 max-w-3xl">
-                  All product images were retouched and prepared for web — original
-                  photos edited with clean studio-style backgrounds for a consistent,
-                  premium look across the catalog.
+                  {t('mielchahda.photoDesc')}
                 </p>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   {productImages.map((src, i) => (
@@ -345,20 +314,14 @@ const MielChahdaPage = () => {
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
-                <h2 className="text-3xl font-bold mb-6">What Made This Hard</h2>
+                <h2 className="text-3xl font-bold mb-6">{t('mielchahda.lessonTitle')}</h2>
                 <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 mb-6">
                   <p className="text-lg font-medium">
-                    Fixing someone else's mess is harder than building from scratch.
-                    Every change carried the risk of breaking a live checkout while
-                    real customers were placing orders.
+                    {t('mielchahda.lessonQuote')}
                   </p>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
-                  The previous developer had left the site with over 30 active plugins
-                  generating conflicting scripts and layout breaks. Diagnosing which
-                  plugin caused which problem — without simply deactivating everything
-                  at once — required methodical, isolated testing. Every optimization
-                  was verified against live WooCommerce functionality before being kept.
+                  {t('mielchahda.lessonDesc')}
                 </p>
               </motion.div>
 
@@ -370,13 +333,9 @@ const MielChahdaPage = () => {
                 transition={{ duration: 0.6 }}
                 className="max-w-3xl"
               >
-                <h2 className="text-3xl font-bold mb-6">Looking Back</h2>
+                <h2 className="text-3xl font-bold mb-6">{t('mielchahda.lookbackTitle')}</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  This project confirmed something I already suspected: performance
-                  optimization and technical debt recovery require a different mindset
-                  than new builds. You have to understand what's there before you can
-                  improve it — and move carefully, because someone's business is running
-                  on it while you work.
+                  {t('mielchahda.lookbackDesc')}
                 </p>
               </motion.div>
             </div>
@@ -388,7 +347,7 @@ const MielChahdaPage = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-2xl font-bold mb-8">See also</h2>
+              <h2 className="text-2xl font-bold mb-8">{t('mielchahda.seeAlso')}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {relatedProjects.map((project) => (
                   <Link

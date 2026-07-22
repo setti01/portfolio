@@ -157,7 +157,7 @@ const LamaraPage = () => {
                 >
                   <h2 className="text-2xl font-bold mb-4">{t('lamara.impactTitle')}</h2>
                   <p className="text-muted-foreground leading-relaxed mb-6">
-                    {t('weprod.campaignsDesc')}
+                    {t('lamara.impactDesc')}
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="bg-card rounded-xl p-6 border border-border">

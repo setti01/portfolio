@@ -11,39 +11,39 @@ const AboutPage = () => {
 
   const experiences = [
     { 
-      date: '2025 - Présent', 
-      title: 'Graphic Designer & Web Developer', 
-      company: 'DishAndRecipe.com',
-      description: 'Création d\'interfaces web et conception graphique pour une plateforme culinaire.' 
+      date: t('about.exp1_date'), 
+      title: t('about.exp1_title'), 
+      company: t('about.exp1_company'),
+      description: t('about.exp1_desc')
     },
     { 
-      date: 'Juillet 2024 - Novembre 2024', 
-      title: 'Infographiste', 
-      company: 'WeProd Maroc',
-      description: 'Projets notables : Flamant Rose Apartments, Hotel Farah Tanger, Palais Blanc, Bloom Beauty Tanger. Création de supports de communication digitaux et imprimés pour le secteur hôtelier et lifestyle.' 
+      date: t('about.exp2_date'), 
+      title: t('about.exp2_title'), 
+      company: t('about.exp2_company'),
+      description: t('about.exp2_desc')
     },
     { 
-      date: '2018 - Présent', 
-      title: 'Freelance Designer & Web Developer', 
-      company: 'Indépendant',
-      description: 'Accompagnement de plus de 50 clients internationaux et locaux dans la création d\'écosystèmes visuels complets (branding, web, réseaux sociaux).' 
+      date: t('about.exp3_date'), 
+      title: t('about.exp3_title'), 
+      company: t('about.exp3_company'),
+      description: t('about.exp3_desc')
     },
   ];
 
   const education = [
-    { date: '2025', title: 'Graphic Design', school: 'ALX' },
-    { date: '2024', title: 'Full Stack Software Engineering - Foundations', school: 'ALX', desc: 'Score moyen: 97.57%' },
-    { date: '2024', title: 'AI Career Essentials', school: 'ALX' },
-    { date: '2019 - 2022', title: 'Licence Économie et Gestion', school: 'FSJES Dhar El Mehraz, Fès' },
-    { date: '2019', title: 'Baccalauréat Gestion Comptable', school: 'Lycée Al Wahda, Taounate' },
+    { date: t('about.edu1_date'), title: t('about.edu1_title'), school: t('about.edu1_school') },
+    { date: t('about.edu2_date'), title: t('about.edu2_title'), school: t('about.edu2_school'), desc: t('about.edu2_desc') },
+    { date: t('about.edu3_date'), title: t('about.edu3_title'), school: t('about.edu3_school') },
+    { date: t('about.edu4_date'), title: t('about.edu4_title'), school: t('about.edu4_school') },
+    { date: t('about.edu5_date'), title: t('about.edu5_title'), school: t('about.edu5_school') },
   ];
 
   const skillCategories = [
-    { title: 'Design Tools', skills: ['Adobe Photoshop', 'Illustrator', 'InDesign', 'Premiere Pro', 'After Effects', 'Audition', 'Canva', 'Figma', 'CapCut'] },
-    { title: 'Web Tools', skills: ['WordPress', 'Elementor', 'WooCommerce', 'Shopify'] },
-    { title: 'SEO & Marketing', skills: ['SEMrush', 'Ahrefs'] },
-    { title: 'AI Tools', skills: ['ChatGPT', 'Leonardo AI', 'Google AI Studio', 'Claude'] },
-    { title: 'Office Tools', skills: ['Word', 'Excel', 'PowerPoint'] },
+    { title: t('about.skill_designTools'), skills: t('about.skill_designTools_list', { returnObjects: true }) },
+    { title: t('about.skill_webTools'), skills: t('about.skill_webTools_list', { returnObjects: true }) },
+    { title: t('about.skill_seoMarketing'), skills: t('about.skill_seoMarketing_list', { returnObjects: true }) },
+    { title: t('about.skill_aiTools'), skills: t('about.skill_aiTools_list', { returnObjects: true }) },
+    { title: t('about.skill_officeTools'), skills: t('about.skill_officeTools_list', { returnObjects: true }) },
   ];
 
   const interests = [
@@ -194,10 +194,10 @@ const AboutPage = () => {
                     {t('about.certTitle')}
                   </h3>
                   {[
-                    { name: 'TCF Tout Public B2', org: 'Institut Français', badge: 'Valide : Nov 2027' },
-                    { name: 'AI Career Essentials', org: 'ALX', badge: '2024' },
-                    { name: 'Licence Économie & Gestion', org: 'FSJES Dhar El Mehraz', badge: '2022' },
-                    { name: 'Baccalauréat Gestion Comptable', org: 'Lycée Al Wahda, Taounate', badge: '2019' },
+                    { name: t('about.cert1_name'), org: t('about.cert1_org'), badge: t('about.cert1_badge') },
+                    { name: t('about.cert2_name'), org: t('about.cert2_org'), badge: t('about.cert2_badge') },
+                    { name: t('about.cert3_name'), org: t('about.cert3_org'), badge: t('about.cert3_badge') },
+                    { name: t('about.cert4_name'), org: t('about.cert4_org'), badge: t('about.cert4_badge') },
                   ].map((cert, i) => (
                     <div key={i} className="flex items-center justify-between border-b border-border/50 pb-3 mb-3 last:border-0 last:pb-0 last:mb-0">
                       <div>

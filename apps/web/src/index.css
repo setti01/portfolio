@@ -99,3 +99,35 @@
   0% { transform: translateX(-50%); }
   100% { transform: translateX(0); }
 }
+
+/* Performance: GPU-accelerated marquee */
+.marquee-left {
+  animation: marquee-left 50s linear infinite;
+  will-change: transform;
+}
+
+.marquee-right {
+  animation: marquee-right 50s linear infinite;
+  will-change: transform;
+}
+
+.marquee-left:hover,
+.marquee-right:hover {
+  animation-play-state: paused;
+}
+
+/* Performance: lazy-section hides offscreen content */
+.lazy-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 500px;
+}
+
+/* Replaces framer-motion for rotating text */
+@keyframes textFadeIn {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-textFadeIn {
+  animation: textFadeIn 0.4s ease-out;
+}

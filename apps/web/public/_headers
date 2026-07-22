@@ -1,0 +1,21 @@
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+# Fonts: long cache
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images: long cache
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Static assets with hashed names
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML: short cache
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate

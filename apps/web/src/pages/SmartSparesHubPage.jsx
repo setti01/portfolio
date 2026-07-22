@@ -12,8 +12,8 @@ import BrowserFrame from '@/components/BrowserFrame.jsx';
 const SmartSparesHubPage = () => {
   const { t } = useTranslation();
   const relatedProjects = [
-    { title: 'Hotel Farah Tanger', category: 'Branding & Social', link: '/portfolio/hotel-farah' },
-    { title: 'WeProd Maroc', category: 'Design & Web', link: '/portfolio/weprod' },
+    { title: 'Hotel Farah Tanger', category: t('project.categoryBrandingSocial'), link: '/portfolio/hotel-farah' },
+    { title: 'WeProd Maroc', category: t('project.categoryGraphicDesign'), link: '/portfolio/weprod' },
   ];
 
   const whatIBuilt = [

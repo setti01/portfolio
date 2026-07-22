@@ -1,24 +1,33 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Route, Routes, BrowserRouter as Router, Link, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { Button } from '@/components/ui/button';
 import { Toaster } from '@/components/ui/sonner';
 import ScrollToTop from './components/ScrollToTop.jsx';
-import HomePage from './pages/HomePage.jsx';
-import PortfolioPage from './pages/PortfolioPage.jsx';
-import AboutPage from './pages/AboutPage.jsx';
-import ServicesPage from './pages/ServicesPage.jsx';
-import ContactPage from './pages/ContactPage.jsx';
-import AllinfesPage from './pages/AllinfesPage.jsx';
-import LamaraPage from './pages/LamaraPage.jsx';
-import OmegaSushiPage from './pages/OmegaSushiPage.jsx';
-import WeProdPage from './pages/WeProdPage.jsx';
-import GaleriePage from './pages/GaleriePage.jsx';
-import SmartSparesHubPage from './pages/SmartSparesHubPage.jsx';
-import HotelFarahPage from './pages/HotelFarahPage.jsx';
-import NotFoundPage from './pages/NotFoundPage.jsx';
-import MielChahdaPage from './pages/MielChahdaPage.jsx';
 
+// Route-based code splitting — each page loads only when needed
+const HomePage = lazy(() => import('./pages/HomePage.jsx'));
+const PortfolioPage = lazy(() => import('./pages/PortfolioPage.jsx'));
+const AboutPage = lazy(() => import('./pages/AboutPage.jsx'));
+const ServicesPage = lazy(() => import('./pages/ServicesPage.jsx'));
+const ContactPage = lazy(() => import('./pages/ContactPage.jsx'));
+const AllinfesPage = lazy(() => import('./pages/AllinfesPage.jsx'));
+const LamaraPage = lazy(() => import('./pages/LamaraPage.jsx'));
+const OmegaSushiPage = lazy(() => import('./pages/OmegaSushiPage.jsx'));
+const WeProdPage = lazy(() => import('./pages/WeProdPage.jsx'));
+const GaleriePage = lazy(() => import('./pages/GaleriePage.jsx'));
+const SmartSparesHubPage = lazy(() => import('./pages/SmartSparesHubPage.jsx'));
+const HotelFarahPage = lazy(() => import('./pages/HotelFarahPage.jsx'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage.jsx'));
+const MielChahdaPage = lazy(() => import('./pages/MielChahdaPage.jsx'));
+
+// Loading spinner for Suspense fallback
+const PageLoader = () => (
+  <div className="min-h-screen bg-background flex items-center justify-center">
+    <div className="w-10 h-10 border-3 border-primary/20 border-t-primary rounded-full animate-spin" />
+  </div>
+);
 
 const WhatsAppButton = () => (
   
@@ -60,30 +69,82 @@ const AnimatedRoutes = () => {
   return (
     <AnimatePresence mode="wait">
       <motion.div key={location.pathname} variants={pageVariants} initial="initial" animate="animate" exit="exit">
-        <Routes location={location}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/portfolio" element={<PortfolioPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/portfolio/allinfes" element={<AllinfesPage />} />
-          <Route path="/portfolio/lamara" element={<LamaraPage />} />
-          <Route path="/portfolio/omega-sushi" element={<OmegaSushiPage />} />
-          <Route path="/portfolio/weprod" element={<WeProdPage />} />
-          <Route path="/portfolio/smart-spares-hub" element={<SmartSparesHubPage />} />
-          <Route path="/portfolio/hotel-farah" element={<HotelFarahPage />} />
-          <Route path="/portfolio/miel-chahda" element={<MielChahdaPage />} />
-          <Route path="/galerie" element={<GaleriePage />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
+        <Suspense fallback={<PageLoader />}>
+          <Routes location={location}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/portfolio" element={<PortfolioPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/portfolio/allinfes" element={<AllinfesPage />} />
+            <Route path="/portfolio/lamara" element={<LamaraPage />} />
+            <Route path="/portfolio/omega-sushi" element={<OmegaSushiPage />} />
+            <Route path="/portfolio/weprod" element={<WeProdPage />} />
+            <Route path="/portfolio/smart-spares-hub" element={<SmartSparesHubPage />} />
+            <Route path="/portfolio/hotel-farah" element={<HotelFarahPage />} />
+            <Route path="/portfolio/miel-chahda" element={<MielChahdaPage />} />
+            <Route path="/galerie" element={<GaleriePage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </Suspense>
       </motion.div>
     </AnimatePresence>
   );
 };
 
+const siteUrl = 'https://bilalessatte.site';
+
+const jsonLdPerson = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Bilal ESSATTE',
+  jobTitle: 'Graphic & Web Designer',
+  url: siteUrl,
+  email: 'mailto:contact@bilalessatte.site',
+  telephone: '+212620983108',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Tangier',
+    addressCountry: 'MA',
+  },
+  sameAs: [
+    'https://www.behance.net/b30072001',
+    'https://github.com/setti01',
+  ],
+  knowsAbout: [
+    'Graphic Design',
+    'Brand Identity',
+    'Web Design',
+    'WordPress',
+    'React',
+    'SEO',
+  ],
+};
+
+const jsonLdWebsite = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Bilal ESSATTE — Graphic & Web Designer',
+  url: siteUrl,
+  description: 'Portfolio of Bilal ESSATTE, graphic and web designer based in Tangier, Morocco specializing in brand identity, web design and visual ecosystems.',
+  author: {
+    '@type': 'Person',
+    name: 'Bilal ESSATTE',
+  },
+};
+
 function App() {
   return (
     <Router>
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(jsonLdPerson)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLdWebsite)}</script>
+        <link rel="canonical" href={siteUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Bilal ESSATTE" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@bilalessatte" />
+      </Helmet>
       <ScrollToTop />
       <Toaster position="bottom-right" />
       <WhatsAppButton />
@@ -91,3 +152,5 @@ function App() {
     </Router>
   );
 }
+
+export default App;

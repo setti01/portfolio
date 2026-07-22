@@ -1,32 +1,28 @@
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect, useCallback } from 'react';
 
 const RotatingText = ({ phrases, className = "" }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % phrases.length);
-    }, 3000);
-    return () => clearInterval(interval);
+  const next = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % phrases.length);
   }, [phrases.length]);
 
+  useEffect(() => {
+    const interval = setInterval(next, 4000);
+    return () => clearInterval(interval);
+  }, [next]);
+
+  // Pure CSS crossfade — no framer-motion overhead
   return (
-    <div className={`flex items-center overflow-hidden ${className}`}>
-      <AnimatePresence mode="wait">
-        <motion.span
-          key={currentIndex}
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -15 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="block"
-        >
-          {phrases[currentIndex]}
-        </motion.span>
-      </AnimatePresence>
-    </div>
+    <span className={`inline overflow-hidden ${className}`}>
+      <span
+        key={currentIndex}
+        className="inline animate-textFadeIn"
+      >
+        {phrases[currentIndex]}
+      </span>
+    </span>
   );
 };
 

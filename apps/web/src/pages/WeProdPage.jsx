@@ -14,12 +14,12 @@ const WeProdPage = () => {
   const relatedProjects = [
     {
       title: 'Lamara',
-      category: 'Web Design',
+      category: t('project.categoryWeb'),
       link: '/portfolio/lamara',
     },
     {
       title: 'Omega Sushi Tanger',
-      category: 'Branding & Social',
+      category: t('project.categoryBrandingSocial'),
       link: '/portfolio/omega-sushi',
     },
   ];

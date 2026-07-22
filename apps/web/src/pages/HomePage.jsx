@@ -31,20 +31,20 @@ const HomePage = () => {
 
   const featuredProjects = [
     {
-      title: 'WeProd Maroc',
-      category: 'Graphic Design & Events',
+      title: t('home.featuredProject1_title'),
+      category: t('home.featuredProject1_category'),
       image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783910220/WhatsApp_Image_2025-05-04_at_00.39.05_3_betqh6.jpg',
       link: '/portfolio/weprod',
     },
     {
-      title: 'Smart Spares Hub',
-      category: 'Brand & Web Design',
+      title: t('home.featuredProject2_title'),
+      category: t('home.featuredProject2_category'),
       image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783996886/Homepage_hkyuki.png',
       link: '/portfolio/smart-spares-hub',
     },
     {
-      title: 'Hotel Farah Tanger',
-      category: 'Branding & Social Media',
+      title: t('home.featuredProject3_title'),
+      category: t('home.featuredProject3_category'),
       image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783999178/WhatsApp_Image_2025-05-04_at_00.39.00_1_ifixgo.jpg',
       link: '/portfolio/hotel-farah',
     },
@@ -52,27 +52,27 @@ const HomePage = () => {
 
   const testimonials = [
     { 
-      name: 'CEO, Riad Timrad', 
-      role: 'Secteur Hôtellerie', 
-      text: 'Une collaboration exceptionnelle pour la refonte de notre identité visuelle. Notre riad a gagné en prestige grâce à son œil esthétique et son professionnalisme.' 
+      name: t('home.testimonial1_name'), 
+      role: t('home.testimonial1_role'), 
+      text: t('home.testimonial1_text')
     },
     { 
-      name: 'Hamza, Gérant — Omega Sushi', 
-      role: 'Restaurant Japonais, Tanger', 
-      text: 'Le nouveau menu et le branding ont complètement transformé l\'image de notre restaurant. Les clients adorent le nouveau design et notre présence en ligne s\'est nettement améliorée.' 
+      name: t('home.testimonial2_name'), 
+      role: t('home.testimonial2_role'), 
+      text: t('home.testimonial2_text')
     },
     { 
-      name: 'Oussama, CEO — Allinfes', 
-      role: 'Hospitality Sourcing, Maroc', 
-      text: 'Un travail sérieux et professionnel. Le site web reflète exactement l\'image qu\'on voulait donner à notre marque. Bilal a su comprendre notre vision et la traduire visuellement.' 
+      name: t('home.testimonial3_name'), 
+      role: t('home.testimonial3_role'), 
+      text: t('home.testimonial3_text')
     },
   ];
 
   return (
     <>
       <Helmet>
-        <title>Bilal ESSATTE - Designer Graphique & Web | Portfolio</title>
-        <meta name="description" content="Portfolio de Bilal ESSATTE, designer graphique et web spécialisé dans la création d'écosystèmes visuels complets." />
+        <title>{t('home.helmetTitle')}</title>
+        <meta name="description" content={t('home.helmetDesc')} />
       </Helmet>
 
       <div className="min-h-screen bg-background">
@@ -82,9 +82,10 @@ const HomePage = () => {
         <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden pt-20">
           <div className="absolute inset-0 z-0">
             <img
-              src="https://images.unsplash.com/photo-1688760871131-29afc15029ec"
+              src="https://images.unsplash.com/photo-1688760871131-29afc15029ec?w=1920&q=75"
               alt="Abstract dark background"
               className="w-full h-full object-cover opacity-40"
+              fetchpriority="high"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background" />
           </div>
@@ -96,15 +97,14 @@ const HomePage = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="max-w-4xl mx-auto flex flex-col items-center"
             >
-              <motion.div layout className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 max-w-full">
+              <motion.div layout className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 max-w-full overflow-hidden">
                 <Sparkles className="w-4 h-4 text-primary shrink-0" />
                 <RotatingText phrases={heroPhrases} className="text-sm font-medium text-primary" />
               </motion.div>
 
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight tracking-tight text-balance">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight tracking-tight text-balance flex flex-wrap justify-center gap-x-3">
                 <TextReveal text={t('home.heroHeadingPrefix')} className="inline" />
-                {" "}
-                <span className="text-primary inline-block min-w-[320px]">
+                <span className="text-primary whitespace-nowrap">
                   <RotatingText
                     phrases={heroWords}
                     className="text-primary"
@@ -135,11 +135,11 @@ const HomePage = () => {
         </section>
 
         {/* 2. STATISTICS */}
-        <section className="py-20 border-y border-border bg-card/30">
+        <section className="py-20 border-y border-border bg-card/30 lazy-section">
           <div className="container-custom">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
               {[
-                { label: t('home.statsYears'), value: 7, suffix: '+' },
+                { label: t('home.statsYears'), value: 8, suffix: '+' },
                 { label: t('home.statsClients'), value: 50, suffix: '+' },
                 { label: t('home.statsProjects'), value: 100, suffix: '+' },
                 { label: t('home.statsSectors'), value: 8, suffix: '+' },
@@ -189,65 +189,36 @@ const HomePage = () => {
             </motion.div>
           </div>
 
-          {/* Row 1 - scrolling left */}
-          <div className="relative flex overflow-hidden mb-6">
-            <div className="flex gap-6 whitespace-nowrap" style={{ animation: 'marquee-left 50s linear infinite' }}>
+          {/* Single row — all tools scrolling left */}
+          <div className="relative flex overflow-hidden group">
+            <div className="flex gap-8 whitespace-nowrap marquee-left" aria-hidden="true">
               {[
                 { name: 'Photoshop', icon: 'https://cdn.simpleicons.org/adobephotoshop' },
                 { name: 'Illustrator', icon: 'https://cdn.simpleicons.org/adobeillustrator' },
-                { name: 'InDesign', icon: 'https://cdn.simpleicons.org/adobeindesign' },
-                { name: 'Premiere Pro', icon: 'https://cdn.simpleicons.org/adobepremierepro' },
-                { name: 'After Effects', icon: 'https://cdn.simpleicons.org/adobeaftereffects' },
+                { name: 'InDesign', icon: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1784689428/indesign_mn8jbv.png' },
+                { name: 'Premiere Pro', icon: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1784689428/pr_pqorym.png' },
+                { name: 'After Effects', icon: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1784689429/ae_xprp6v.png' },
                 { name: 'WordPress', icon: 'https://cdn.simpleicons.org/wordpress' },
                 { name: 'Figma', icon: 'https://cdn.simpleicons.org/figma' },
                 { name: 'Shopify', icon: 'https://cdn.simpleicons.org/shopify' },
-                { name: 'Photoshop', icon: 'https://cdn.simpleicons.org/adobephotoshop' },
-                { name: 'Illustrator', icon: 'https://cdn.simpleicons.org/adobeillustrator' },
-                { name: 'InDesign', icon: 'https://cdn.simpleicons.org/adobeindesign' },
-                { name: 'Premiere Pro', icon: 'https://cdn.simpleicons.org/adobepremierepro' },
-                { name: 'After Effects', icon: 'https://cdn.simpleicons.org/adobeaftereffects' },
-                { name: 'WordPress', icon: 'https://cdn.simpleicons.org/wordpress' },
-                { name: 'Figma', icon: 'https://cdn.simpleicons.org/figma' },
-                { name: 'Shopify', icon: 'https://cdn.simpleicons.org/shopify' },
-              ].map((tool, i) => (
-                <div key={i} className="flex items-center gap-3 bg-card border border-border rounded-2xl px-6 py-4 shrink-0 hover:border-primary/50 hover:bg-card/80 transition-all duration-300">
-                  <img src={tool.icon} alt={tool.name} className="w-8 h-8 object-contain" />
-                  <span className="font-medium text-sm">{tool.name}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Row 2 - scrolling right */}
-          <div className="relative flex overflow-hidden">
-            <div className="flex gap-6 whitespace-nowrap" style={{ animation: 'marquee-right 50s linear infinite' }}>
-              {[
-                { name: 'Canva', icon: 'https://cdn.simpleicons.org/canva' },
+                { name: 'Canva', icon: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1784689429/canva_kbgdem.png' },
                 { name: 'WooCommerce', icon: 'https://cdn.simpleicons.org/woocommerce' },
-                { name: 'ChatGPT', icon: 'https://cdn.simpleicons.org/openai' },
-                { name: 'Elementor', icon: 'https://cdn.simpleicons.org/elementor' },
-                { name: 'CapCut', icon: 'https://cdn.simpleicons.org/capcut' },
-                { name: 'Leonardo AI', bg: '#1a1a2e', letter: 'L' },
-                { name: 'Google AI Studio', bg: '#1a73e8', letter: 'G' },
-                { name: 'Claude', bg: '#cc785c', letter: 'C' },
-                { name: 'Canva', icon: 'https://cdn.simpleicons.org/canva' },
-                { name: 'WooCommerce', icon: 'https://cdn.simpleicons.org/woocommerce' },
-                { name: 'ChatGPT', icon: 'https://cdn.simpleicons.org/openai' },
+                { name: 'ChatGPT', icon: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1784689428/chat_gpt_inwzoc.png' },
                 { name: 'Elementor', icon: 'https://cdn.simpleicons.org/elementor' },
                 { name: 'CapCut', icon: 'https://cdn.simpleicons.org/capcut' },
                 { name: 'Leonardo AI', bg: '#1a1a2e', letter: 'L' },
                 { name: 'Google AI Studio', bg: '#1a73e8', letter: 'G' },
                 { name: 'Claude', bg: '#cc785c', letter: 'C' },
               ].map((tool, i) => (
-                <div key={i} className="flex items-center gap-3 bg-card border border-border rounded-2xl px-6 py-4 shrink-0 hover:border-primary/50 hover:bg-card/80 transition-all duration-300">
+                <div key={i} className="flex items-center gap-4 bg-card border border-border rounded-2xl px-8 py-6 shrink-0">
                   {tool.icon ? (
-                    <img src={tool.icon} alt={tool.name} className="w-8 h-8 object-contain" />
+                    <img src={tool.icon} alt="" className="w-16 h-16 object-contain" loading="lazy" />
                   ) : (
-                    <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white font-bold text-sm" style={{ backgroundColor: tool.bg }}>
+                    <div className="w-16 h-16 rounded-xl flex items-center justify-center text-white font-bold text-2xl" style={{ backgroundColor: tool.bg }}>
                       {tool.letter}
                     </div>
                   )}
-                  <span className="font-medium text-sm">{tool.name}</span>
+                  <span className="font-medium text-xl whitespace-nowrap">{tool.name}</span>
                 </div>
               ))}
             </div>
@@ -264,15 +235,39 @@ const HomePage = () => {
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { name: 'Riad Timrad', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781026098/RIAD-TIMRAD-final-best.pdf_fca1hv.png' },
-                { name: 'Hotel Farah Tanger', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781025970/8_ibwj1z.png' },
-                { name: 'Flamant Rose', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781025951/6_lgwkig.png' },
-                { name: 'Digi Topup', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781025873/IMG_5439.JPG_e2fv4s.jpg' },
-                { name: 'Omega Sushi', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781026024/omegasushimorocco_1_zwwox9.png' },
-                { name: 'Bouabdallaoui Events', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781026013/Asset_3_cavy5a.png' },
-                { name: 'Indupuls', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781025982/Add_a_heading_sromrh.png' },
-                { name: 'Bghit Nakl Daba', logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781025914/WhatsApp_Image_2025-05-04_at_00.39.03_1_fvdfch.jpg' },
-              ].map((client, i) => (
+  { 
+    name: 'Flamant Rose', 
+    logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1784685336/flamant_rose_toohda.png' 
+  },
+  { 
+    name: 'Poppy', 
+    logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1784685329/poppy_c3r3yi.png' 
+  },
+  { 
+    name: 'WeProd', 
+    logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1784685329/weprod_gw79od.png' 
+  },
+  { 
+    name: 'Bloom', 
+    logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1784685329/bloom_nnyzxa.png' 
+  },
+  { 
+    name: 'Mosaika', 
+    logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1784685582/mosaika_yst3zc.png' 
+  },
+  { 
+    name: 'Riad Timrad', 
+    logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1784685325/riad_timrad_s43n8o.png' 
+  },
+  { 
+    name: 'Bouabdallaoui Events', 
+    logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1784685321/b-events_jvcgzo.png' 
+  },
+  { 
+    name: 'Indupulse', 
+    logo: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1784685321/indupulse_occife.png' 
+  },
+].map((client, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
