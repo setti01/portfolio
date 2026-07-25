@@ -16,18 +16,12 @@ const PortfolioPage = () => {
 
   const categories = [t('portfolio.filterAll'), t('portfolio.filterWeb'), t('portfolio.filterBranding'), t('portfolio.filterSocial')];
 
-  // Full clean data array
   const projects = [
     { title: 'WEPROD MAROC', category: t('portfolio.filterSocial'), image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783910220/WhatsApp_Image_2025-05-04_at_00.39.05_3_betqh6.jpg', link: '/portfolio/weprod', description: 'Graphic design, branding and event communication for a Tangier creative agency.' },
     { title: 'SMART SPARES HUB', category: t('portfolio.filterWeb'), image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783996886/Homepage_hkyuki.png', link: '/portfolio/smart-spares-hub', description: 'B2B platform for industrial spare parts, branding and web design from scratch.' },
     { title: 'HOTEL FARAH TANGER', category: t('portfolio.filterBranding'), image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783999178/WhatsApp_Image_2025-05-04_at_00.39.00_1_ifixgo.jpg', link: '/portfolio/hotel-farah', description: 'Luxury hospitality social media design, created via WeProd Maroc.' },
-    { title: 'ALLINFES', category: t('portfolio.filterWeb'), image: 'https://images.unsplash.com/photo-1695634365024-b7513447e4f0', link: '/portfolio/allinfes', description: 'WordPress WooCommerce development for Moroccan hospitality sourcing.' },
     { title: 'OMEGA SUSHI TANGER', category: t('portfolio.filterBranding'), image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781053606/omegasushimorocco_mhomup.png', link: '/portfolio/omega-sushi', description: 'Complete visual identity and restaurant menu design.' },
-    { title: 'LAMARA', category: t('portfolio.filterWeb'), image: 'https://images.unsplash.com/photo-1617451588899-7ac8679908c7', link: '/portfolio/lamara', description: 'Shopify e-commerce site creation with image retouching.' },
-    { title: 'GLOBAL BITES', category: t('portfolio.filterBranding'), image: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1', link: 'https://behance.net/b30072001', description: 'Rebranding, visual identity redesign and marketing assets.' },
     { title: 'MIEL CHAHDA', category: t('portfolio.filterWeb'), image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1784601445/screencapture-mielchahda-2026-07-21-04_02_37_leusvs.png', link: '/portfolio/miel-chahda', description: 'Full e-commerce recovery — speed optimization, WooCommerce restructure and homepage rebuild.' },
-    { title: 'FASTASK', category: t('portfolio.filterSocial'), image: 'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0', link: 'https://behance.net/b30072001', description: 'Visual design and content creation for social media.' },
-    { title: 'TTOKLIN COMPANY', category: t('portfolio.filterBranding'), image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0', link: 'https://behance.net/b30072001', description: 'Complete brand identity and digital asset creation.' },
   ];
 
   // Reset the visible count when a new category is selected
