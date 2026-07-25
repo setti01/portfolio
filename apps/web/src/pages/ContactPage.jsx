@@ -12,7 +12,7 @@ const ContactPage = () => {
 
   const contactInfo = [
     { icon: Phone, label: t('contact.infoPhone'), value: '+212 620 983 108', href: 'tel:+212620983108' },
-    { icon: Mail, label: t('contact.infoEmail'), value: 'settibilal1@gmail.com', href: 'mailto:settibilal1@gmail.com' },
+    { icon: Mail, label: t('contact.infoEmail'), value: 'contact@bilalessatte.site', href: 'mailto:contact@bilalessatte.site' },
     { icon: MapPin, label: t('contact.infoLocation'), value: t('contact.locationValue'), href: null },
   ];
 
