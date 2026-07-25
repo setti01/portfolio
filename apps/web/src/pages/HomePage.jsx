@@ -11,6 +11,7 @@ import Footer from '@/components/Footer.jsx';
 import ProjectCard from '@/components/ProjectCard.jsx';
 import AnimatedCounter from '@/components/AnimatedCounter.jsx';
 import RotatingText from '@/components/RotatingText.jsx';
+import ClickEffect from '@/components/ClickEffect.jsx';
 
 const HomePage = () => {
   const { t } = useTranslation();
@@ -80,6 +81,7 @@ const HomePage = () => {
 
         {/* 1. HERO SECTION */}
         <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden pt-20">
+          <ClickEffect color="var(--primary)" />
           <div className="absolute inset-0 z-0">
             <img
               src="https://images.unsplash.com/photo-1688760871131-29afc15029ec?w=1920&q=75"
