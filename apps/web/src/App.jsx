@@ -21,6 +21,7 @@ const SmartSparesHubPage = lazy(() => import('./pages/SmartSparesHubPage.jsx'));
 const HotelFarahPage = lazy(() => import('./pages/HotelFarahPage.jsx'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage.jsx'));
 const MielChahdaPage = lazy(() => import('./pages/MielChahdaPage.jsx'));
+import RiadTimradPage from './pages/RiadTimradPage.jsx';
 
 // Loading spinner for Suspense fallback
 const PageLoader = () => (
@@ -87,6 +88,7 @@ const AnimatedRoutes = () => {
             <Route path="/portfolio/smart-spares-hub" element={<SmartSparesHubPage />} />
             <Route path="/portfolio/hotel-farah" element={<HotelFarahPage />} />
             <Route path="/portfolio/miel-chahda" element={<MielChahdaPage />} />
+            <Route path="/portfolio/riad-timrad" element={<RiadTimradPage />} />
             <Route path="/galerie" element={<GaleriePage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
