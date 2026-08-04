@@ -61,18 +61,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bilalessatte.site/portfolio/allinfes</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://bilalessatte.site/portfolio/lamara</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bilalessatte.site/portfolio/miel-chahda</loc>
     <lastmod>2026-07-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -80,6 +68,12 @@
   </url>
   <url>
     <loc>https://bilalessatte.site/portfolio/riad-timrad</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bilalessatte.site/portfolio/aida-food</loc>
     <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

@@ -23,6 +23,7 @@ const PortfolioPage = () => {
     { title: 'OMEGA SUSHI TANGER', category: t('portfolio.filterBranding'), image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781053606/omegasushimorocco_mhomup.png', link: '/portfolio/omega-sushi', description: 'Complete visual identity and restaurant menu design.' },
     { title: 'MIEL CHAHDA', category: t('portfolio.filterWeb'), image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1784601445/screencapture-mielchahda-2026-07-21-04_02_37_leusvs.png', link: '/portfolio/miel-chahda', description: 'Full e-commerce recovery — speed optimization, WooCommerce restructure and homepage rebuild.' },
     { title: 'RIAD TIMRAD', category: t('portfolio.filterWeb'), image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1785797802/screencapture-riad-timrad-2026-08-04-00_55_35_1_icatsn.png', link: '/portfolio/riad-timrad', description: 'Full WordPress website — design, development, copywriting and SEO for a luxury riad in Fès.' },
+    { title: 'AIDA FOOD', category: t('portfolio.filterBranding'), image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1785816972/ftor_ramdan_w6ghot.jpg', link: '/portfolio/aida-food', description: 'TV display visuals designed and installed on-site for a Tangier restaurant.' },
   ];
 
   // Reset the visible count when a new category is selected

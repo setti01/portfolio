@@ -12,8 +12,6 @@ const PortfolioPage = lazy(() => import('./pages/PortfolioPage.jsx'));
 const AboutPage = lazy(() => import('./pages/AboutPage.jsx'));
 const ServicesPage = lazy(() => import('./pages/ServicesPage.jsx'));
 const ContactPage = lazy(() => import('./pages/ContactPage.jsx'));
-const AllinfesPage = lazy(() => import('./pages/AllinfesPage.jsx'));
-const LamaraPage = lazy(() => import('./pages/LamaraPage.jsx'));
 const OmegaSushiPage = lazy(() => import('./pages/OmegaSushiPage.jsx'));
 const WeProdPage = lazy(() => import('./pages/WeProdPage.jsx'));
 const GaleriePage = lazy(() => import('./pages/GaleriePage.jsx'));
@@ -22,6 +20,7 @@ const HotelFarahPage = lazy(() => import('./pages/HotelFarahPage.jsx'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage.jsx'));
 const MielChahdaPage = lazy(() => import('./pages/MielChahdaPage.jsx'));
 import RiadTimradPage from './pages/RiadTimradPage.jsx';
+import AidaFoodPage from './pages/AidaFoodPage.jsx';
 
 // Loading spinner for Suspense fallback
 const PageLoader = () => (
@@ -81,14 +80,13 @@ const AnimatedRoutes = () => {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/contact" element={<ContactPage />} />
-            <Route path="/portfolio/allinfes" element={<AllinfesPage />} />
-            <Route path="/portfolio/lamara" element={<LamaraPage />} />
             <Route path="/portfolio/omega-sushi" element={<OmegaSushiPage />} />
             <Route path="/portfolio/weprod" element={<WeProdPage />} />
             <Route path="/portfolio/smart-spares-hub" element={<SmartSparesHubPage />} />
             <Route path="/portfolio/hotel-farah" element={<HotelFarahPage />} />
             <Route path="/portfolio/miel-chahda" element={<MielChahdaPage />} />
             <Route path="/portfolio/riad-timrad" element={<RiadTimradPage />} />
+            <Route path="/portfolio/aida-food" element={<AidaFoodPage />} />
             <Route path="/galerie" element={<GaleriePage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
