@@ -21,6 +21,7 @@ const NotFoundPage = lazy(() => import('./pages/NotFoundPage.jsx'));
 const MielChahdaPage = lazy(() => import('./pages/MielChahdaPage.jsx'));
 import RiadTimradPage from './pages/RiadTimradPage.jsx';
 import AidaFoodPage from './pages/AidaFoodPage.jsx';
+import LeCoinVertPage from './pages/LeCoinVertPage.jsx';
 
 // Loading spinner for Suspense fallback
 const PageLoader = () => (
@@ -87,6 +88,7 @@ const AnimatedRoutes = () => {
             <Route path="/portfolio/miel-chahda" element={<MielChahdaPage />} />
             <Route path="/portfolio/riad-timrad" element={<RiadTimradPage />} />
             <Route path="/portfolio/aida-food" element={<AidaFoodPage />} />
+            <Route path="/portfolio/le-coin-vert" element={<LeCoinVertPage />} />
             <Route path="/galerie" element={<GaleriePage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>

@@ -24,6 +24,7 @@ const PortfolioPage = () => {
     { title: 'MIEL CHAHDA', category: t('portfolio.filterWeb'), image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1784601445/screencapture-mielchahda-2026-07-21-04_02_37_leusvs.png', link: '/portfolio/miel-chahda', description: 'Full e-commerce recovery — speed optimization, WooCommerce restructure and homepage rebuild.' },
     { title: 'RIAD TIMRAD', category: t('portfolio.filterWeb'), image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1785797802/screencapture-riad-timrad-2026-08-04-00_55_35_1_icatsn.png', link: '/portfolio/riad-timrad', description: 'Full WordPress website — design, development, copywriting and SEO for a luxury riad in Fès.' },
     { title: 'AIDA FOOD', category: t('portfolio.filterBranding'), image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1785816972/ftor_ramdan_w6ghot.jpg', link: '/portfolio/aida-food', description: 'TV display visuals designed and installed on-site for a Tangier restaurant.' },
+    { title: 'LE COIN VERT', category: t('portfolio.filterBranding'), image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1785873354/Black_And_Orange_Modern_Food_Menu_Landscape_A4__page-0008_oykhvz.jpg', link: '/portfolio/le-coin-vert', description: 'Full 8-page bilingual menu design in French and Arabic for a Tangier café.' },
   ];
 
   // Reset the visible count when a new category is selected
