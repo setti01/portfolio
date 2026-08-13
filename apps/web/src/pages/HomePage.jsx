@@ -29,7 +29,7 @@ const HomePage = () => {
     {
       title: t('home.featuredProject3_title'),
       category: t('home.featuredProject3_category'),
-      image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783999178/WhatsApp_Image_2025-05-04_at_00.39.00_1_ifixgo.jpg',
+      image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1786599139/WhatsApp_Image_2025-05-04_at_00.38.59_1_mkejol.jpg',
       link: '/portfolio/hotel-farah',
     },
   ];
