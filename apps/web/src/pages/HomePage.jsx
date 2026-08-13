@@ -23,7 +23,7 @@ const HomePage = () => {
     {
       title: t('home.featuredProject2_title'),
       category: t('home.featuredProject2_category'),
-      image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783996886/Homepage_hkyuki.png',
+      image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1786578537/homepage_hero_f8dpwj.jpg',
       link: '/portfolio/smart-spares-hub',
     },
     {
