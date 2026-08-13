@@ -3,37 +3,21 @@ import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import TextReveal from '@/components/TextReveal.jsx';
-import { ArrowRight, Sparkles, Quote, Layout } from 'lucide-react';
+import { ArrowRight, Quote } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 import ProjectCard from '@/components/ProjectCard.jsx';
 import AnimatedCounter from '@/components/AnimatedCounter.jsx';
-import RotatingText from '@/components/RotatingText.jsx';
 
 const HomePage = () => {
   const { t } = useTranslation();
-
-  const heroPhrases = [
-    t('home.heroTagline1'),
-    t('home.heroTagline2'),
-    t('home.heroTagline3'),
-    t('home.heroTagline4'),
-    t('home.heroTagline5'),
-  ];
-  
-  const heroWords = [
-    t('home.heroWord1'),
-    t('home.heroWord2'),
-    t('home.heroWord3'),
-  ];
 
   const featuredProjects = [
     {
       title: t('home.featuredProject1_title'),
       category: t('home.featuredProject1_category'),
-      image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783910220/WhatsApp_Image_2025-05-04_at_00.39.05_3_betqh6.jpg',
+      image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1786581718/weprod_thumbnail_hga0rt.jpg',
       link: '/portfolio/weprod',
     },
     {
@@ -79,58 +63,51 @@ const HomePage = () => {
         <Header />
 
         {/* 1. HERO SECTION */}
-        <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden pt-20">
+        <section className="relative min-h-[100dvh] flex items-center pt-20">
           <div className="absolute inset-0 z-0">
             <img
               src="https://images.unsplash.com/photo-1688760871131-29afc15029ec?w=1920&q=75"
-              alt="Abstract dark background"
-              className="w-full h-full object-cover opacity-40"
-              fetchpriority="high"
+              alt=""
+              className="w-full h-full object-cover opacity-30"
+              aria-hidden="true"
+              fetchPriority="high"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/95 to-background" />
           </div>
 
-          <div className="container-custom relative z-10 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="max-w-4xl mx-auto flex flex-col items-center"
-            >
-              <motion.div layout className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 max-w-full overflow-hidden">
-                <Sparkles className="w-4 h-4 text-primary shrink-0" />
-                <RotatingText phrases={heroPhrases} className="text-sm font-medium text-primary" />
-              </motion.div>
+          <div className="container-custom relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+              <div className="flex flex-col gap-8">
+                <p className="hero-type text-sm font-medium text-primary tracking-wider uppercase animate-heroEntrance">
+                  {t('home.heroIdentity')}
+                </p>
 
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight tracking-tight text-balance flex flex-wrap justify-center gap-x-3">
-                <TextReveal text={t('home.heroHeadingPrefix')} className="inline" />
-                <span className="text-primary whitespace-nowrap">
-                  <RotatingText
-                    phrases={heroWords}
-                    className="text-primary"
-                  />
-                </span>
-              </h1>
+                <h1 className="hero-type text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-balance animate-heroEntrance" style={{ animationDelay: '0.1s' }}>
+                  {t('home.heroPositioning')}
+                </h1>
 
-              <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed max-w-3xl mx-auto">
-                {t('home.heroSubtitle')}
-              </p>
+                <p className="hero-type text-muted-foreground text-lg animate-heroEntrance" style={{ animationDelay: '0.2s' }}>
+                  {t('home.heroCaption')}
+                </p>
 
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button asChild size="lg" className="gap-2 rounded-full px-8 h-14 text-base hover:scale-105 transition-transform">
-                  <Link to="/portfolio">
-                    {t('home.viewProjects')}
-                    <ArrowRight className="w-5 h-5" />
+                <Button asChild size="lg" className="w-fit rounded-2xl h-14 text-base animate-heroEntrance" style={{ animationDelay: '0.3s' }}>
+                  <Link to="/portfolio/smart-spares-hub">
+                    {t('home.heroCta')}
+                    <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="rounded-full px-8 h-14 text-base gap-2">
-                  <a href="https://behance.net/b30072001" target="_blank" rel="noopener noreferrer">
-                    <Layout className="w-5 h-5" />
-                    {t('home.behanceProfile')}
-                  </a>
-                </Button>
               </div>
-            </motion.div>
+
+              <div className="relative animate-heroEntrance" style={{ animationDelay: '0.2s' }}>
+                <div className="relative rounded-3xl overflow-hidden border border-border">
+                  <img
+                    src="https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1786578537/homepage_hero_f8dpwj.jpg"
+                    alt={t('home.heroImageAlt')}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -324,7 +301,7 @@ const HomePage = () => {
               <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
                 {t('home.ctaDesc')}
               </p>
-              <Button asChild size="lg" className="rounded-full px-10 h-14 text-lg">
+              <Button asChild size="lg" className="rounded-2xl px-10 h-14 text-lg">
                 <Link to="/contact">{t('home.ctaButton')}</Link>
               </Button>
             </motion.div>

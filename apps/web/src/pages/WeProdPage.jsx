@@ -138,7 +138,7 @@ const WeProdPage = () => {
               className="mb-16 rounded-3xl overflow-hidden"
             >
               <img
-                src="https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783910220/WhatsApp_Image_2025-05-04_at_00.39.05_3_betqh6.jpg"
+                src="https://res.cloudinary.com/dvcaobhqt/image/upload/v1786581718/weprod_thumbnail_hga0rt.jpg"
                 alt="WeProd event stage production with branded lighting"
                 className="w-full h-auto"
               />

@@ -238,7 +238,7 @@ const AboutPage = () => {
     href="https://res.cloudinary.com/dvcaobhqt/raw/upload/v1784235856/Bilal_ESSATTE_CV_English_njksbz.docx"
     target="_blank"
     rel="noopener noreferrer"
-    className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-full font-medium hover:opacity-90 transition-all duration-300 hover:scale-105"
+    className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-2xl font-medium hover:opacity-90 transition-all duration-300 hover:scale-105"
   >
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
@@ -252,7 +252,7 @@ const AboutPage = () => {
     href="https://res.cloudinary.com/dvcaobhqt/raw/upload/v1784235856/Bilal_ESSATTE_CV_Francais_ut3qvg.docx"
     target="_blank"
     rel="noopener noreferrer"
-    className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-border rounded-full font-medium hover:border-primary hover:text-primary transition-all duration-300 hover:scale-105"
+    className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-border rounded-2xl font-medium hover:border-primary hover:text-primary transition-all duration-300 hover:scale-105"
   >
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>

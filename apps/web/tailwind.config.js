@@ -67,15 +67,6 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
 
-      'marquee-left': {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' },
-        },
-        'marquee-right': {
-          '0%': { transform: 'translateX(-50%)' },
-          '100%': { transform: 'translateX(0)' },
-        },
-
       keyframes: {
         "accordion-down": {
           from: {
@@ -95,9 +86,6 @@ module.exports = {
         },
       },
 
-      'marquee-left': 'marquee-left 30s linear infinite',
-        'marquee-right': 'marquee-right 30s linear infinite',
-        
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",

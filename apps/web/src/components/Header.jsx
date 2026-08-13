@@ -75,7 +75,7 @@ const Header = () => {
             <div className="relative">
               <button
                 onClick={() => setLangMenuOpen(!langMenuOpen)}
-                className="flex items-center gap-1.5 px-3 py-2 rounded-full text-sm font-medium text-muted-foreground hover:text-foreground border border-border hover:border-primary/50 transition-all duration-200"
+                className="flex items-center gap-1.5 px-3 py-2 rounded-2xl text-sm font-medium text-muted-foreground hover:text-foreground border border-border hover:border-primary/50 transition-all duration-200"
               >
                 <Globe className="w-4 h-4" />
                 {languages.find((l) => l.code === i18n.language)?.label || 'EN'}
@@ -97,7 +97,7 @@ const Header = () => {
               )}
             </div>
 
-            <Button asChild variant="default" size="sm" className="gap-2 rounded-full px-6">
+            <Button asChild variant="default" size="sm" className="gap-2 rounded-2xl px-6">
               <a href="https://behance.net/b30072001" target="_blank" rel="noopener noreferrer">
                 <Layout className="w-4 h-4" />
                 Behance
@@ -140,7 +140,7 @@ const Header = () => {
                     <button
                       key={lang.code}
                       onClick={() => changeLanguage(lang.code)}
-                      className={`px-4 py-2 rounded-full text-sm font-medium border transition-colors duration-200 ${
+                      className={`px-4 py-2 rounded-2xl text-sm font-medium border transition-colors duration-200 ${
                         i18n.language === lang.code
                           ? 'border-primary text-primary bg-primary/5'
                           : 'border-border text-muted-foreground'
@@ -152,7 +152,7 @@ const Header = () => {
                 </motion.div>
 
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
-                  <Button asChild className="w-full gap-2 mt-4 rounded-full">
+                  <Button asChild className="w-full gap-2 mt-4 rounded-2xl">
                     <a href="https://behance.net/b30072001" target="_blank" rel="noopener noreferrer">
                       <Layout className="w-4 h-4" />
                       Portfolio Behance

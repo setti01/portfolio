@@ -88,15 +88,7 @@ No excessive font weights.
 
 Primary:
 
-Inter
-
-Alternative:
-
-Manrope
-
-Alternative:
-
-Satoshi
+Poppins
 
 ---
 
@@ -130,15 +122,15 @@ No huge blocks of text.
 
 Primary Background
 
-Pure White
+Near Black
 
 Secondary Background
 
-Very Light Gray
+Dark Gray
 
 Primary Text
 
-Near Black
+Near White
 
 Secondary Text
 
@@ -178,19 +170,19 @@ Not decorate.
 
 Buttons
 
-12px
+16px
 
 Cards
 
-20px
+16px
 
 Inputs
 
-12px
+10px
 
 Images
 
-20px
+24px
 
 Never mix many border radius values.
 

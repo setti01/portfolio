@@ -27,7 +27,7 @@ const NotFoundPage = () => {
               <p className="text-muted-foreground text-lg mb-10 max-w-md mx-auto">
                 The page you're looking for doesn't exist or has been moved.
               </p>
-              <Button asChild className="rounded-full gap-2 px-8">
+              <Button asChild className="rounded-2xl gap-2 px-8">
                 <Link to="/">
                   <ArrowLeft className="w-4 h-4" />
                   Back to home

@@ -138,7 +138,7 @@ const ServicesPage = () => {
                       </ul>
                     </div>
                     
-                    <Button asChild variant="outline" className="rounded-full h-12 px-6">
+                    <Button asChild variant="outline" className="rounded-2xl h-12 px-6">
                       <Link to="/contact">{t('services.discussBtn')}</Link>
                     </Button>
                   </motion.div>
@@ -162,7 +162,7 @@ const ServicesPage = () => {
               <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
                 {t('services.ctaDesc')}
               </p>
-              <Button asChild size="lg" className="rounded-full px-8 h-14 text-lg gap-2">
+              <Button asChild size="lg" className="rounded-2xl px-8 h-14 text-lg gap-2">
                 <Link to="/contact">
                   {t('services.ctaBtn')} <ArrowRight className="w-5 h-5" />
                 </Link>

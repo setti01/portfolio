@@ -93,7 +93,7 @@ const RiadTimradPage = () => {
                 development, content writing and SEO, all delivered in 21 days.
               </p>
 
-              <Button asChild variant="outline" className="rounded-full gap-2">
+              <Button asChild variant="outline" className="rounded-2xl gap-2">
                 <a href="https://riad-timrad.com/" target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="w-4 h-4" />
                   Visit riad-timrad.com

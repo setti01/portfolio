@@ -102,7 +102,7 @@ const MielChahdaPage = () => {
                 {t('mielchahda.heroDesc')}
               </p>
 
-              <Button asChild variant="outline" className="rounded-full gap-2">
+              <Button asChild variant="outline" className="rounded-2xl gap-2">
                 <a href="https://mielchahda.com" target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="w-4 h-4" />
                   {t('mielchahda.heroBtn')}

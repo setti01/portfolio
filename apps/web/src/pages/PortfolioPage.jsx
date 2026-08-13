@@ -17,7 +17,7 @@ const PortfolioPage = () => {
   const categories = [t('portfolio.filterAll'), t('portfolio.filterWeb'), t('portfolio.filterBranding'), t('portfolio.filterSocial')];
 
   const projects = [
-    { title: 'WEPROD MAROC', category: t('portfolio.filterSocial'), image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783910220/WhatsApp_Image_2025-05-04_at_00.39.05_3_betqh6.jpg', link: '/portfolio/weprod', description: 'Graphic design, branding and event communication for a Tangier creative agency.' },
+    { title: 'WEPROD MAROC', category: t('portfolio.filterSocial'), image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1786581718/weprod_thumbnail_hga0rt.jpg', link: '/portfolio/weprod', description: 'Graphic design, branding and event communication for a Tangier creative agency.' },
     { title: 'SMART SPARES HUB', category: t('portfolio.filterWeb'), image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783996886/Homepage_hkyuki.png', link: '/portfolio/smart-spares-hub', description: 'B2B platform for industrial spare parts, branding and web design from scratch.' },
     { title: 'HOTEL FARAH TANGER', category: t('portfolio.filterBranding'), image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783999178/WhatsApp_Image_2025-05-04_at_00.39.00_1_ifixgo.jpg', link: '/portfolio/hotel-farah', description: 'Luxury hospitality social media design, created via WeProd Maroc.' },
     { title: 'OMEGA SUSHI TANGER', category: t('portfolio.filterBranding'), image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1781053606/omegasushimorocco_mhomup.png', link: '/portfolio/omega-sushi', description: 'Complete visual identity and restaurant menu design.' },
@@ -63,7 +63,7 @@ const PortfolioPage = () => {
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-8">
                 {t('portfolio.heroDesc')}
               </p>
-              <Button asChild size="lg" className="rounded-full px-8 gap-2">
+              <Button asChild size="lg" className="rounded-2xl px-8 gap-2">
                 <a href="https://behance.net/b30072001" target="_blank" rel="noopener noreferrer">
                   <Layout className="w-5 h-5" />
                   {t('portfolio.behanceBtn')}
@@ -111,7 +111,7 @@ const PortfolioPage = () => {
                   onClick={() => setVisibleCount((prev) => prev + 6)}
                   variant="outline" 
                   size="lg" 
-                  className="rounded-full px-8 font-medium transition-all hover:bg-primary hover:text-primary-foreground"
+                  className="rounded-2xl px-8 font-medium transition-all hover:bg-primary hover:text-primary-foreground"
                 >
                   {t('portfolio.loadMore')}
                 </Button>

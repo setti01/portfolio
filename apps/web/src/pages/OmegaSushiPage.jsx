@@ -101,7 +101,7 @@ const OmegaSushiPage = () => {
               <p className="text-xl text-muted-foreground max-w-3xl leading-relaxed mb-8">
                 {t('omegasushi.heroDesc')}
               </p>
-              <Button asChild variant="outline" className="rounded-full gap-2">
+              <Button asChild variant="outline" className="rounded-2xl gap-2">
                 <a href="https://www.instagram.com/omegasushitanger/" target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="w-4 h-4" />
                   Voir sur Instagram
@@ -240,7 +240,7 @@ const OmegaSushiPage = () => {
             >
               <h2 className="text-3xl font-bold mb-4">{t('omegasushi.ctaTitle')}</h2>
               <p className="text-muted-foreground mb-8 max-w-xl mx-auto">{t('omegasushi.ctaDesc')}</p>
-              <Button asChild size="lg" className="rounded-full px-8 h-14 gap-2">
+              <Button asChild size="lg" className="rounded-2xl px-8 h-14 gap-2">
                 <Link to="/contact">{t('omegasushi.ctaButton')}</Link>
               </Button>
             </motion.div>
