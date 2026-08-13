@@ -101,7 +101,7 @@ const HomePage = () => {
               <div className="relative animate-heroEntrance" style={{ animationDelay: '0.2s' }}>
                 <div className="relative rounded-3xl overflow-hidden border border-border">
                   <img
-                    src="https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1786578537/homepage_hero_f8dpwj.jpg"
+                    src="https://res.cloudinary.com/dvcaobhqt/image/upload/v1786596478/smart_spares_hub_swtz5c.jpg"
                     alt={t('home.heroImageAlt')}
                     className="w-full h-full object-cover"
                   />

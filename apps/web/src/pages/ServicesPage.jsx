@@ -32,7 +32,7 @@ const ServicesPage = () => {
       title: t('services.s2_title'),
       desc: t('services.s2_desc'),
       icon: Globe,
-      image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/q_auto,f_auto/v1783996886/Homepage_hkyuki.png',
+      image: 'https://res.cloudinary.com/dvcaobhqt/image/upload/v1786596478/smart_spares_hub_swtz5c.jpg',
       deliverables: [
         t('services.s2_d1'),
         t('services.s2_d2'),
