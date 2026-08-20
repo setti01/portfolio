@@ -11,6 +11,7 @@ const ProjectCard = ({ project, index }) => {
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.45, delay: index * 0.08, ease: [0.25, 0.1, 0.25, 1] }}
       whileHover={{ y: -6, transition: { duration: 0.25, ease: [0.25, 0.1, 0.25, 1] } }}
+      className="project-card"
     >
       <Link
         to={project.link}

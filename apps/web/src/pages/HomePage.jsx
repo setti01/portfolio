@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
@@ -52,6 +52,21 @@ const HomePage = () => {
     },
   ];
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -63,7 +78,7 @@ const HomePage = () => {
         <Header />
 
         {/* 1. HERO SECTION */}
-        <section className="relative min-h-[100dvh] flex items-center pt-20">
+        <section className="relative min-h-[100dvh] flex items-center pt-20 reveal">
           <div className="absolute inset-0 z-0">
             <img
               src="https://images.unsplash.com/photo-1688760871131-29afc15029ec?w=1920&q=75"
@@ -112,7 +127,7 @@ const HomePage = () => {
         </section>
 
         {/* 2. STATISTICS */}
-        <section className="py-20 border-y border-border bg-card/30 lazy-section">
+        <section className="py-20 border-y border-border bg-card/30 lazy-section reveal">
           <div className="container-custom">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
               {[
@@ -133,7 +148,7 @@ const HomePage = () => {
         </section>
 
         {/* 3. FEATURED PROJECTS */}
-        <section className="py-24 bg-background">
+        <section className="py-24 bg-background reveal">
           <div className="container-custom">
             <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
               <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }}>
@@ -158,7 +173,7 @@ const HomePage = () => {
         </section>
 
         {/* 3.5 SKILLS & TOOLS */}
-        <section className="py-24 overflow-hidden bg-card/20 border-y border-border">
+        <section className="py-24 overflow-hidden bg-card/20 border-y border-border reveal">
           <div className="container-custom mb-12">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} className="text-center">
               <h2 className="text-3xl md:text-5xl font-bold mb-4">{t('home.skillsTitle')}</h2>
@@ -203,7 +218,7 @@ const HomePage = () => {
         </section>
 
         {/* 3.6 CLIENTS */}
-        <section className="py-20 bg-background">
+        <section className="py-20 bg-background reveal">
           <div className="container-custom">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} className="text-center mb-12">
               <p className="text-xs font-mono text-muted-foreground uppercase tracking-widest mb-4">{t('home.clientsTag')}</p>
@@ -265,7 +280,7 @@ const HomePage = () => {
         </section>
         
         {/* 4. TESTIMONIALS */}
-        <section className="py-24 bg-secondary/30">
+        <section className="py-24 bg-secondary/30 reveal">
           <div className="container-custom">
             <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }}>
               <h2 className="text-3xl md:text-5xl font-bold mb-4">{t('home.testimonialsTitle')}</h2>
@@ -292,7 +307,7 @@ const HomePage = () => {
         </section>
 
         {/* 5. CTA SECTION */}
-        <section className="py-32 relative overflow-hidden">
+        <section className="py-32 relative overflow-hidden reveal">
           <div className="absolute inset-0 bg-primary/10" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/20 rounded-full blur-[120px] pointer-events-none" />
           <div className="container-custom relative z-10 text-center">
